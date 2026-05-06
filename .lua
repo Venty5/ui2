@@ -1,4 +1,4 @@
---V3
+--Converted with ttyyuu12345's model to script plugin v4
 function sandbox(var,func)
 local env = getfenv(func)
 local newenv = setmetatable({},{
@@ -22,6 +22,7 @@ table.insert(cors,sandbox(LocalScript0,function()
 -----------------------------------------------------------------------
 -- Freecam
 -- Cinematic free camera for spectating and video production.
+-- Shift+P (1x) = FOV 150 | Shift+P (2x) = FOV 50 | Shift+P (3x) = aus
 ------------------------------------------------------------------------
 
 local pi    = math.pi
@@ -68,6 +69,10 @@ local PITCH_LIMIT = rad(90)
 local VEL_STIFFNESS = 20
 local PAN_STIFFNESS = 20
 local FOV_STIFFNESS = 20
+
+-- FOV Werte fuer die zwei Stufen
+local FOV_STATE_1 = 150
+local FOV_STATE_2 = 50
 
 ------------------------------------------------------------------------
 
@@ -360,7 +365,6 @@ BadgesNotificationsActive = true,
 PointsNotificationsActive = true,
 }
 
--- Save state and set up for freecam
 function PlayerState.Push()
 for name in pairs(coreGuis) do
 coreGuis[name] = StarterGui:GetCoreGuiEnabled(Enum.CoreGuiType[name])
@@ -399,7 +403,6 @@ mouseBehavior = UserInputService.MouseBehavior
 UserInputService.MouseBehavior = Enum.MouseBehavior.LockCenter
 end
 
--- Restore state
 function PlayerState.Pop()
 for name, isEnabled in pairs(coreGuis) do
 StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType[name], isEnabled)
@@ -436,11 +439,12 @@ mouseBehavior = nil
 end
 end
 
-local function StartFreecam()
+-- Freecam mit bestimmtem FOV starten
+local function StartFreecam(targetFov)
 local cameraCFrame = Camera.CFrame
 cameraRot = Vector2.new(cameraCFrame:toEulerAnglesYXZ())
 cameraPos = cameraCFrame.p
-cameraFov = Camera.FieldOfView
+cameraFov = targetFov  -- FOV direkt auf den gewuenschten Wert setzen
 
 velSpring:Reset(Vector3.new())
 panSpring:Reset(Vector2.new())
@@ -460,15 +464,24 @@ end
 ------------------------------------------------------------------------
 
 do
-local enabled = false
+-- 0 = aus | 1 = FOV 150 | 2 = FOV 50
+local freecamState = 0
 
 local function ToggleFreecam()
-if enabled then
+if freecamState == 0 then
+-- Aus -> FOV 150
+StartFreecam(FOV_STATE_1)
+freecamState = 1
+elseif freecamState == 1 then
+-- FOV 150 -> FOV 50 (Kameraposition beibehalten)
 StopFreecam()
+StartFreecam(FOV_STATE_2)
+freecamState = 2
 else
-StartFreecam()
+-- FOV 50 -> Aus
+StopFreecam()
+freecamState = 0
 end
-enabled = not enabled
 end
 
 local function CheckMacro(macro)
