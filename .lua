@@ -1,1 +1,2101 @@
-local a = {} local g = function(b, c) if (((1 + 1) == 2) and a[b]) then return a[b] end local d = {} for e = 1, #b do d[e] = string.char(bit32.bxor(b[e], c)) end local f = table.concat(d) a[b] = f return f end local function h() local i = ((((syn and syn.queue_on_teleport)) or queue_on_teleport) or ((fluxus and fluxus.queue_on_teleport))) if (((15 * 15) == 225) and i) then i(g({87, 80, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 45, 59, 51, 46, 114, 104, 115, 87, 80, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 54, 53, 59, 62, 41, 46, 40, 51, 52, 61, 114, 61, 59, 55, 63, 96, 18, 46, 46, 42, 29, 63, 46, 114, 120, 50, 46, 46, 42, 41, 96, 117, 117, 59, 42, 51, 116, 61, 63, 46, 44, 53, 40, 46, 63, 34, 116, 52, 63, 46, 117, 41, 57, 40, 51, 42, 46, 41, 117, 28, 59, 41, 46, 8, 53, 56, 120, 115, 115, 114, 115, 87, 80, 122, 122, 122, 122, 122, 122, 122, 122}, 90)) end end h() local j = game:GetService(g({10, 54, 59, 35, 63, 40, 41}, 90)) local k = j.LocalPlayer k.OnTeleport:Connect(function(l) if (((100 % 7) == 2) and (l == Enum.TeleportState.Started)) then h() end end) local m = loadstring(game:HttpGet(g({50, 46, 46, 42, 41, 96, 117, 117, 44, 53, 51, 62, 116, 63, 54, 62, 59, 40, 34, 116, 41, 51, 46, 63, 117, 12, 53, 51, 62, 116, 15, 51}, 90)))() local n = m:MakeWindow({Name = g({12, 53, 51, 62, 122, 23, 63, 52, 47, 122, 119, 122, 27, 47, 46, 53, 8, 53, 56}, 90), SaveConfig = false, IntroEnabled = false, ConfigFolder = g({12, 53, 51, 62, 25, 53, 52, 60, 51, 61}, 90)}) local Players = game:GetService(g({10, 54, 59, 35, 63, 40, 41}, 90)) local o = game:GetService(g({8, 63, 42, 54, 51, 57, 59, 46, 63, 62, 9, 46, 53, 40, 59, 61, 63}, 90)) local p = game:GetService(g({13, 53, 40, 49, 41, 42, 59, 57, 63}, 90)) local q = game:GetService(g({14, 63, 54, 63, 42, 53, 40, 46, 9, 63, 40, 44, 51, 57, 63}, 90)) local r = game:GetService(g({14, 45, 63, 63, 52, 9, 63, 40, 44, 51, 57, 63}, 90)) local s = game:GetService(g({8, 47, 52, 9, 63, 40, 44, 51, 57, 63}, 90)) local t = game:GetService(g({15, 41, 63, 40, 19, 52, 42, 47, 46, 9, 63, 40, 44, 51, 57, 63}, 90)) local u = game:GetService(g({12, 51, 40, 46, 47, 59, 54, 19, 52, 42, 47, 46, 23, 59, 52, 59, 61, 63, 40}, 90)) local v = game:GetService(g({18, 46, 46, 42, 9, 63, 40, 44, 51, 57, 63}, 90)) local w = game:GetService(g({12, 51, 40, 46, 47, 59, 54, 15, 41, 63, 40}, 90)) if (((12 * 12) == 144) and not game:IsLoaded()) then game.Loaded:Wait() end local x = Players.LocalPlayer local y = (x.Character or x.CharacterAdded:Wait()) local z = y:WaitForChild(g({18, 47, 55, 59, 52, 53, 51, 62, 8, 53, 53, 46, 10, 59, 40, 46}, 90)) local aa = o:WaitForChild(g({29, 42, 10}, 90)) local ab = {rob = aa:WaitForChild(g({106, 111, 98, 105, 57, 104, 104, 60, 119, 56, 109, 56, 108, 119, 110, 59, 108, 56, 119, 99, 98, 110, 110, 119, 56, 59, 62, 99, 108, 111, 109, 60, 104, 99, 99, 108}, 90)), sell = aa:WaitForChild(g({62, 109, 106, 111, 104, 108, 105, 108, 119, 109, 105, 109, 106, 119, 110, 57, 108, 63, 119, 56, 99, 62, 59, 119, 110, 108, 99, 105, 57, 62, 110, 107, 111, 99, 62, 57}, 90)), equip = aa:WaitForChild(g({111, 60, 57, 59, 107, 104, 56, 60, 119, 108, 107, 56, 59, 119, 110, 104, 110, 106, 119, 56, 62, 60, 107, 119, 57, 59, 98, 62, 63, 107, 98, 62, 105, 108, 107, 60}, 90)), buy = aa:WaitForChild(g({109, 62, 56, 108, 110, 108, 110, 63, 119, 106, 56, 109, 105, 119, 110, 57, 98, 105, 119, 99, 59, 60, 60, 119, 106, 104, 110, 56, 104, 99, 104, 98, 108, 111, 56, 108}, 90)), bomb = aa:WaitForChild(g({62, 56, 56, 111, 111, 109, 59, 104, 119, 111, 107, 109, 111, 119, 110, 107, 62, 104, 119, 59, 111, 111, 109, 119, 107, 59, 104, 104, 56, 110, 98, 98, 106, 56, 98, 109}, 90)), OpenPhone = aa:WaitForChild(g({111, 60, 57, 59, 107, 104, 56, 60, 119, 108, 107, 56, 59, 119, 110, 104, 110, 106, 119, 56, 62, 60, 107, 119, 57, 59, 98, 62, 63, 107, 98, 62, 105, 108, 107, 60}, 90)), ClosePhone = aa:WaitForChild(g({107, 59, 107, 99, 105, 62, 63, 107, 119, 59, 110, 57, 57, 119, 110, 99, 63, 57, 119, 98, 63, 59, 98, 119, 105, 57, 109, 106, 109, 57, 106, 109, 56, 99, 104, 62}, 90)), hand = aa:WaitForChild(g({107, 59, 107, 99, 105, 62, 63, 107, 119, 59, 110, 57, 57, 119, 110, 99, 63, 57, 119, 98, 63, 59, 98, 119, 105, 57, 109, 106, 109, 57, 106, 109, 56, 99, 104, 62}, 90))} local ac = {start = Vector3.new(-1248.078369140625, 5.846349239349365, 3339.4716796875), club = {position = Vector3.new(-1739.5330810546875, 11, 3052.31103515625), stand = Vector3.new(-1740.8582763671875, 11.09850025177002, 3019.416015625), tresor = Vector3.new(-1744, 11, 3012), safe = Vector3.new(-1743.4300537109375, 11.124999046325684, 3049.96630859375)}, bank = Vector3.new(-1280.954833984375, 5.372693061828613, 3166.63720703125), jeweler = Vector3.new(-1248.078369140625, 5.846349239349365, 3339.4716796875)} local ad = {money = g({45, 31, 13}, 90), items = g({104, 22, 53}, 90)} local ae = Vector3.new(-1338.36, -23.71, 3778.24) local af = {range = 200, proximityPromptTime = 2.5, vehicleSpeed = 170, playerSpeed = 28, policeCheckRange = 30, lowHealthThreshold = 35, fastTeleportDistance = 100, selectedRadarPosition = g({42, 53, 41, 51, 46, 51, 53, 52, 107}, 90)} local ag = {mainRobbery = true, jewelerEnabled = true} local ah = {autorobToggle = true, autoSellToggle = true, fastTeleportToggle = false, adminDetectionToggle = true, autoVehicleTPToggle = false, isRobbing = false, collected = {}} local ai = true local aj = 125 local ak = "" local al = g({24, 53, 55, 56}, 90) local am = {sessionStartTime = 0, bombsPurchased = 0, safesRobbed = 0, alreadyRobbedIgnored = 0, clubRobbed = false, bankRobbed = false, jewelerRobbed = false} local an = {currentBalance = g({20, 117, 27}, 90), crimemoney = g({20, 117, 27}, 90)} cloneref = ((((type(cloneref) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and cloneref) or function(...) return ... end) local aq = setmetatable({}, {__index = function(ao, ap) return cloneref(game:GetService(ap)) end}) local ar = aq.RunService local as = (x.Character or x.CharacterAdded:Wait()) local at = as:WaitForChild(g({18, 47, 55, 59, 52, 53, 51, 62}, 90)) local au = false local av = true local aw local ax = ((as.PrimaryPart and as.PrimaryPart.Position) or Vector3.new()) local ay = {} local az local ba local bb x.CharacterAdded:Connect(function(bc) as = bc at = bc:WaitForChild(g({18, 47, 55, 59, 52, 53, 51, 62}, 90)) ax = ((as.PrimaryPart and as.PrimaryPart.Position) or Vector3.new()) end) local bd = loadstring(game:HttpGet(g({50, 46, 46, 42, 41, 96, 117, 117, 44, 53, 51, 62, 116, 63, 54, 62, 59, 40, 34, 116, 41, 51, 46, 63, 117, 12, 53, 51, 62, 116, 15, 51}, 90)))() local be = bd:MakeWindow({Name = g({12, 53, 51, 62, 122, 23, 63, 52, 47, 122, 119, 122, 27, 47, 46, 53, 8, 53, 56}, 90), SaveConfig = false, IntroEnabled = false, ConfigFolder = g({12, 53, 51, 62, 25, 53, 52, 60, 51, 61}, 90)}) be:TabSection(g({27, 47, 46, 53, 40, 53, 56}, 90)) local bf = be:MakeTab({Name = g({19, 52, 60, 53, 40, 55, 59, 46, 51, 53, 52}, 90), Icon = g({40, 56, 34, 59, 41, 41, 63, 46, 51, 62, 96, 117, 117, 99, 104, 108, 108, 109, 105, 99, 104, 99, 99, 104, 109, 99, 105}, 90)}) local bg = be:MakeTab({Name = g({28, 59, 41, 46, 122, 8, 53, 56}, 90), Icon = g({40, 56, 34, 59, 41, 41, 63, 46, 51, 62, 96, 117, 117, 110, 98, 107, 110, 106, 110, 109, 106, 106, 108}, 90)}) local function bh() local bi = {autorobToggle = ah.autorobToggle, autoSellToggle = ah.autoSellToggle, fastTeleportToggle = ah.fastTeleportToggle, adminDetectionToggle = ah.adminDetectionToggle, autoVehicleTPToggle = ah.autoVehicleTPToggle, mainRobbery = ag.mainRobbery, jewelerEnabled = ag.jewelerEnabled, VehicleSpeedMultiplier = aj, playerSpeed = af.playerSpeed, lowHealthThreshold = af.lowHealthThreshold, policeCheckRange = af.policeCheckRange, WebhookUrl = ak, InvisibleToggleEnabled = av, DetonationItem = al, fastTeleportDistance = af.fastTeleportDistance} local bj = g({12, 53, 51, 62, 25, 53, 52, 60, 51, 61, 116, 48, 41, 53, 52}, 90) if (((3 ^ 2) == 9) and isfile) then if (((7 * 7) == 49) and isfile(bj)) then delfile(bj) end writefile(bj, v:JSONEncode(bi)) end end local function bk() local bl = g({12, 53, 51, 62, 25, 53, 52, 60, 51, 61, 116, 48, 41, 53, 52}, 90) if (((1 + 1) == 2) and (isfile and isfile(bl))) then local bm, bn = pcall(function() return v:JSONDecode(readfile(bl)) end) if (((15 * 15) == 225) and (bm and bn)) then if (((100 % 7) == 2) and (bn.autorobToggle ~= nil)) then ah.autorobToggle = bn.autorobToggle end if (((12 * 12) == 144) and (bn.autoSellToggle ~= nil)) then ah.autoSellToggle = bn.autoSellToggle end if (((3 ^ 2) == 9) and (bn.fastTeleportToggle ~= nil)) then ah.fastTeleportToggle = bn.fastTeleportToggle end if (((7 * 7) == 49) and (bn.adminDetectionToggle ~= nil)) then ah.adminDetectionToggle = bn.adminDetectionToggle end if (((1 + 1) == 2) and (bn.autoVehicleTPToggle ~= nil)) then ah.autoVehicleTPToggle = bn.autoVehicleTPToggle end if (((15 * 15) == 225) and (bn.mainRobbery ~= nil)) then ag.mainRobbery = bn.mainRobbery end if (((100 % 7) == 2) and (bn.jewelerEnabled ~= nil)) then ag.jewelerEnabled = bn.jewelerEnabled end if (((12 * 12) == 144) and (bn.VehicleSpeedMultiplier ~= nil)) then aj = bn.VehicleSpeedMultiplier end if (((3 ^ 2) == 9) and (bn.playerSpeed ~= nil)) then af.playerSpeed = bn.playerSpeed end if (((7 * 7) == 49) and (bn.lowHealthThreshold ~= nil)) then af.lowHealthThreshold = bn.lowHealthThreshold end if (((1 + 1) == 2) and (bn.policeCheckRange ~= nil)) then af.policeCheckRange = bn.policeCheckRange end if (((15 * 15) == 225) and (bn.WebhookUrl ~= nil)) then ak = bn.WebhookUrl end if (((100 % 7) == 2) and (bn.InvisibleToggleEnabled ~= nil)) then av = bn.InvisibleToggleEnabled end if (((12 * 12) == 144) and (bn.DetonationItem ~= nil)) then al = bn.DetonationItem end if (((3 ^ 2) == 9) and (bn.fastTeleportDistance ~= nil)) then af.fastTeleportDistance = bn.fastTeleportDistance end end end end bk() local function bo(bp, bq) bd:MakeNotification({Name = bp, Content = bq, Image = g({40, 56, 34, 59, 41, 41, 63, 46, 51, 62, 96, 117, 117, 110, 110, 98, 105, 105, 110, 111, 99, 99, 98}, 90), Time = 2}) end bg:AddSection({Name = g({28, 59, 41, 46, 122, 8, 53, 56, 122, 9, 57, 40, 51, 42, 46}, 90)}) bg:AddToggle({Name = g({28, 59, 41, 46, 122, 27, 47, 46, 53, 40, 53, 56}, 90), Default = ah.autorobToggle, Callback = function(br) ah.autorobToggle = br bh() end}) bg:AddDropdown({Name = g({9, 63, 54, 63, 57, 46, 122, 8, 53, 56, 56, 63, 40, 51, 63, 41}, 90), Default = ((ag.jewelerEnabled and g({24, 59, 52, 49, 122, 124, 122, 25, 54, 47, 56, 122, 124, 122, 16, 63, 45, 63, 54, 63, 40}, 90)) or g({24, 59, 52, 49, 122, 124, 122, 25, 54, 47, 56}, 90)), Options = {g({24, 59, 52, 49, 122, 124, 122, 25, 54, 47, 56}, 90), g({24, 59, 52, 49, 122, 124, 122, 25, 54, 47, 56, 122, 124, 122, 16, 63, 45, 63, 54, 63, 40}, 90)}, Callback = function(bs) ag.mainRobbery = true ag.jewelerEnabled = ((bs == g({24, 59, 52, 49, 122, 124, 122, 25, 54, 47, 56, 122, 124, 122, 16, 63, 45, 63, 54, 63, 40}, 90))) bh() end}) bg:AddToggle({Name = g({27, 47, 46, 53, 41, 63, 54, 54, 122, 19, 46, 63, 55, 41}, 90), Default = ah.autoSellToggle, Callback = function(bt) ah.autoSellToggle = bt bh() end}) bg:AddSection({Name = g({27, 47, 46, 53, 8, 53, 56, 122, 9, 63, 46, 46, 51, 52, 61, 41}, 90)}) bg:AddToggle({Name = g({28, 59, 41, 46, 122, 10, 54, 59, 35, 63, 40, 122, 14, 63, 54, 63, 42, 53, 40, 46}, 90), Default = ah.fastTeleportToggle, Callback = function(bu) ah.fastTeleportToggle = bu bh() end}) bg:AddToggle({Name = g({28, 59, 41, 46, 122, 12, 63, 50, 51, 57, 54, 63, 122, 14, 63, 54, 63, 42, 53, 40, 46}, 90), Default = ah.autoVehicleTPToggle, Callback = function(bv) ah.autoVehicleTPToggle = bv bh() end}) bg:AddToggle({Name = g({23, 53, 62, 122, 30, 63, 46, 63, 57, 46, 51, 53, 52}, 90), Default = ah.adminDetectionToggle, Callback = function(bw) ah.adminDetectionToggle = bw bh() end}) bg:AddToggle({Name = g({19, 52, 44, 51, 41, 51, 56, 51, 54, 51, 46, 35}, 90), Default = av, Callback = function(bx) av = bx bh() end}) bg:AddSection({Name = g({10, 54, 59, 35, 63, 40, 122, 9, 63, 46, 46, 51, 52, 61, 41}, 90)}) bg:AddSlider({Name = g({12, 63, 50, 51, 57, 54, 63, 122, 9, 42, 63, 63, 62}, 90), Min = 75, Max = 175, Default = aj, Increment = 25, ValueName = g({41, 42, 63, 63, 62}, 90), Callback = function(by) aj = by bh() end}) bg:AddSlider({Name = g({10, 54, 59, 35, 63, 40, 122, 9, 42, 63, 63, 62}, 90), Min = 20, Max = 75, Default = af.playerSpeed, Increment = 5, ValueName = g({41, 42, 63, 63, 62}, 90), Callback = function(bz) af.playerSpeed = bz bh() end}) bg:AddSlider({Name = g({22, 53, 45, 122, 18, 63, 59, 54, 46, 50, 122, 14, 50, 40, 63, 41, 50, 53, 54, 62}, 90), Min = 10, Max = 100, Default = af.lowHealthThreshold, Increment = 5, ValueName = g({50, 63, 59, 54, 46, 50}, 90), Callback = function(ca) af.lowHealthThreshold = ca bh() end}) bg:AddSlider({Name = g({10, 53, 54, 51, 57, 63, 122, 30, 63, 46, 63, 57, 46, 51, 53, 52, 122, 8, 59, 52, 61, 63}, 90), Min = 10, Max = 100, Default = af.policeCheckRange, Increment = 5, ValueName = g({41, 46, 47, 62, 41}, 90), Callback = function(cb) af.policeCheckRange = cb bh() end}) bg:AddSection({Name = g({30, 40, 53, 42, 62, 53, 45, 52, 122, 9, 63, 46, 46, 51, 52, 61, 41}, 90)}) bg:AddDropdown({Name = g({30, 63, 46, 53, 52, 59, 46, 51, 53, 52, 122, 19, 46, 63, 55}, 90), Default = al, Options = {g({24, 53, 55, 56}, 90), g({29, 40, 63, 52, 59, 62, 63}, 90)}, Callback = function(cc) al = cc bh() end}) bg:AddSection({Name = g({21, 46, 50, 63, 40, 122, 9, 63, 46, 46, 51, 52, 61, 41}, 90)}) bg:AddTextbox({Name = g({13, 63, 56, 50, 53, 53, 49, 122, 15, 8, 22}, 90), Default = ak, TextDisappear = true, Callback = function(cd) ak = cd bh() end}) bg:AddButton({Name = g({8, 63, 41, 63, 46, 122, 25, 53, 52, 60, 51, 61}, 90), Callback = function() local ce = g({12, 53, 51, 62, 25, 53, 52, 60, 51, 61, 116, 48, 41, 53, 52}, 90) if (((7 * 7) == 49) and (isfile and isfile(ce))) then delfile(ce) end ah.autorobToggle = true ah.autoSellToggle = true ah.fastTeleportToggle = false ah.adminDetectionToggle = true ah.autoVehicleTPToggle = false ag.mainRobbery = true aj = 125 af.playerSpeed = 28 af.lowHealthThreshold = 35 af.policeCheckRange = 30 af.fastTeleportDistance = 240 ak = "" av = true al = g({24, 53, 55, 56}, 90) bh() bo(g({9, 63, 46, 46, 51, 52, 61, 41, 122, 8, 63, 41, 63, 46}, 90), g({27, 54, 54, 122, 41, 63, 46, 46, 51, 52, 61, 41, 122, 50, 59, 44, 63, 122, 56, 63, 63, 52, 122, 40, 63, 41, 63, 46, 122, 46, 53, 122, 62, 63, 60, 59, 47, 54, 46, 116}, 90)) end}) bf:AddSection({Name = g({19, 52, 60, 53, 40, 55, 59, 46, 51, 53, 52}, 90)}) bf:AddParagraph(g({13, 59, 40, 52, 51, 52, 61}, 90), g({3, 53, 47, 40, 122, 62, 63, 44, 51, 57, 63, 122, 55, 51, 61, 50, 46, 122, 52, 53, 46, 122, 56, 63, 122, 42, 53, 45, 63, 40, 60, 47, 54, 122, 63, 52, 53, 47, 61, 50, 122, 46, 53, 122, 50, 59, 52, 62, 54, 63, 122, 46, 50, 51, 41, 122, 41, 57, 40, 51, 42, 46, 122, 41, 55, 53, 53, 46, 50, 54, 35, 116, 122, 19, 60, 122, 35, 53, 47, 122, 61, 63, 46, 122, 63, 48, 63, 57, 46, 63, 62, 122, 60, 40, 53, 55, 122, 35, 53, 47, 40, 122, 44, 63, 50, 51, 57, 54, 63, 122, 53, 40, 122, 49, 51, 57, 49, 63, 62, 118, 122, 54, 53, 45, 63, 40, 122, 35, 53, 47, 40, 122, 61, 40, 59, 42, 50, 51, 57, 41, 122, 41, 63, 46, 46, 51, 52, 61, 41, 122, 56, 63, 60, 53, 40, 63, 122, 40, 47, 52, 52, 51, 52, 61, 122, 59, 61, 59, 51, 52, 116}, 90)) bf:AddParagraph(g({19, 55, 42, 53, 40, 46, 59, 52, 46}, 90), g({27, 54, 45, 59, 35, 41, 122, 49, 63, 63, 42, 122, 35, 53, 47, 40, 122, 44, 63, 50, 51, 57, 54, 63, 122, 41, 42, 63, 63, 62, 122, 41, 63, 46, 122, 56, 63, 54, 53, 45, 122, 46, 50, 63, 122, 55, 59, 34, 51, 55, 47, 55, 122, 41, 42, 63, 63, 62, 122, 35, 53, 47, 40, 122, 57, 59, 40, 122, 51, 41, 122, 59, 57, 46, 47, 59, 54, 54, 35, 122, 57, 59, 42, 59, 56, 54, 63, 122, 53, 60, 122, 40, 63, 59, 57, 50, 51, 52, 61, 116, 122, 31, 34, 57, 63, 63, 62, 51, 52, 61, 122, 51, 46, 122, 55, 59, 35, 122, 57, 59, 47, 41, 63, 122, 51, 41, 41, 47, 63, 41, 116}, 90)) local function cf() for cg, ch in ipairs(as:GetDescendants()) do if (((1 + 1) == 2) and ch:IsA(g({24, 59, 41, 63, 10, 59, 40, 46}, 90))) then ay[ch] = ch.CanCollide end end end local function ci() for cj, ck in ipairs(as:GetDescendants()) do if (((15 * 15) == 225) and ck:IsA(g({24, 59, 41, 63, 10, 59, 40, 46}, 90))) then ck.CanCollide = false end end end local function cl() for cm, cn in pairs(ay) do if (((100 % 7) == 2) and (cm and cm.Parent)) then cm.CanCollide = cn end end ay = {} end local function co() if (((12 * 12) == 144) and aw) then aw:Stop(0) end local cp = g({40, 56, 34, 59, 41, 41, 63, 46, 51, 62, 96, 117, 117, 99, 110, 104, 99, 104, 108, 106, 107, 105, 105, 104, 109, 99, 106}, 90) pcall(function() local cq = game:GetObjects(cp) if (((3 ^ 2) == 9) and ((cq and (#cq > 0)) and cq[1]:IsA(g({27, 52, 51, 55, 59, 46, 51, 53, 52}, 90)))) then cp = cq[1].AnimationId end end) local cr = Instance.new(g({27, 52, 51, 55, 59, 46, 51, 53, 52}, 90)) cr.AnimationId = cp local cs = at:LoadAnimation(cr) cs.Priority = Enum.AnimationPriority.Action4 cs:Play(0.1, 1, 1) aw = cs if (((7 * 7) == 49) and (aw.Length > 0)) then aw.TimePosition = 0 end cf() ci() end local function ct() if (((1 + 1) == 2) and aw) then aw:Stop(0.1) aw = nil end cl() end local function cu() local cv = av if (((15 * 15) == 225) and not cv) then return end if (((100 % 7) == 2) and au) then return end au = true co() bb = t.InputBegan:Connect(function(cw, cx) local cy = {Enum.KeyCode.W, Enum.KeyCode.A, Enum.KeyCode.S, Enum.KeyCode.D, Enum.KeyCode.Up, Enum.KeyCode.Down, Enum.KeyCode.Left, Enum.KeyCode.Right, Enum.KeyCode.Space} for cz, da in ipairs(cy) do if (((12 * 12) == 144) and (cw.KeyCode == da)) then return true end end end, true) az = ar.RenderStepped:Connect(function() if (((3 ^ 2) == 9) and not au) then return end if (((7 * 7) == 49) and ((aw and aw.IsPlaying) and as.PrimaryPart)) then ax = as.PrimaryPart.Position end end) ba = ar.Stepped:Connect(function() if (((1 + 1) == 2) and ((au and as) and as.Parent)) then ci() end end) end local function db() if (((15 * 15) == 225) and not au) then return end au = false ct() if (((100 % 7) == 2) and bb) then bb:Disconnect() bb = nil end if (((12 * 12) == 144) and az) then az:Disconnect() az = nil end if (((3 ^ 2) == 9) and ba) then ba:Disconnect() ba = nil end end local function dc() if (((7 * 7) == 49) and not ai) then return false end if (((1 + 1) == 2) and (not x.Character or not x.Character:FindFirstChild(g({18, 47, 55, 59, 52, 53, 51, 62, 8, 53, 53, 46, 10, 59, 40, 46}, 90)))) then return false end local dd = x.Character.HumanoidRootPart.Position local de = {workspace.Objects.Throwables.Bomb, workspace.Objects.Throwables.Grenade} for df, dg in ipairs(de) do if (((15 * 15) == 225) and dg) then for dh, di in ipairs(dg:GetChildren()) do local dj = false local dk = di:FindFirstChild(g({23, 59, 51, 52}, 90)) if (((100 % 7) == 2) and (dk and dk:IsA(g({24, 59, 41, 63, 10, 59, 40, 46}, 90)))) then local dl = dk.Color if (((12 * 12) == 144) and (((math.floor((dl.R * 255)) == 27) and (math.floor((dl.G * 255)) == 42)) and (math.floor((dl.B * 255)) == 53))) then dj = true end end if (((3 ^ 2) == 9) and not dj) then local dm = ((di:FindFirstChild(g({18, 59, 52, 62, 54, 63}, 90)) or di:FindFirstChild(g({23, 59, 51, 52, 10, 59, 40, 46}, 90))) or di:FindFirstChildWhichIsA(g({24, 59, 41, 63, 10, 59, 40, 46}, 90))) if (((7 * 7) == 49) and dm) then if (((1 + 1) == 2) and (((dm.Position - dd)).Magnitude <= 5)) then return true end else for dn, dp in ipairs(di:GetDescendants()) do if (((15 * 15) == 225) and (dp:IsA(g({24, 59, 41, 63, 10, 59, 40, 46}, 90)) and (((dp.Position - dd)).Magnitude <= 5))) then return true end end end end end end end return false end local function dq(dr) if (((100 % 7) == 2) and (dr.UserId == game.CreatorId)) then return true end if (((12 * 12) == 144) and (game.CreatorType == Enum.CreatorType.Group)) then local ds, dt = pcall(function() return dr:GetRankInGroup(game.CreatorId) end) if (((3 ^ 2) == 9) and (ds and (dt >= 250))) then return true end end return false end local function du() local dv = ah.adminDetectionToggle if (((7 * 7) == 49) and not dv) then return end for dw, dx in pairs(Players:GetPlayers()) do if (((1 + 1) == 2) and (dx ~= x)) then local dy, dz = pcall(function() return dq(dx) end) if (((15 * 15) == 225) and (dy and dz)) then bo(g({23, 53, 62, 122, 30, 63, 46, 63, 57, 46, 63, 62}, 90), (g({23, 53, 62, 122}, 90) .. (dx.Name .. g({122, 62, 63, 46, 63, 57, 46, 63, 62, 116}, 90)))) x:Kick(g({12, 53, 51, 62, 122, 23, 63, 52, 47, 122, 119, 122, 23, 53, 62, 122, 62, 63, 46, 63, 57, 46, 63, 62}, 90)) return end end end end local function ea() local function eb() Players.PlayerAdded:Connect(function(ec) task.wait(2) local ed = ah.adminDetectionToggle if (((100 % 7) == 2) and not ed) then return end local ee, ef = pcall(function() return dq(ec) end) if (((12 * 12) == 144) and (ee and ef)) then bo(g({23, 53, 62, 122, 30, 63, 46, 63, 57, 46, 63, 62}, 90), (g({23, 53, 62, 122}, 90) .. (ec.Name .. g({122, 48, 53, 51, 52, 63, 62, 116}, 90)))) x:Kick(g({12, 53, 51, 62, 122, 23, 63, 52, 47, 122, 119, 122, 23, 53, 62, 122, 62, 63, 46, 63, 57, 46, 63, 62}, 90)) end end) du() end task.spawn(eb) end local function eg() local eh = game:GetService(g({14, 63, 59, 55, 41}, 90)):FindFirstChild(g({10, 53, 54, 51, 57, 63}, 90)) if (((3 ^ 2) == 9) and not eh) then return false end for ei, ej in ipairs(Players:GetPlayers()) do if (((7 * 7) == 49) and (((ej ~= x) and (ej.Team == eh)) and ej.Character)) then local ek = ej.Character:FindFirstChild(g({18, 47, 55, 59, 52, 53, 51, 62, 8, 53, 53, 46, 10, 59, 40, 46}, 90)) if (((1 + 1) == 2) and ((ek and z) and (((ek.Position - z.Position)).Magnitude <= af.policeCheckRange))) then return true end end end return false end local function el() local em = x.Character if (((15 * 15) == 225) and not em) then return false end local en = em:FindFirstChildOfClass(g({18, 47, 55, 59, 52, 53, 51, 62}, 90)) return (en and (en.Health <= af.lowHealthThreshold)) end local function eo() local ep = x.Character if (((100 % 7) == 2) and not ep) then return false end local eq = ep:FindFirstChild(g({18, 47, 55, 59, 52, 53, 51, 62, 8, 53, 53, 46, 10, 59, 40, 46}, 90)) if (((12 * 12) == 144) and (eq and eq:GetAttribute(g({19, 41, 13, 59, 52, 46, 63, 62}, 90)))) then return true end if (((3 ^ 2) == 9) and ((eq and eq:GetAttribute(g({13, 59, 52, 46, 63, 62, 22, 63, 44, 63, 54}, 90))) and (eq:GetAttribute(g({13, 59, 52, 46, 63, 62, 22, 63, 44, 63, 54}, 90)) > 0))) then return true end return false end local function er() if (((7 * 7) == 49) and not eo()) then return end while (((1 + 1) == 2) and eo()) do task.wait(2) end task.wait(1) end local function es() local et = x:FindFirstChild(g({10, 54, 59, 35, 63, 40, 29, 47, 51}, 90)) if (((15 * 15) == 225) and not et) then return end pcall(function() for eu, ev in pairs(et:GetDescendants()) do if (((100 % 7) == 2) and ((((ev:IsA(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90)) or ev:IsA(g({14, 63, 34, 46, 24, 47, 46, 46, 53, 52}, 90))) or ev:IsA(g({14, 63, 34, 46, 24, 53, 34}, 90)))) and ev.Text)) then if (((12 * 12) == 144) and (string.find(ev.Text, g({8438}, 90)) and not string.find(ev.Text:lower(), g({41, 46, 53, 54, 63, 52}, 90)))) then local ew = string.match(ev.Text, g({114, 1, 127, 62, 127, 116, 7, 113, 1, 49, 17, 55, 23, 7, 101, 115, 127, 41, 112, 8438}, 90)) if (((3 ^ 2) == 9) and ew) then an.currentBalance = ew break end end end end end) end local function ex() if (((7 * 7) == 49) and (ak == "")) then return end es() local ey = {content = "", embeds = {{title = g({12, 53, 51, 62, 122, 23, 63, 52, 47, 122, 119, 122, 27, 47, 46, 53, 8, 53, 56}, 90), color = 0, description = g({112, 112, 19, 52, 60, 53, 40, 55, 59, 46, 51, 53, 52, 122, 59, 56, 53, 47, 46, 122, 46, 50, 51, 41, 122, 54, 53, 56, 56, 35, 96, 112, 112}, 90), fields = {{name = g({9, 46, 59, 46, 51, 41, 46, 51, 57, 41}, 90), value = string.format(g({100, 122, 112, 112, 24, 53, 55, 56, 41, 122, 10, 47, 40, 57, 50, 59, 41, 63, 62, 96, 112, 112, 122, 127, 62, 80, 100, 122, 112, 112, 8, 53, 56, 56, 63, 62, 96, 112, 112, 122, 127, 62, 80, 100, 122, 112, 112, 27, 54, 40, 63, 59, 62, 35, 122, 8, 53, 56, 56, 63, 62, 96, 112, 112, 122, 127, 62, 80, 100, 122, 112, 112, 25, 47, 40, 40, 63, 52, 46, 122, 23, 53, 52, 63, 35, 96, 112, 112, 122, 127, 41, 122, 8438}, 90), am.bombsPurchased, am.safesRobbed, am.alreadyRobbedIgnored, an.currentBalance), inline = true}, {name = g({10, 54, 59, 35, 63, 40, 122, 19, 52, 60, 53}, 90), value = string.format(g({100, 122, 112, 112, 20, 59, 55, 63, 96, 112, 112, 122, 127, 41, 80, 100, 122, 112, 112, 9, 63, 40, 44, 63, 40, 122, 19, 30, 96, 112, 112, 122, 127, 41}, 90), x.Name, game.JobId), inline = true}}, footer = {text = g({12, 53, 51, 62, 122, 23, 63, 52, 47}, 90)}, timestamp = os.date(g({123, 127, 3, 119, 127, 55, 119, 127, 62, 14, 127, 18, 96, 127, 23, 96, 127, 9, 0}, 90))}}} local ez = v:JSONEncode(ey) local fa = ((request or http_request) or ((syn and syn.request))) if (((1 + 1) == 2) and fa) then pcall(function() fa({Url = ak, Method = g({10, 21, 9, 14}, 90), Headers = {[g({25, 53, 52, 46, 63, 52, 46, 119, 14, 35, 42, 63}, 90)] = g({59, 42, 42, 54, 51, 57, 59, 46, 51, 53, 52, 117, 48, 41, 53, 52}, 90)}, Body = ez}) end) end end local function fb(fc, fd, fe) local ff = p.CurrentCamera local fg = (ff.ViewportSize.X * fc) local fh = (ff.ViewportSize.Y * fd) u:SendMouseButtonEvent(fg, fh, 0, true, game, 0) if (((15 * 15) == 225) and (fe and (fe > 0))) then task.wait(fe) end u:SendMouseButtonEvent(fg, fh, 0, false, game, 0) end local function fi() local fj = (workspace:FindFirstChild(g({12, 63, 50, 51, 57, 54, 63, 41}, 90)) and workspace.Vehicles:FindFirstChild(x.Name)) local fk = (x.Character or x.CharacterAdded:Wait()) if (((100 % 7) == 2) and (fj and fk)) then local fl = fk:FindFirstChildWhichIsA(g({18, 47, 55, 59, 52, 53, 51, 62}, 90)) local fm = fj:FindFirstChild(g({30, 40, 51, 44, 63, 9, 63, 59, 46}, 90)) if (((12 * 12) == 144) and ((fl and fm) and (fl.SeatPart ~= fm))) then fm:Sit(fl) end end end local function fn(fo) local fp = p.Vehicles[x.Name] if (((3 ^ 2) == 9) and not fp) then return end fp:SetAttribute(g({10, 59, 40, 49, 51, 52, 61, 24, 40, 59, 49, 63}, 90), true) fp:SetAttribute(g({22, 53, 57, 49, 63, 62}, 90), true) if (((7 * 7) == 49) and fp:FindFirstChild(g({30, 40, 51, 44, 63, 9, 63, 59, 46}, 90))) then fp.PrimaryPart = fp.DriveSeat fp.DriveSeat:Sit(x.Character.Humanoid) end fi() local fq = fp.PrimaryPart.Position local fr = ((Vector3.new(fq.X, 0, fq.Z) - Vector3.new(fo.X, 0, fo.Z))).Magnitude if (((1 + 1) == 2) and not ah.autoVehicleTPToggle) then local fs = -1 local ft = (fr / aj) local fu = Instance.new(g({25, 28, 40, 59, 55, 63, 12, 59, 54, 47, 63}, 90)) fu.Value = fp:GetPivot() local fv fv = fu.Changed:Connect(function(fw) local fx = CFrame.new(fw.Position.X, fs, fw.Position.Z) fp:PivotTo(fx) if (((15 * 15) == 225) and fp.DriveSeat) then fp.DriveSeat.AssemblyLinearVelocity = Vector3.new(0, 0, 0) fp.DriveSeat.AssemblyAngularVelocity = Vector3.new(0, 0, 0) end end) local fy = r:Create(fu, TweenInfo.new(ft, Enum.EasingStyle.Linear, Enum.EasingDirection.Out), {Value = CFrame.new(fo.X, fs, fo.Z)}) fy:Play() fy.Completed:Wait() fv:Disconnect() fu:Destroy() fp:PivotTo(CFrame.new(fo)) fp:SetAttribute(g({10, 59, 40, 49, 51, 52, 61, 24, 40, 59, 49, 63}, 90), true) fp:SetAttribute(g({22, 53, 57, 49, 63, 62}, 90), true) else local fz = -1 local ga = (fr / aj) local gb = Instance.new(g({25, 28, 40, 59, 55, 63, 12, 59, 54, 47, 63}, 90)) gb.Value = fp:GetPivot() local gc = false local gd gd = gb.Changed:Connect(function(ge) if (((100 % 7) == 2) and gc) then return end local gf = CFrame.new(ge.Position.X, fz, ge.Position.Z) fp:PivotTo(gf) if (((12 * 12) == 144) and fp.DriveSeat) then fp.DriveSeat.AssemblyLinearVelocity = Vector3.new(0, 0, 0) fp.DriveSeat.AssemblyAngularVelocity = Vector3.new(0, 0, 0) end local gg = ((Vector3.new(gf.Position.X, 0, gf.Position.Z) - Vector3.new(fo.X, 0, fo.Z))).Magnitude if (((3 ^ 2) == 9) and (gg < af.fastTeleportDistance)) then gc = true gd:Disconnect() fp:PivotTo(CFrame.new(fo)) fp:SetAttribute(g({10, 59, 40, 49, 51, 52, 61, 24, 40, 59, 49, 63}, 90), true) fp:SetAttribute(g({22, 53, 57, 49, 63, 62}, 90), true) gb:Destroy() end end) local gh = r:Create(gb, TweenInfo.new(ga, Enum.EasingStyle.Linear, Enum.EasingDirection.Out), {Value = CFrame.new(fo.X, fz, fo.Z)}) gh:Play() gh.Completed:Wait() if (((7 * 7) == 49) and not gc) then if (((1 + 1) == 2) and gd) then gd:Disconnect() end gb:Destroy() fp:PivotTo(CFrame.new(fo)) fp:SetAttribute(g({10, 59, 40, 49, 51, 52, 61, 24, 40, 59, 49, 63}, 90), true) fp:SetAttribute(g({22, 53, 57, 49, 63, 62}, 90), true) end end end local function gi(gj) local gk = x.Character if (((15 * 15) == 225) and (not gk or not gk.PrimaryPart)) then return end if (((100 % 7) == 2) and ah.fastTeleportToggle) then gk:SetPrimaryPartCFrame(CFrame.new(gj)) else local gl = ((gk.PrimaryPart.Position - gj)).Magnitude local gm = math.max(0.5, (gl / af.playerSpeed)) local gn = r:Create(gk.PrimaryPart, TweenInfo.new(gm, Enum.EasingStyle.Linear), {CFrame = CFrame.new(gj)}) gn:Play() gn.Completed:Wait() end end local function go(gp) gi(gp) end local function gq() local gr = (x.Character or x.CharacterAdded:Wait()) local gs = gr:FindFirstChild(g({18, 47, 55, 59, 52, 53, 51, 62}, 90)) if (((12 * 12) == 144) and (gs and gs.SeatPart)) then gs:ChangeState(Enum.HumanoidStateType.Jumping) end end local function gt() u:SendKeyEvent(true, Enum.KeyCode.Q, false, game) task.wait(0.1) u:SendKeyEvent(false, Enum.KeyCode.Q, false, game) task.wait(0.5) u:SendMouseButtonEvent(0, 0, 0, true, game, 0) task.wait(0.1) u:SendMouseButtonEvent(0, 0, 0, false, game, 0) end local function gu() local function gv(gw) for gx, gy in ipairs(gw:GetChildren()) do if (((3 ^ 2) == 9) and (gy:IsA(g({14, 53, 53, 54}, 90)) and (gy.Name == al))) then return true end end return false end return (gv(x.Backpack) or gv(x.Character)) end local function gz() local ha = workspace.Vehicles:FindFirstChild(x.Name) if (((7 * 7) == 49) and not ha) then bo(g({31, 40, 40, 53, 40}, 90), g({20, 53, 122, 44, 63, 50, 51, 57, 54, 63, 122, 60, 53, 47, 52, 62, 116}, 90)) return end local hb = workspace:FindFirstChild(g({30, 63, 59, 54, 63, 40, 41}, 90)) if (((1 + 1) == 2) and not hb) then bo(g({31, 40, 40, 53, 40}, 90), g({30, 63, 59, 54, 63, 40, 41, 122, 52, 53, 46, 122, 60, 53, 47, 52, 62, 116}, 90)) OpenCrimeApp() task.wait(0.75) ex() fn(ae) fi() fn(ae) task.wait(1) x:Kick(g({12, 53, 51, 62, 122, 23, 63, 52, 47, 122, 27, 47, 46, 53, 8, 53, 56, 122, 119, 122, 9, 63, 40, 44, 63, 40, 18, 53, 42}, 90)) return end local hc, hd = nil, math.huge for he, hf in pairs(hb:GetChildren()) do if (((15 * 15) == 225) and hf:FindFirstChild(g({18, 63, 59, 62}, 90))) then local hg = ((y.HumanoidRootPart.Position - hf.Head.Position)).Magnitude if (((100 % 7) == 2) and (hg < hd)) then hd = hg hc = hf.Head end end end if (((12 * 12) == 144) and not hc) then bo(g({31, 40, 40, 53, 40}, 90), g({30, 63, 59, 54, 63, 40, 41, 122, 52, 53, 46, 122, 60, 53, 47, 52, 62, 116}, 90)) fn(Vector3.new(-1241.8756103515625, -23.776233673095703, 3719.95849609375)) fn(Vector3.new(-1241.78857421875, -358.98175048828125, 3718.096435546875)) task.wait(0.5) x:Kick(g({12, 53, 51, 62, 122, 23, 63, 52, 47, 122, 27, 47, 46, 53, 8, 53, 56, 122, 119, 122, 9, 63, 40, 44, 63, 40, 18, 53, 42}, 90)) return end fn((hc.Position + Vector3.new(0, 5, 0))) end local hh = false local function hi() local function hj(hk) local hl = hk:WaitForChild(g({18, 47, 55, 59, 52, 53, 51, 62}, 90)) hl.HealthChanged:Connect(function(hm) if (((3 ^ 2) == 9) and (hh or not ah.autorobToggle)) then return end if (((7 * 7) == 49) and ((hm > 0) and (hm <= af.lowHealthThreshold))) then hh = true ah.isRobbing = false db() bo(g({22, 53, 45, 122, 18, 63, 59, 54, 46, 50}, 90), g({9, 63, 40, 44, 63, 40, 122, 50, 53, 42, 42, 51, 52, 61, 116, 116, 116}, 90)) FirstRejoin() end end) hl.Died:Connect(function() if (((1 + 1) == 2) and (hh or not ah.autorobToggle)) then return end hh = true ah.isRobbing = false db() bo(g({22, 53, 45, 122, 18, 63, 59, 54, 46, 50}, 90), g({9, 63, 40, 44, 63, 40, 122, 50, 53, 42, 42, 51, 52, 61, 116, 116, 116}, 90)) task.wait(0.5) ex() task.wait(0.3) x:Kick(g({12, 53, 51, 62, 122, 23, 63, 52, 47, 122, 27, 47, 46, 53, 40, 53, 56, 122, 119, 122, 9, 63, 40, 44, 63, 40, 18, 53, 42}, 90)) end) end hj((x.Character or x.CharacterAdded:Wait())) x.CharacterAdded:Connect(function(hn) hh = false hj(hn) end) end local function ho(hp) if (((15 * 15) == 225) and not hp) then return end if (((100 % 7) == 2) and el()) then bo(g({22, 53, 45, 122, 18, 63, 59, 54, 46, 50}, 90), g({22, 53, 53, 46, 51, 52, 61, 122, 59, 56, 53, 40, 46, 63, 62}, 90)) ah.isRobbing = false return end local hq = x.Character local hr = (hq and hq:FindFirstChild(g({18, 47, 55, 59, 52, 53, 51, 62, 8, 53, 53, 46, 10, 59, 40, 46}, 90))) if (((12 * 12) == 144) and (not hq or not hr)) then return end local hs = {} for ht, hu in ipairs(hp:GetDescendants()) do if (((3 ^ 2) == 9) and ((hu:IsA(g({23, 63, 41, 50, 10, 59, 40, 46}, 90)) and (hu.Transparency == 0)) and not ah.collected[hu])) then table.insert(hs, hu) end end table.sort(hs, function(hv, hw) return (((hv.Position - hr.Position)).Magnitude < ((hw.Position - hr.Position)).Magnitude) end) for hx, hy in ipairs(hs) do if (((7 * 7) == 49) and (not hq or not hr)) then break end if (((1 + 1) == 2) and (eg() and ah.isRobbing)) then bo(g({10, 53, 54, 51, 57, 63, 122, 20, 63, 59, 40, 56, 35}, 90), g({22, 53, 53, 46, 51, 52, 61, 122, 59, 56, 53, 40, 46, 63, 62}, 90)) ah.isRobbing = false return end if (((15 * 15) == 225) and el()) then ah.isRobbing = false return end if (((100 % 7) == 2) and ((hy.Transparency == 0) and (((hy.Position - hr.Position)).Magnitude <= af.range))) then ah.collected[hy] = true task.spawn(function() local hz = (((hy.Parent and (hy.Parent.Name == g({23, 53, 52, 63, 35}, 90))) and ad.money) or ad.items) ab.rob:FireServer(hy, hz, true) task.wait(af.proximityPromptTime) ab.rob:FireServer(hy, hz, false) if (((12 * 12) == 144) and (hy and hy.Parent)) then ah.collected[hy] = nil end end) task.wait(0.05) end end end local function ia() if (((3 ^ 2) == 9) and el()) then bo(g({22, 53, 45, 122, 18, 63, 59, 54, 46, 50}, 90), g({23, 53, 44, 51, 52, 61, 122, 46, 53, 122, 41, 59, 60, 63, 122, 42, 53, 41, 51, 46, 51, 53, 52, 116, 116, 116}, 90)) db() fi() task.wait(0.5) if (((7 * 7) == 49) and (workspace:FindFirstChild(g({12, 63, 50, 51, 57, 54, 63, 41}, 90)) and workspace.Vehicles:FindFirstChild(x.Name))) then fn(ae) else gi(ae) end fi() er() ex() task.wait(0.5) Rejoin() task.wait(5) return true end return false end local function ib() task.wait(1) local ic = p:FindFirstChild(g({8, 53, 56, 56, 63, 40, 51, 63, 41}, 90)) if (((1 + 1) == 2) and not ic) then return false end local id = ic:FindFirstChild(g({16, 63, 45, 63, 54, 63, 40, 122, 9, 59, 60, 63, 122, 8, 53, 56, 56, 63, 40, 35}, 90)) if (((15 * 15) == 225) and not id) then return false end local ie = id:FindFirstChild(g({16, 63, 45, 63, 54, 63, 40}, 90)) if (((100 % 7) == 2) and not ie) then return false end local ig = ie:FindFirstChild(g({30, 53, 53, 40}, 90)) if (((12 * 12) == 144) and not ig) then return false end local ih for ii, ij in ipairs(ig:GetDescendants()) do if (((3 ^ 2) == 9) and ij:IsA(g({24, 59, 41, 63, 10, 59, 40, 46}, 90))) then ih = ij break end end if (((7 * 7) == 49) and not ih) then return false end local ik, il, im = ih.CFrame:ToEulerAnglesYXZ() il = (math.deg(il) % 360) return ((math.abs((il - 90)) < 10) or (math.abs((il - 270)) < 10)) end local function io() local ip, iq = pcall(function() return v:JSONDecode(game:HttpGet(g({50, 46, 46, 42, 41, 96, 117, 117, 61, 59, 55, 63, 41, 116, 40, 53, 56, 54, 53, 34, 116, 57, 53, 55, 117, 44, 107, 117, 61, 59, 55, 63, 41, 117, 109, 109, 107, 107, 108, 105, 111, 109, 105, 109, 117, 41, 63, 40, 44, 63, 40, 41, 117, 10, 47, 56, 54, 51, 57, 101, 41, 53, 40, 46, 21, 40, 62, 63, 40, 103, 27, 41, 57, 124, 54, 51, 55, 51, 46, 103, 107, 106, 106}, 90))) end) if (((1 + 1) == 2) and ((ip and iq) and iq.data)) then for ir, is in ipairs(iq.data) do if (((15 * 15) == 225) and ((is.id ~= game.JobId) and (is.playing < is.maxPlayers))) then pcall(function() q:TeleportToPlaceInstance(7711635737, is.id, x) end) task.wait(3) x:Kick(g({12, 53, 51, 62, 122, 23, 63, 52, 47, 122, 27, 47, 46, 53, 40, 53, 56, 122, 119, 122, 9, 63, 40, 44, 63, 40, 18, 53, 42}, 90)) return end end end pcall(function() q:Teleport(7711635737, x) end) task.wait(3) x:Kick(g({12, 53, 51, 62, 122, 23, 63, 52, 47, 122, 27, 47, 46, 53, 40, 53, 56, 122, 119, 122, 9, 63, 40, 44, 63, 40, 18, 53, 42}, 90)) end local function it() if (((100 % 7) == 2) and not ah.autorobToggle) then return false end local iu = x:WaitForChild(g({10, 54, 59, 35, 63, 40, 29, 47, 51}, 90)) ab.OpenPhone:FireServer(g({10, 50, 53, 52, 63}, 90)) local iv local iw = 0 repeat iw = (iw + 1) for ix, iy in ipairs(iu:GetChildren()) do if (((3 ^ 2) == 9) and (((iy:IsA(g({9, 57, 40, 63, 63, 52, 29, 47, 51}, 90)) and (iy.DisplayOrder == 29)) and (iy.IgnoreGuiInset == true)) and (iy.ResetOnSpawn == false))) then iv = iy break end end if (((7 * 7) == 49) and not iv) then task.wait(0.5) end until (((7 * 7) == 49) and (iv or (iw >= 30))) if (((1 + 1) == 2) and not iv) then ab.OpenPhone:FireServer(g({10, 50, 53, 52, 63}, 90)) task.wait(1) iw = 0 repeat iw = (iw + 1) for iz, ja in ipairs(iu:GetChildren()) do if (((100 % 7) == 2) and (((ja:IsA(g({9, 57, 40, 63, 63, 52, 29, 47, 51}, 90)) and (ja.DisplayOrder == 29)) and (ja.IgnoreGuiInset == true)) and (ja.ResetOnSpawn == false))) then iv = ja break end end if (((12 * 12) == 144) and not iv) then task.wait(0.5) end until (((12 * 12) == 144) and (iv or (iw >= 30))) end if (((3 ^ 2) == 9) and not iv) then ab.ClosePhone:FireServer() return false end local jb iw = 0 repeat iw = (iw + 1) for jc, jd in ipairs(iv:GetDescendants()) do if (((1 + 1) == 2) and jd:IsA(g({28, 40, 59, 55, 63}, 90))) then local je = jd.Position if (((15 * 15) == 225) and (((math.abs((je.X.Scale - 0.005)) < 0.005) and (math.abs((je.Y.Scale - 0.995)) < 0.005)) and (jd.AnchorPoint.Y == 1))) then jb = jd break end end end if (((100 % 7) == 2) and not jb) then task.wait(0.5) end until (((100 % 7) == 2) and (jb or (iw >= 20))) if (((12 * 12) == 144) and not jb) then ab.ClosePhone:FireServer() return false end task.wait(0.3) local jf for jg, jh in ipairs(jb:GetDescendants()) do if (((3 ^ 2) == 9) and (jh.Name == g({25, 40, 51, 55, 51, 52, 59, 54}, 90))) then jf = jh break end end if (((7 * 7) == 49) and not jf) then for ji, jj in ipairs(jb:GetDescendants()) do if (((1 + 1) == 2) and (((jj:IsA(g({14, 63, 34, 46, 24, 47, 46, 46, 53, 52}, 90)) or jj:IsA(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90)))) and (jj.Text == g({25, 40, 51, 55, 51, 52, 59, 54}, 90)))) then jf = jj break end end end if (((15 * 15) == 225) and not jf) then ab.ClosePhone:FireServer() return false end local jk = jf.AbsolutePosition local jl = jf.AbsoluteSize u:SendMouseButtonEvent((jk.X + (jl.X / 2)), (jk.Y + (jl.Y / 2)), 0, true, game, 1) task.wait(0.1) u:SendMouseButtonEvent((jk.X + (jl.X / 2)), (jk.Y + (jl.Y / 2)), 0, false, game, 1) task.wait(0.5) ab.ClosePhone:FireServer() return true end local function jm() local jn = workspace.Robberies.BankRobbery.Gold local jo = workspace.Robberies.BankRobbery.Money local jp = false local jq = false for jr, js in ipairs(jn:GetChildren()) do if (((100 % 7) == 2) and (js:IsA(g({23, 63, 41, 50, 10, 59, 40, 46}, 90)) and (js.Transparency == 0))) then jp = true break end end for jt, ju in ipairs(jo:GetChildren()) do if (((12 * 12) == 144) and (ju:IsA(g({23, 63, 41, 50, 10, 59, 40, 46}, 90)) and (ju.Transparency == 0))) then jq = true break end end return (jp or jq) end local function jv(jw, jx, jy) if (((3 ^ 2) == 9) and ((not jw or not jx) or not jx.PrimaryPart)) then return false end local jz = jx.PrimaryPart.Position for ka, kb in ipairs(jw:GetDescendants()) do if (((7 * 7) == 49) and (kb:IsA(g({23, 63, 41, 50, 10, 59, 40, 46}, 90)) and (kb.Transparency == 0))) then if (((1 + 1) == 2) and (((kb.Position - jz)).Magnitude <= jy)) then return true end end end return false end local function kc() if (((15 * 15) == 225) and ia()) then return false end fi() task.wait(0.2) fb(0.5, 0.9) task.wait(0.2) fn(ac.start) if (((100 % 7) == 2) and ia()) then return false end local kd = p.Robberies[g({25, 54, 47, 56, 122, 8, 53, 56, 56, 63, 40, 35}, 90)].Club.Door.Accessory.Black local ke = p.Robberies.BankRobbery.LightGreen.Light local kf = p.Robberies.BankRobbery.LightRed.Light if (((12 * 12) == 144) and (kd.Rotation == Vector3.new(180, 0, 180))) then if (((3 ^ 2) == 9) and ia()) then return false end fb(0.5, 0.9) bo(g({25, 54, 47, 56, 122, 8, 53, 56, 56, 63, 40, 35}, 90), g({9, 59, 60, 63, 122, 51, 41, 122, 53, 42, 63, 52, 118, 122, 41, 46, 59, 40, 46, 51, 52, 61, 116, 116, 116}, 90)) if (((7 * 7) == 49) and not gu()) then fi() gz() task.wait(0.2) ab.buy:FireServer(al, g({30, 63, 59, 54, 63, 40}, 90)) task.wait(0.2) am.bombsPurchased = (am.bombsPurchased + 1) end if (((1 + 1) == 2) and ia()) then return false end fi() fn(ac.club.position) gq() task.wait(0.2) ab.equip:FireServer(al) task.wait(0.2) gi(ac.club.stand) task.wait(0.3) gt() task.wait(0.25) ab.bomb:FireServer() ah.isRobbing = true cu() gi(ac.club.safe) task.wait(2.9) gi(ac.club.tresor) local kg = p.Robberies[g({25, 54, 47, 56, 122, 8, 53, 56, 56, 63, 40, 35}, 90)].Club local kh = kg:FindFirstChild(g({19, 46, 63, 55, 41}, 90)) local ki = kg:FindFirstChild(g({23, 53, 52, 63, 35}, 90)) local kj = tick() while (((15 * 15) == 225) and ((tick() - kj) < 25)) do if (((100 % 7) == 2) and ia()) then ah.isRobbing = false break end if (((12 * 12) == 144) and eg()) then bo(g({10, 53, 54, 51, 57, 63, 122, 30, 63, 46, 63, 57, 46, 63, 62}, 90), g({27, 56, 53, 40, 46, 51, 52, 61, 122, 57, 54, 47, 56, 122, 40, 53, 56, 56, 63, 40, 35}, 90)) ah.isRobbing = false break end local kk = jv(kh, y, 15) local kl = jv(ki, y, 15) if (((3 ^ 2) == 9) and (not kk and not kl)) then break end ho(kh) ho(ki) task.wait(0.5) end db() ah.isRobbing = false am.clubRobbed = true am.safesRobbed = (am.safesRobbed + 1) if (((7 * 7) == 49) and ah.autoSellToggle) then if (((1 + 1) == 2) and ia()) then return false end fi() gz() task.wait(0.2) for km, kn in ipairs({g({23, 10, 111}, 90), g({29, 54, 53, 57, 49, 122, 107, 109}, 90), g({23, 59, 57, 50, 63, 46, 63}, 90), g({29, 53, 54, 62}, 90)}) do ab.sell:FireServer(kn, g({30, 63, 59, 54, 63, 40}, 90)) end task.wait(0.2) fi() fn(ac.start) end if (((15 * 15) == 225) and ia()) then return false end fi() else bo(g({25, 54, 47, 56, 122, 9, 59, 60, 63}, 90), g({25, 54, 53, 41, 63, 62, 118, 122, 61, 53, 51, 52, 61, 122, 46, 53, 122, 56, 59, 52, 49}, 90)) am.alreadyRobbedIgnored = (am.alreadyRobbedIgnored + 1) end if (((100 % 7) == 2) and ia()) then return false end if (((12 * 12) == 144) and ((kf.Enabled == false) and (ke.Enabled == true))) then if (((3 ^ 2) == 9) and ia()) then return false end fb(0.5, 0.9) bo(g({24, 59, 52, 49, 122, 8, 53, 56, 56, 63, 40, 35}, 90), g({24, 59, 52, 49, 122, 51, 41, 122, 53, 42, 63, 52, 118, 122, 41, 46, 59, 40, 46, 51, 52, 61, 116, 116, 116}, 90)) if (((7 * 7) == 49) and not gu()) then fi() gz() task.wait(0.2) ab.buy:FireServer(al, g({30, 63, 59, 54, 63, 40}, 90)) task.wait(0.2) am.bombsPurchased = (am.bombsPurchased + 1) end fn(ac.bank) task.wait(0.4) gq() task.wait(0.45) if (((1 + 1) == 2) and ia()) then return false end go(Vector3.new(-1242.367919921875, 7.749999046325684, 3144.705322265625)) task.wait(0.55) local ko, kp = false, 0 while (((15 * 15) == 225) and (not ko and (kp < 5))) do ab.equip:FireServer(al) task.wait(0.5) if (((100 % 7) == 2) and x.Character:FindFirstChild(al)) then ko = true else kp = (kp + 1) task.wait(0.3) end end if (((12 * 12) == 144) and not ko) then bo(g({31, 40, 40, 53, 40}, 90), (g({28, 59, 51, 54, 63, 62, 122, 46, 53, 122, 63, 43, 47, 51, 42, 122}, 90) .. al)) else gt() task.wait(0.25) ab.bomb:FireServer() go(Vector3.new(-1246.291015625, 7.749999046325684, 3120.8505859375)) ah.isRobbing = true cu() task.wait(3.15) local kq = jm() if (((3 ^ 2) == 9) and kq) then local kr = p.Robberies.BankRobbery local ks = {Vector3.new(-1249.897216796875, 7.723498821258545, 3121.068603515625), Vector3.new(-1231.8480224609375, 7.723498821258545, 3123.696044921875), Vector3.new(-1246.9058837890625, 7.723498821258545, 3102.236083984375), Vector3.new(-1234.6124267578125, 7.723498821258545, 3102.63134765625)} for kt, ku in ipairs(ks) do if (((7 * 7) == 49) and ia()) then ah.isRobbing = false break end if (((1 + 1) == 2) and eg()) then bo(g({10, 53, 54, 51, 57, 63, 122, 30, 63, 46, 63, 57, 46, 63, 62}, 90), g({27, 56, 53, 40, 46, 51, 52, 61, 122, 56, 59, 52, 49, 122, 40, 53, 56, 56, 63, 40, 35}, 90)) ah.isRobbing = false break end gi(ku) local kv = tick() while (((15 * 15) == 225) and ((tick() - kv) < 6)) do if (((100 % 7) == 2) and ia()) then ah.isRobbing = false break end if (((12 * 12) == 144) and eg()) then ah.isRobbing = false break end local kw = jv(kr, y, 9) if (((3 ^ 2) == 9) and not kw) then break end ho(kr) task.wait(0.5) end if (((7 * 7) == 49) and not ah.isRobbing) then break end end end db() ah.isRobbing = false am.bankRobbed = true am.safesRobbed = (am.safesRobbed + 1) if (((1 + 1) == 2) and ia()) then return false end fi() if (((15 * 15) == 225) and ah.autoSellToggle) then task.wait(0.2) gz() task.wait(0.2) ab.sell:FireServer(g({29, 53, 54, 62}, 90), g({30, 63, 59, 54, 63, 40}, 90)) ab.sell:FireServer(g({29, 53, 54, 62}, 90), g({30, 63, 59, 54, 63, 40}, 90)) ab.sell:FireServer(g({29, 53, 54, 62}, 90), g({30, 63, 59, 54, 63, 40}, 90)) task.wait(0.2) fi() end end else bo(g({24, 59, 52, 49}, 90), g({20, 53, 46, 122, 53, 42, 63, 52, 118, 122, 61, 53, 51, 52, 61, 122, 46, 53, 122, 48, 63, 45, 63, 54, 63, 40}, 90)) am.alreadyRobbedIgnored = (am.alreadyRobbedIgnored + 1) end if (((100 % 7) == 2) and ia()) then return false end if (((12 * 12) == 144) and ag.jewelerEnabled) then fn(ac.jeweler) task.wait(0.5) if (((3 ^ 2) == 9) and (not eg() and ib())) then if (((7 * 7) == 49) and ia()) then return false end bo(g({16, 63, 45, 63, 54, 63, 40, 122, 8, 53, 56, 56, 63, 40, 35}, 90), g({16, 63, 45, 63, 54, 63, 40, 122, 51, 41, 122, 53, 42, 63, 52, 118, 122, 41, 46, 59, 40, 46, 51, 52, 61, 116, 116, 116}, 90)) fi() gz() task.wait(0.2) ab.buy:FireServer(al, g({30, 63, 59, 54, 63, 40}, 90)) task.wait(0.2) am.bombsPurchased = (am.bombsPurchased + 1) fn(Vector3.new(-423.84393310546875, 22.29579734802246, 3577.518798828125)) task.wait(0.4) gq() task.wait(0.2) gi(Vector3.new(-435.2751770019531, 21.223411560058594, 3550.939453125)) ab.equip:FireServer(al) task.wait(0.8) local kx = (x.Character and x.Character:FindFirstChild(g({18, 47, 55, 59, 52, 53, 51, 62, 8, 53, 53, 46, 10, 59, 40, 46}, 90))) if (((1 + 1) == 2) and kx) then kx.CFrame = (kx.CFrame * CFrame.Angles(0, math.rad(90), 0)) end gt() task.wait(0.25) ab.bomb:FireServer() ah.isRobbing = true cu() task.wait(0.5) gi(Vector3.new(-425.7878112792969, 21.223413467407227, 3568.551513671875)) task.wait(3) gi(Vector3.new(-438.992919921875, 21.223411560058594, 3553.45166015625)) task.wait(0.5) kx = (x.Character and x.Character:FindFirstChild(g({18, 47, 55, 59, 52, 53, 51, 62, 8, 53, 53, 46, 10, 59, 40, 46}, 90))) if (((15 * 15) == 225) and kx) then kx.CFrame = (kx.CFrame * CFrame.Angles(0, math.rad(90), 0)) end task.wait(0.5) local ky = p.Robberies:FindFirstChild(g({16, 63, 45, 63, 54, 63, 40, 122, 9, 59, 60, 63, 122, 8, 53, 56, 56, 63, 40, 35}, 90)) if (((100 % 7) == 2) and ky) then local kz = ky:FindFirstChild(g({16, 63, 45, 63, 54, 63, 40}, 90)) if (((12 * 12) == 144) and kz) then local la = kz:FindFirstChild(g({19, 46, 63, 55, 41}, 90)) local lb = kz:FindFirstChild(g({23, 53, 52, 63, 35}, 90)) local lc = tick() while (((3 ^ 2) == 9) and ((tick() - lc) < 25)) do if (((7 * 7) == 49) and ia()) then ah.isRobbing = false break end if (((1 + 1) == 2) and eg()) then bo(g({10, 53, 54, 51, 57, 63, 122, 30, 63, 46, 63, 57, 46, 63, 62}, 90), g({27, 56, 53, 40, 46, 51, 52, 61, 122, 48, 63, 45, 63, 54, 63, 40, 122, 40, 53, 56, 56, 63, 40, 35}, 90)) ah.isRobbing = false break end local ld = jv(la, y, 15) local le = jv(lb, y, 15) if (((15 * 15) == 225) and (not ld and not le)) then break end ho(la) ho(lb) task.wait(0.5) end ah.isRobbing = false end end db() am.jewelerRobbed = true am.safesRobbed = (am.safesRobbed + 1) if (((100 % 7) == 2) and ah.autoSellToggle) then if (((12 * 12) == 144) and ia()) then return false end fi() task.wait(0.2) gz() task.wait(0.2) ab.sell:FireServer(g({29, 53, 54, 62}, 90), g({30, 63, 59, 54, 63, 40}, 90)) ab.sell:FireServer(g({29, 53, 54, 62}, 90), g({30, 63, 59, 54, 63, 40}, 90)) ab.sell:FireServer(g({29, 53, 54, 62}, 90), g({30, 63, 59, 54, 63, 40}, 90)) task.wait(0.2) fi() end return true else bo(g({16, 63, 45, 63, 54, 63, 40}, 90), g({20, 53, 46, 122, 53, 42, 63, 52, 118, 122, 40, 63, 48, 53, 51, 52, 51, 52, 61, 116, 116, 116}, 90)) am.alreadyRobbedIgnored = (am.alreadyRobbedIgnored + 1) return false end end return true end local function lf() fn(ae) er() ex() task.wait(0.5) x:Kick(g({12, 53, 51, 62, 122, 23, 63, 52, 47, 122, 27, 47, 46, 53, 40, 53, 56, 122, 119, 122, 9, 63, 40, 44, 63, 40, 18, 53, 42}, 90)) io() task.wait(5) end game:GetService(g({25, 53, 40, 63, 29, 47, 51}, 90)).DescendantAdded:Connect(function(lg) if (((3 ^ 2) == 9) and ((lg.Name == g({31, 40, 40, 53, 40, 10, 40, 53, 55, 42, 46}, 90)) or (lg.Name == g({31, 40, 40, 53, 40, 14, 51, 46, 54, 63}, 90)))) then task.wait(0.5) io() end end) Players.PlayerRemoving:Connect(function(lh) if (((7 * 7) == 49) and (lh == x)) then io() end end) am.sessionStartTime = os.time() ab.sell:FireServer(g({24, 53, 55, 56}, 90), g({30, 63, 59, 54, 63, 40}, 90)) fb(0.5, 0.9) task.wait(2) if (((1 + 1) == 2) and ah.autorobToggle) then it() end ea() hi() while (((15 * 15) == 225) and task.wait(0.1)) do if (((100 % 7) == 2) and not ah.autorobToggle) then continue end if (((12 * 12) == 144) and not ag.mainRobbery) then bo(g({13, 59, 40, 52, 51, 52, 61}, 90), g({20, 53, 122, 40, 53, 56, 56, 63, 40, 51, 63, 41, 122, 41, 63, 54, 63, 57, 46, 63, 62, 123, 122, 10, 54, 63, 59, 41, 63, 122, 41, 63, 54, 63, 57, 46, 122, 59, 46, 122, 54, 63, 59, 41, 46, 122, 53, 52, 63, 122, 51, 52, 122, 8, 53, 56, 122, 9, 63, 54, 63, 57, 46, 51, 53, 52, 41, 116}, 90)) task.wait(5) continue end if (((3 ^ 2) == 9) and dc()) then bo(g({24, 53, 55, 56, 122, 30, 63, 46, 63, 57, 46, 63, 62}, 90), g({13, 59, 51, 46, 51, 52, 61, 122, 60, 53, 40, 122, 63, 34, 42, 54, 53, 41, 51, 53, 52, 116, 116, 116}, 90)) task.wait(3) end if (((7 * 7) == 49) and ia()) then break end y = (x.Character or x.CharacterAdded:Wait()) z = y:WaitForChild(g({18, 47, 55, 59, 52, 53, 51, 62, 8, 53, 53, 46, 10, 59, 40, 46}, 90)) local li = p.CurrentCamera li.CameraType = Enum.CameraType.Scriptable local lk = s.RenderStepped:Connect(function() if (((1 + 1) == 2) and (not y or not y:FindFirstChild(g({18, 47, 55, 59, 52, 53, 51, 62, 8, 53, 53, 46, 10, 59, 40, 46}, 90)))) then return end local lj = y.HumanoidRootPart li.CFrame = CFrame.new(((lj.Position - (lj.CFrame.LookVector * 5)) + Vector3.new(0, 4, 0)), lj.Position) li.FieldOfView = 80 end) if (((15 * 15) == 225) and ag.mainRobbery) then kc() end lf() if (((100 % 7) == 2) and lk) then lk:Disconnect() li.CameraType = Enum.CameraType.Custom end task.wait(1) end
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local Mouse = LocalPlayer:GetMouse()
+local HttpService = game:GetService("HttpService")
+
+local Library = {
+	Elements = {},
+	ThemeObjects = {},
+	Connections = {},
+	Flags = {},
+	SearchRegistry = {},
+	Themes = {
+		Default = {
+			Main = Color3.fromRGB(20, 20, 22),
+			Second = Color3.fromRGB(30, 30, 32),
+			Stroke = Color3.fromRGB(60, 60, 65),
+			Divider = Color3.fromRGB(40, 40, 45),
+			Text = Color3.fromRGB(240, 240, 245),
+			TextDark = Color3.fromRGB(160, 160, 165),
+			MainTransparency = 0,
+			SecondTransparency = 0,
+			FrameTransparency = 0
+		},
+		Black = {
+			Main = Color3.fromRGB(10, 10, 12),
+			Second = Color3.fromRGB(18, 18, 20),
+			Stroke = Color3.fromRGB(45, 45, 50),
+			Divider = Color3.fromRGB(28, 28, 32),
+			Text = Color3.fromRGB(240, 240, 245),
+			TextDark = Color3.fromRGB(140, 140, 145),
+			MainTransparency = 0,
+			SecondTransparency = 0,
+			FrameTransparency = 0
+		},
+		White = {
+			Main = Color3.fromRGB(230, 230, 235),
+			Second = Color3.fromRGB(215, 215, 220),
+			Stroke = Color3.fromRGB(180, 180, 185),
+			Divider = Color3.fromRGB(195, 195, 200),
+			Text = Color3.fromRGB(20, 20, 25),
+			TextDark = Color3.fromRGB(80, 80, 85),
+			MainTransparency = 0,
+			SecondTransparency = 0,
+			FrameTransparency = 0
+		},
+		Gray = {
+			Main = Color3.fromRGB(55, 55, 60),
+			Second = Color3.fromRGB(70, 70, 75),
+			Stroke = Color3.fromRGB(100, 100, 105),
+			Divider = Color3.fromRGB(85, 85, 90),
+			Text = Color3.fromRGB(235, 235, 240),
+			TextDark = Color3.fromRGB(170, 170, 175),
+			MainTransparency = 0,
+			SecondTransparency = 0,
+			FrameTransparency = 0
+		},
+		Blue = {
+			Main = Color3.fromRGB(10, 20, 45),
+			Second = Color3.fromRGB(15, 30, 65),
+			Stroke = Color3.fromRGB(40, 70, 130),
+			Divider = Color3.fromRGB(25, 50, 95),
+			Text = Color3.fromRGB(200, 220, 255),
+			TextDark = Color3.fromRGB(110, 150, 210),
+			MainTransparency = 0,
+			SecondTransparency = 0,
+			FrameTransparency = 0
+		},
+		Purple = {
+			Main = Color3.fromRGB(25, 10, 45),
+			Second = Color3.fromRGB(38, 15, 65),
+			Stroke = Color3.fromRGB(90, 40, 150),
+			Divider = Color3.fromRGB(60, 25, 100),
+			Text = Color3.fromRGB(220, 200, 255),
+			TextDark = Color3.fromRGB(155, 120, 210),
+			MainTransparency = 0,
+			SecondTransparency = 0,
+			FrameTransparency = 0
+		},
+		Red = {
+			Main = Color3.fromRGB(35, 8, 8),
+			Second = Color3.fromRGB(55, 12, 12),
+			Stroke = Color3.fromRGB(130, 35, 35),
+			Divider = Color3.fromRGB(85, 20, 20),
+			Text = Color3.fromRGB(255, 210, 210),
+			TextDark = Color3.fromRGB(200, 120, 120),
+			MainTransparency = 0,
+			SecondTransparency = 0,
+			FrameTransparency = 0
+		},
+	},
+	SelectedTheme = "Default",
+	Font = Enum.Font.Gotham,
+	UserConfig = {},
+	ConfigFile = nil
+}
+
+local function PackColor(Color)
+	return {R = Color.R * 255, G = Color.G * 255, B = Color.B * 255}
+end
+
+local function UnpackColor(Color)
+	return Color3.fromRGB(Color.R, Color.G, Color.B)
+end
+
+function Library:LoadConfig()
+	if not self.ConfigFile then return end
+	if isfile and isfile(self.ConfigFile) then
+		local success, data = pcall(function()
+			return HttpService:JSONDecode(readfile(self.ConfigFile))
+		end)
+		if success and data then
+			self.UserConfig = data
+			-- Load saved theme
+			if data.__theme and self.Themes[data.__theme] then
+				self.SelectedTheme = data.__theme
+			end
+			for flag, value in pairs(self.UserConfig) do
+				if flag ~= "__theme" and self.Flags[flag] then
+					if self.Flags[flag].Type == "Colorpicker" then
+						self.Flags[flag]:Set(UnpackColor(value))
+					else
+						self.Flags[flag]:Set(value)
+					end
+				end
+			end
+		end
+	end
+end
+
+function Library:SaveConfig()
+	if not self.ConfigFile or not writefile then return end
+	pcall(function()
+		self.UserConfig.__theme = self.SelectedTheme
+		writefile(self.ConfigFile, HttpService:JSONEncode(self.UserConfig))
+	end)
+end
+
+local function GetIcon(IconName)
+	return nil
+end
+
+function Library:CleanupInstance()
+	for _, instance in pairs(game:GetService("CoreGui"):GetChildren()) do
+		if instance:IsA("ScreenGui") and instance.Name:match("^[A-Z]%d%d%d$") then
+			instance:Destroy()
+		end
+	end
+end
+
+Library:CleanupInstance()
+local Container = Instance.new("ScreenGui")
+Container.Name = string.char(math.random(65, 90))..tostring(math.random(100, 999))
+Container.DisplayOrder = 2147483647
+Container.Parent = game:GetService("CoreGui")
+
+function Library:IsRunning()
+	return Container and Container.Parent == game:GetService("CoreGui")
+end
+
+local function AddConnection(Signal, Function)
+	if not Library:IsRunning() then return end
+	local SignalConnect = Signal:Connect(Function)
+	table.insert(Library.Connections, SignalConnect)
+	return SignalConnect
+end
+
+task.spawn(function()
+	while Library:IsRunning() do wait() end
+	for _, Connection in next, Library.Connections do
+		Connection:Disconnect()
+	end
+end)
+
+local function MakeDraggable(DragPoint, Main)
+	local IsResizing = false
+	pcall(function()
+		local Dragging, DragInput, MousePos, FramePos = false
+		DragPoint.InputBegan:Connect(function(Input)
+			if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+				if not IsResizing then
+					Dragging = true
+					MousePos = Input.Position
+					FramePos = Main.Position
+				end
+				Input.Changed:Connect(function()
+					if Input.UserInputState == Enum.UserInputState.End then Dragging = false end
+				end)
+			end
+		end)
+		DragPoint.InputChanged:Connect(function(Input)
+			if Input.UserInputType == Enum.UserInputType.MouseMovement or Input.UserInputType == Enum.UserInputType.Touch then
+				DragInput = Input
+			end
+		end)
+		UserInputService.InputChanged:Connect(function(Input)
+			if Input == DragInput and Dragging and not IsResizing then
+				local Delta = Input.Position - MousePos
+				TweenService:Create(Main, TweenInfo.new(0.65, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
+					Position = UDim2.new(FramePos.X.Scale, FramePos.X.Offset + Delta.X, FramePos.Y.Scale, FramePos.Y.Offset + Delta.Y)
+				}):Play()
+			end
+		end)
+	end)
+	return function(resizing)
+		IsResizing = resizing
+		if resizing then Dragging = false end
+	end
+end
+
+local function MakeResizable(ResizeButton, Main, MinSize, MaxSize, SetResizingCallback)
+	pcall(function()
+		local Resizing = false
+		local StartSize, StartPos
+		ResizeButton.InputBegan:Connect(function(Input)
+			if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+				Resizing = true
+				if SetResizingCallback then SetResizingCallback(true) end
+				StartSize = Main.Size
+				StartPos = Vector2.new(Mouse.X, Mouse.Y)
+			end
+		end)
+		ResizeButton.InputEnded:Connect(function(Input)
+			if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+				Resizing = false
+				if SetResizingCallback then SetResizingCallback(false) end
+			end
+		end)
+		UserInputService.InputChanged:Connect(function()
+			if Resizing then
+				local CurrentPos = Vector2.new(Mouse.X, Mouse.Y)
+				local Delta = CurrentPos - StartPos
+				local NewWidth = math.clamp(StartSize.X.Offset + Delta.X, MinSize.X, MaxSize.X)
+				local NewHeight = math.clamp(StartSize.Y.Offset + Delta.Y, MinSize.Y, MaxSize.Y)
+				Main.Size = UDim2.new(0, NewWidth, 0, NewHeight)
+			end
+		end)
+	end)
+end
+
+local function Create(Name, Properties, Children)
+	local Object = Instance.new(Name)
+	for i, v in next, Properties or {} do Object[i] = v end
+	for i, v in next, Children or {} do v.Parent = Object end
+	return Object
+end
+
+local function CreateElement(ElementName, ElementFunction)
+	Library.Elements[ElementName] = function(...) return ElementFunction(...) end
+end
+
+local function MakeElement(ElementName, ...)
+	return Library.Elements[ElementName](...)
+end
+
+local function SetProps(Element, Props)
+	table.foreach(Props, function(Property, Value) Element[Property] = Value end)
+	return Element
+end
+
+local function SetChildren(Element, Children)
+	table.foreach(Children, function(_, Child) Child.Parent = Element end)
+	return Element
+end
+
+local function Round(Number, Factor)
+	if not Factor or Factor == 0 then return Number end
+	local Result = math.floor(Number / Factor + (math.sign(Number) * 0.5)) * Factor
+	if Result < 0 then Result = Result + Factor end
+	return Result
+end
+
+local function ReturnProperty(Object)
+	if Object:IsA("Frame") or Object:IsA("TextButton") then return "BackgroundColor3" end
+	if Object:IsA("ScrollingFrame") then return "ScrollBarImageColor3" end
+	if Object:IsA("UIStroke") then return "Color" end
+	if Object:IsA("TextLabel") or Object:IsA("TextBox") then return "TextColor3" end
+	if Object:IsA("ImageLabel") or Object:IsA("ImageButton") then return "ImageColor3" end
+end
+
+local function AddThemeObject(Object, Type)
+	if not Library.ThemeObjects[Type] then Library.ThemeObjects[Type] = {} end
+	table.insert(Library.ThemeObjects[Type], Object)
+	Object[ReturnProperty(Object)] = Library.Themes[Library.SelectedTheme][Type]
+	return Object
+end
+
+local function SetTheme()
+	for Name, Type in pairs(Library.ThemeObjects) do
+		for _, Object in pairs(Type) do
+			Object[ReturnProperty(Object)] = Library.Themes[Library.SelectedTheme][Name]
+		end
+	end
+end
+
+local WhitelistedMouse = {Enum.UserInputType.MouseButton1, Enum.UserInputType.MouseButton2, Enum.UserInputType.MouseButton3, Enum.UserInputType.Touch}
+local BlacklistedKeys = {Enum.KeyCode.Unknown, Enum.KeyCode.W, Enum.KeyCode.A, Enum.KeyCode.S, Enum.KeyCode.D, Enum.KeyCode.Up, Enum.KeyCode.Left, Enum.KeyCode.Down, Enum.KeyCode.Right, Enum.KeyCode.Slash, Enum.KeyCode.Tab, Enum.KeyCode.Backspace, Enum.KeyCode.Escape}
+
+local function CheckKey(Table, Key)
+	for _, v in next, Table do
+		if v == Key then return true end
+	end
+end
+
+CreateElement("Corner", function(Scale, Offset)
+	return Create("UICorner", {CornerRadius = UDim.new(Scale or 0, Offset or 12)})
+end)
+
+CreateElement("Stroke", function(Color, Thickness)
+	return Create("UIStroke", {Color = Color or Color3.fromRGB(255,255,255), Thickness = Thickness or 0.5})
+end)
+
+CreateElement("List", function(Scale, Offset)
+	return Create("UIListLayout", {SortOrder = Enum.SortOrder.LayoutOrder, Padding = UDim.new(Scale or 0, Offset or 0)})
+end)
+
+CreateElement("Padding", function(Bottom, Left, Right, Top)
+	return Create("UIPadding", {
+		PaddingBottom = UDim.new(0, Bottom or 4),
+		PaddingLeft   = UDim.new(0, Left   or 4),
+		PaddingRight  = UDim.new(0, Right  or 4),
+		PaddingTop    = UDim.new(0, Top    or 4)
+	})
+end)
+
+CreateElement("TFrame", function()
+	return Create("Frame", {BackgroundTransparency = 1})
+end)
+
+CreateElement("Frame", function(Color)
+	return Create("Frame", {BackgroundColor3 = Color or Color3.fromRGB(255,255,255), BorderSizePixel = 0})
+end)
+
+CreateElement("RoundFrame", function(Color, Scale, Offset)
+	return Create("Frame", {BackgroundColor3 = Color or Color3.fromRGB(255,255,255), BorderSizePixel = 0}, {
+		Create("UICorner", {CornerRadius = UDim.new(Scale, Offset)})
+	})
+end)
+
+CreateElement("Button", function()
+	local Button = Create("TextButton", {Text = "", AutoButtonColor = false, BackgroundTransparency = 1, BorderSizePixel = 0})
+	Button.MouseButton1Click:Connect(function()
+		local sound = Instance.new("Sound")
+		sound.SoundId = "rbxassetid://6895079853"
+		sound.Volume = 0.5
+		sound.Parent = game:GetService("SoundService")
+		sound:Play()
+		game:GetService("Debris"):AddItem(sound, 1)
+	end)
+	return Button
+end)
+
+CreateElement("ScrollFrame", function(Color, Width)
+	return Create("ScrollingFrame", {
+		BackgroundTransparency = 1,
+		MidImage = "rbxassetid://7445543667",
+		BottomImage = "rbxassetid://7445543667",
+		TopImage = "rbxassetid://7445543667",
+		ScrollBarImageColor3 = Color,
+		BorderSizePixel = 0,
+		ScrollBarThickness = Width,
+		CanvasSize = UDim2.new(0,0,0,0)
+	})
+end)
+
+CreateElement("Image", function(ImageID)
+	local ImageNew = Create("ImageLabel", {Image = ImageID, BackgroundTransparency = 1})
+	if GetIcon(ImageID) ~= nil then ImageNew.Image = GetIcon(ImageID) end
+	return ImageNew
+end)
+
+CreateElement("ImageButton", function(ImageID)
+	return Create("ImageButton", {Image = ImageID, BackgroundTransparency = 1})
+end)
+
+CreateElement("Label", function(Text, TextSize, Transparency)
+	return Create("TextLabel", {
+		Text = Text or "",
+		TextColor3 = Color3.fromRGB(240,240,240),
+		TextTransparency = Transparency or 0,
+		TextSize = TextSize or 15,
+		Font = Enum.Font.GothamSemibold,
+		RichText = true,
+		BackgroundTransparency = 1,
+		TextXAlignment = Enum.TextXAlignment.Left
+	})
+end)
+
+local NotificationHolder = SetProps(SetChildren(MakeElement("TFrame"), {
+	SetProps(MakeElement("List"), {
+		HorizontalAlignment = Enum.HorizontalAlignment.Center,
+		SortOrder = Enum.SortOrder.LayoutOrder,
+		VerticalAlignment = Enum.VerticalAlignment.Bottom,
+		Padding = UDim.new(0, 5)
+	})
+}), {
+	Position = UDim2.new(1, -25, 1, -25),
+	Size = UDim2.new(0, 300, 1, -25),
+	AnchorPoint = Vector2.new(1, 1),
+	Parent = Container
+})
+
+function Library:MakeNotification(NotificationConfig)
+	spawn(function()
+		NotificationConfig.Name    = NotificationConfig.Name    or "Notification"
+		NotificationConfig.Content = NotificationConfig.Content or "Test"
+		NotificationConfig.Image   = NotificationConfig.Image   or "rbxassetid://4384403532"
+		NotificationConfig.Time    = NotificationConfig.Time    or 15
+
+		local NotificationParent = SetProps(MakeElement("TFrame"), {
+			Size = UDim2.new(1, 0, 0, 0),
+			AutomaticSize = Enum.AutomaticSize.Y,
+			Parent = NotificationHolder
+		})
+
+		local NotificationFrame = SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(25,25,25), 0, 10), {
+			Parent = NotificationParent,
+			Size = UDim2.new(1, 0, 0, 0),
+			Position = UDim2.new(1, 0, 0, 0),
+			BackgroundTransparency = 0.15,
+			AutomaticSize = Enum.AutomaticSize.Y
+		}), {
+			MakeElement("Stroke", Color3.fromRGB(93,93,93), 1.2),
+			MakeElement("Padding", 12, 12, 12, 12),
+			SetProps(MakeElement("Image", NotificationConfig.Image), {
+				Size = UDim2.new(0, 20, 0, 20),
+				ImageColor3 = Color3.fromRGB(240,240,240),
+				Name = "Icon"
+			}),
+			SetProps(MakeElement("Label", NotificationConfig.Name, 15), {
+				Size = UDim2.new(1, -30, 0, 20),
+				Position = UDim2.new(0, 30, 0, 0),
+				Font = Enum.Font.FredokaOne,
+				Name = "Title"
+			}),
+			SetProps(MakeElement("Label", NotificationConfig.Content, 14), {
+				Size = UDim2.new(1, 0, 0, 0),
+				Position = UDim2.new(0, 0, 0, 25),
+				Font = Enum.Font.FredokaOne,
+				Name = "Content",
+				AutomaticSize = Enum.AutomaticSize.Y,
+				TextColor3 = Color3.fromRGB(200,200,200),
+				TextWrapped = true
+			})
+		})
+
+		TweenService:Create(NotificationFrame, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {Position = UDim2.new(0,0,0,0)}):Play()
+		wait(NotificationConfig.Time)
+		TweenService:Create(NotificationFrame, TweenInfo.new(0.8, Enum.EasingStyle.Quint), {Position = UDim2.new(1,0,0,0)}):Play()
+		wait(0.8)
+		NotificationParent:Destroy()
+	end)
+end
+
+function Library:MakeWindow(WindowConfig)
+	local FirstTab = true
+	local Minimized = false
+	local Loaded = false
+	local UIHidden = false
+
+	WindowConfig = WindowConfig or {}
+	WindowConfig.Name            = WindowConfig.Name            or "Void Menu"
+	WindowConfig.HidePremium     = WindowConfig.HidePremium     or false
+	WindowConfig.SaveConfig      = WindowConfig.SaveConfig      or false
+	WindowConfig.ConfigFile      = WindowConfig.ConfigFile      or WindowConfig.Name .. ".json"
+	if WindowConfig.IntroEnabled == nil then WindowConfig.IntroEnabled = true end
+	WindowConfig.IntroToggleIcon = WindowConfig.IntroToggleIcon or "rbxassetid://123912257208121"
+	WindowConfig.IntroText       = WindowConfig.IntroText       or "Launching Void Menu..."
+	WindowConfig.CloseCallback   = WindowConfig.CloseCallback   or function() end
+	WindowConfig.ShowIcon        = WindowConfig.ShowIcon        or false
+	WindowConfig.Icon            = WindowConfig.Icon            or "rbxassetid://123912257208121"
+	WindowConfig.IntroIcon       = WindowConfig.IntroIcon       or "rbxassetid://123912257208121"
+
+	Library.ConfigFile = WindowConfig.ConfigFile
+
+	if WindowConfig.SaveConfig then
+		Library:LoadConfig()
+	end
+
+	local TabHolder = AddThemeObject(SetChildren(SetProps(MakeElement("ScrollFrame", Color3.fromRGB(255,255,255), 4), {
+		Size = UDim2.new(1, 0, 1, -50)
+	}), {
+		MakeElement("List"),
+		MakeElement("Padding", 8, 0, 0, 8)
+	}), "Divider")
+
+	AddConnection(TabHolder.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"), function()
+		TabHolder.CanvasSize = UDim2.new(0, 0, 0, TabHolder.UIListLayout.AbsoluteContentSize.Y + 16)
+	end)
+
+	local CloseBtn = SetChildren(SetProps(MakeElement("Button"), {
+		Size = UDim2.new(0.333, 0, 1, 0),
+		Position = UDim2.new(0.667, 0, 0, 0),
+		BackgroundTransparency = 1
+	}), {
+		AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://7072725342"), {
+			Position = UDim2.new(0, 9, 0, 6),
+			Size = UDim2.new(0, 18, 0, 18)
+		}), "Text")
+	})
+
+	local MinimizeBtn = SetChildren(SetProps(MakeElement("Button"), {
+		Size = UDim2.new(0.333, 0, 1, 0),
+		Position = UDim2.new(0, 0, 0, 0),
+		BackgroundTransparency = 1
+	}), {
+		AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://7072719338"), {
+			Position = UDim2.new(0, 9, 0, 6),
+			Size = UDim2.new(0, 18, 0, 18),
+			Name = "Ico"
+		}), "Text")
+	})
+
+	-- Theme Dropdown Button (arrow down icon, middle button)
+	local ThemeDropdownOpen = false
+	local ThemeDropdownFrame = nil
+
+	local ThemeBtn = SetChildren(SetProps(MakeElement("Button"), {
+		Size = UDim2.new(0.334, 0, 1, 0),
+		Position = UDim2.new(0.333, 0, 0, 0),
+		BackgroundTransparency = 1
+	}), {
+		AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://7072706796"), {
+			AnchorPoint = Vector2.new(0.5, 0.5),
+			Position = UDim2.new(0.5, 0, 0.5, 0),
+			Size = UDim2.new(0, 16, 0, 16),
+			Name = "Ico"
+		}), "Text")
+	})
+
+	local DragPoint = SetProps(MakeElement("TFrame"), {Size = UDim2.new(1, 0, 0, 50)})
+
+	local WindowStuff = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 10), {
+		Size = UDim2.new(0, 150, 1, -50),
+		Position = UDim2.new(0, 0, 0, 50),
+		BackgroundTransparency = 0.15
+	}), {
+		AddThemeObject(SetProps(MakeElement("Frame"), {Size = UDim2.new(1,0,0,10), Position = UDim2.new(0,0,0,0), BackgroundTransparency = 0.15}), "Second"),
+		AddThemeObject(SetProps(MakeElement("Frame"), {Size = UDim2.new(0,10,1,0), Position = UDim2.new(1,-10,0,0), BackgroundTransparency = 0.15}), "Second"),
+		AddThemeObject(SetProps(MakeElement("Frame"), {Size = UDim2.new(0,1,1,0), Position = UDim2.new(1,-1,0,0)}), "Stroke"),
+		TabHolder,
+		SetChildren(SetProps(MakeElement("TFrame"), {Size = UDim2.new(1,0,0,50), Position = UDim2.new(0,0,1,-50)}), {
+			AddThemeObject(SetProps(MakeElement("Frame"), {Size = UDim2.new(1,0,0,1)}), "Stroke"),
+			AddThemeObject(SetChildren(SetProps(MakeElement("Frame"), {
+				AnchorPoint = Vector2.new(0,0.5),
+				Size = UDim2.new(0,32,0,32),
+				Position = UDim2.new(0,10,0.5,0),
+				BackgroundTransparency = 0.2
+			}), {
+				SetProps(MakeElement("Image", "https://www.roblox.com/headshot-thumbnail/image?userId="..(LocalPlayer and LocalPlayer.UserId or 0).."&width=420&height=420&format=png"), {Size = UDim2.new(1,0,1,0)}),
+				AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://4031889928"), {Size = UDim2.new(1,0,1,0)}), "Second"),
+				MakeElement("Corner", 1)
+			}), "Divider"),
+			SetChildren(SetProps(MakeElement("TFrame"), {
+				AnchorPoint = Vector2.new(0,0.5),
+				Size = UDim2.new(0,32,0,32),
+				Position = UDim2.new(0,10,0.5,0)
+			}), {
+				AddThemeObject(MakeElement("Stroke"), "Stroke"),
+				MakeElement("Corner", 1)
+			}),
+			AddThemeObject(SetProps(MakeElement("Label", "Void Menu", WindowConfig.HidePremium and 14 or 13), {
+				Size = UDim2.new(1,-60,0,13),
+				Position = WindowConfig.HidePremium and UDim2.new(0,50,0,19) or UDim2.new(0,50,0,12),
+				Font = Enum.Font.FredokaOne,
+				ClipsDescendants = true
+			}), "Text"),
+			SetProps(MakeElement("Label", "No Vip", 12), {
+				Size = UDim2.new(1,-60,0,12),
+				Position = UDim2.new(0,50,1,-25),
+				Visible = not WindowConfig.HidePremium,
+				TextColor3 = Color3.fromRGB(150, 150, 165)
+			})
+		}),
+	}), "Second")
+
+	local WindowName = AddThemeObject(SetProps(MakeElement("Label", WindowConfig.Name, 14), {
+		Size = UDim2.new(1,-30,2,0),
+		Position = UDim2.new(0,25,0,-24),
+		Font = Enum.Font.GothamBlack,
+		TextSize = 20
+	}), "Text")
+
+	local WindowTopBarLine = AddThemeObject(SetProps(MakeElement("Frame"), {
+		Size = UDim2.new(1,0,0,1),
+		Position = UDim2.new(0,0,1,-1)
+	}), "Stroke")
+
+	-- TopBar button container: now 3 buttons wide
+	local TopBarButtonContainer = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 7), {
+		Size = UDim2.new(0, 105, 0, 30),
+		Position = UDim2.new(1, -120, 0, 10),
+		BackgroundTransparency = 0.15
+	}), {
+		AddThemeObject(MakeElement("Stroke"), "Stroke"),
+		-- divider between minimize and theme
+		AddThemeObject(SetProps(MakeElement("Frame"), {Size = UDim2.new(0,1,1,0), Position = UDim2.new(0.333,0,0,0)}), "Stroke"),
+		-- divider between theme and close
+		AddThemeObject(SetProps(MakeElement("Frame"), {Size = UDim2.new(0,1,1,0), Position = UDim2.new(0.667,0,0,0)}), "Stroke"),
+		MinimizeBtn,
+		ThemeBtn,
+		CloseBtn
+	}), "Second")
+
+	local MainWindow = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 10), {
+		Parent = Container,
+		Position = UDim2.new(0.5,-307,0.5,-172),
+		Size = UDim2.new(0,615,0,344),
+		ClipsDescendants = true,
+		BackgroundTransparency = 0
+	}), {
+		SetChildren(SetProps(MakeElement("TFrame"), {Size = UDim2.new(1,0,0,50), Name = "TopBar"}), {
+			WindowName,
+			WindowTopBarLine,
+			TopBarButtonContainer,
+		}),
+		DragPoint,
+		WindowStuff
+	}), "Main")
+
+	-- Theme dropdown popup (parented to Container so it floats above everything)
+	local ThemeNames = {"Black", "White", "Gray", "Blue", "Purple", "Red"}
+	local ThemeDisplayNames = {"Black", "White", "Gray", "Blue", "Purple", "Red"}
+
+	local ThemePopup = Create("Frame", {
+		BackgroundColor3 = Library.Themes[Library.SelectedTheme].Second,
+		BackgroundTransparency = 0,
+		BorderSizePixel = 0,
+		Size = UDim2.new(0, 120, 0, #ThemeNames * 28 + 8),
+		Visible = false,
+		ZIndex = 50,
+		Parent = Container,
+	})
+	Create("UICorner", {CornerRadius = UDim.new(0, 8), Parent = ThemePopup})
+	Create("UIStroke", {Color = Library.Themes[Library.SelectedTheme].Stroke, Thickness = 1, Parent = ThemePopup})
+	local ThemePopupList = Create("UIListLayout", {
+		SortOrder = Enum.SortOrder.LayoutOrder,
+		Padding = UDim.new(0, 2),
+		Parent = ThemePopup
+	})
+	Create("UIPadding", {
+		PaddingTop = UDim.new(0,4), PaddingBottom = UDim.new(0,4),
+		PaddingLeft = UDim.new(0,4), PaddingRight = UDim.new(0,4),
+		Parent = ThemePopup
+	})
+
+	local ThemeButtonRefs = {}
+	for i, tName in ipairs(ThemeNames) do
+		local displayName = ThemeDisplayNames[i]
+		local optBtn = Create("TextButton", {
+			Size = UDim2.new(1, 0, 0, 26),
+			BackgroundTransparency = (Library.SelectedTheme == tName) and 0.5 or 1,
+			BackgroundColor3 = Library.Themes[Library.SelectedTheme].Stroke,
+			BorderSizePixel = 0,
+			Text = displayName,
+			TextColor3 = Library.Themes[Library.SelectedTheme].Text,
+			TextSize = 13,
+			Font = Enum.Font.FredokaOne,
+			ZIndex = 51,
+			Parent = ThemePopup,
+		})
+		Create("UICorner", {CornerRadius = UDim.new(0, 5), Parent = optBtn})
+		ThemeButtonRefs[tName] = optBtn
+
+		optBtn.MouseEnter:Connect(function()
+			if Library.SelectedTheme ~= tName then
+				TweenService:Create(optBtn, TweenInfo.new(0.15), {BackgroundTransparency = 0.7}):Play()
+			end
+		end)
+		optBtn.MouseLeave:Connect(function()
+			if Library.SelectedTheme ~= tName then
+				TweenService:Create(optBtn, TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
+			end
+		end)
+		optBtn.MouseButton1Click:Connect(function()
+			-- play click sound
+			local sound = Instance.new("Sound")
+			sound.SoundId = "rbxassetid://6895079853"
+			sound.Volume = 0.5
+			sound.Parent = game:GetService("SoundService")
+			sound:Play()
+			game:GetService("Debris"):AddItem(sound, 1)
+
+			Library.SelectedTheme = tName
+			SetTheme()
+
+			-- Update popup styling
+			ThemePopup.BackgroundColor3 = Library.Themes[tName].Second
+			local popupStroke = ThemePopup:FindFirstChildOfClass("UIStroke")
+			if popupStroke then popupStroke.Color = Library.Themes[tName].Stroke end
+
+			for k, btn in pairs(ThemeButtonRefs) do
+				btn.TextColor3 = Library.Themes[tName].Text
+				btn.BackgroundColor3 = Library.Themes[tName].Stroke
+				TweenService:Create(btn, TweenInfo.new(0.15), {
+					BackgroundTransparency = (k == tName) and 0.5 or 1
+				}):Play()
+			end
+
+			-- Auto-save theme
+			if WindowConfig.SaveConfig and Library.ConfigFile then
+				Library.UserConfig.__theme = tName
+				Library:SaveConfig()
+			end
+
+			-- Close popup
+			ThemeDropdownOpen = false
+			TweenService:Create(ThemePopup, TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundTransparency = 1
+			}):Play()
+			wait(0.15)
+			ThemePopup.Visible = false
+			ThemePopup.BackgroundTransparency = 0.05
+
+			Library:MakeNotification({
+				Name = "Theme geändert",
+				Content = "Theme wurde auf " .. displayName .. " gesetzt.",
+				Time = 3
+			})
+		end)
+	end
+
+	local function RepositionThemePopup()
+		local btnPos = TopBarButtonContainer.AbsolutePosition
+		local btnSize = TopBarButtonContainer.AbsoluteSize
+		ThemePopup.Position = UDim2.new(0, btnPos.X + btnSize.X - 120, 0, btnPos.Y + btnSize.Y + 4)
+	end
+
+	AddConnection(ThemeBtn.MouseButton1Click, function()
+		ThemeDropdownOpen = not ThemeDropdownOpen
+		if ThemeDropdownOpen then
+			RepositionThemePopup()
+			ThemePopup.Visible = true
+			ThemePopup.BackgroundTransparency = 1
+			TweenService:Create(ThemePopup, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundTransparency = 0.05
+			}):Play()
+			TweenService:Create(ThemeBtn.Ico, TweenInfo.new(0.2), {Rotation = 180}):Play()
+		else
+			TweenService:Create(ThemePopup, TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundTransparency = 1
+			}):Play()
+			TweenService:Create(ThemeBtn.Ico, TweenInfo.new(0.2), {Rotation = 0}):Play()
+			wait(0.15)
+			ThemePopup.Visible = false
+			ThemePopup.BackgroundTransparency = 0.05
+		end
+	end)
+
+	-- Close popup when clicking elsewhere
+	AddConnection(UserInputService.InputBegan, function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 and ThemeDropdownOpen then
+			local mx, my = Mouse.X, Mouse.Y
+			local pp = ThemePopup.AbsolutePosition
+			local ps = ThemePopup.AbsoluteSize
+			local insidePopup = mx >= pp.X and mx <= pp.X+ps.X and my >= pp.Y and my <= pp.Y+ps.Y
+			local bp = TopBarButtonContainer.AbsolutePosition
+			local bs = TopBarButtonContainer.AbsoluteSize
+			local insideBtn = mx >= bp.X and mx <= bp.X+bs.X and my >= bp.Y and my <= bp.Y+bs.Y
+			if not insidePopup and not insideBtn then
+				ThemeDropdownOpen = false
+				TweenService:Create(ThemePopup, TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
+				TweenService:Create(ThemeBtn.Ico, TweenInfo.new(0.2), {Rotation = 0}):Play()
+				task.delay(0.15, function()
+					ThemePopup.Visible = false
+					ThemePopup.BackgroundTransparency = 0.05
+				end)
+			end
+		end
+	end)
+
+	local SetResizingCallback = MakeDraggable(DragPoint, MainWindow)
+
+	local MobileReopenButton = SetChildren(SetProps(MakeElement("Button"), {
+		Parent = Container,
+		Size = UDim2.new(0,40,0,40),
+		Position = UDim2.new(0.5,-20,0,20),
+		BackgroundTransparency = 0.2,
+		BackgroundColor3 = Library.Themes[Library.SelectedTheme].Main,
+		Visible = false
+	}), {
+		AddThemeObject(SetProps(MakeElement("Image", WindowConfig.IntroToggleIcon or "http://www.roblox.com/asset/?id=8834748103"), {
+			AnchorPoint = Vector2.new(0.5,0.5),
+			Position = UDim2.new(0.5,0,0.5,0),
+			Size = UDim2.new(0.7,0,0.7,0),
+		}), "Text"),
+		MakeElement("Corner", 1)
+	})
+
+	AddConnection(CloseBtn.MouseButton1Up, function()
+		MainWindow.Visible = false
+		ThemePopup.Visible = false
+		ThemeDropdownOpen = false
+		if UserInputService.TouchEnabled then MobileReopenButton.Visible = true end
+		UIHidden = true
+		Library:MakeNotification({
+			Name = "Interface Hidden",
+			Content = UserInputService.TouchEnabled and "Tap the button or Left Control to reopen the interface" or "Press Left Control to reopen the interface",
+			Time = 5
+		})
+		WindowConfig.CloseCallback()
+	end)
+
+	AddConnection(UserInputService.InputBegan, function(Input)
+		if Input.KeyCode == Enum.KeyCode.LeftControl and UIHidden == true then
+			MainWindow.Visible = true
+			MobileReopenButton.Visible = false
+		end
+	end)
+
+	AddConnection(MobileReopenButton.Activated, function()
+		MainWindow.Visible = true
+		MobileReopenButton.Visible = false
+	end)
+
+	AddConnection(MinimizeBtn.MouseButton1Up, function()
+		if Minimized then
+			TweenService:Create(MainWindow, TweenInfo.new(0.5, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0,615,0,344)}):Play()
+			MinimizeBtn.Ico.Image = "rbxassetid://7072719338"
+			wait(.02)
+			MainWindow.ClipsDescendants = false
+			WindowStuff.Visible = true
+			WindowTopBarLine.Visible = true
+		else
+			MainWindow.ClipsDescendants = true
+			WindowTopBarLine.Visible = false
+			MinimizeBtn.Ico.Image = "rbxassetid://7072720870"
+			TweenService:Create(MainWindow, TweenInfo.new(0.5, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, WindowName.TextBounds.X + 175, 0, 50)}):Play()
+			wait(0.1)
+			WindowStuff.Visible = false
+		end
+		Minimized = not Minimized
+	end)
+
+	local function LoadSequence()
+		MainWindow.Visible = false
+
+		local LoadSequenceLogo = SetProps(MakeElement("Image", WindowConfig.IntroIcon), {
+			Parent = Container,
+			AnchorPoint = Vector2.new(0.5,0.5),
+			Position = UDim2.new(0.5,0,0.4,0),
+			Size = UDim2.new(0,28,0,28),
+			ImageColor3 = Color3.fromRGB(255,255,255),
+			ImageTransparency = 1
+		})
+
+		local LoadSequenceText = SetProps(MakeElement("Label", WindowConfig.IntroText, 14), {
+			Parent = Container,
+			Size = UDim2.new(1,0,1,0),
+			AnchorPoint = Vector2.new(0.5,0.5),
+			Position = UDim2.new(0.5,19,0.5,0),
+			TextXAlignment = Enum.TextXAlignment.Center,
+			Font = Enum.Font.GothamBold,
+			TextTransparency = 1
+		})
+
+		local LoadingBarBackground = Instance.new("Frame")
+		LoadingBarBackground.Size = UDim2.new(0, 200, 0, 4)
+		LoadingBarBackground.Position = UDim2.new(0.5, -100, 0.55, 0)
+		LoadingBarBackground.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+		LoadingBarBackground.BorderSizePixel = 0
+		LoadingBarBackground.Parent = Container
+		LoadingBarBackground.BackgroundTransparency = 1
+		Instance.new("UICorner", LoadingBarBackground).CornerRadius = UDim.new(0, 2)
+
+		local LoadingBarFill = Instance.new("Frame")
+		LoadingBarFill.Size = UDim2.new(0, 0, 1, 0)
+		LoadingBarFill.Position = UDim2.new(0, 0, 0, 0)
+		LoadingBarFill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		LoadingBarFill.BorderSizePixel = 0
+		LoadingBarFill.Parent = LoadingBarBackground
+		Instance.new("UICorner", LoadingBarFill).CornerRadius = UDim.new(0, 2)
+
+		local PercentageText = SetProps(MakeElement("Label", "0%", 14), {
+			Parent = Container,
+			Size = UDim2.new(0, 50, 0, 20),
+			AnchorPoint = Vector2.new(0.5, 0),
+			Position = UDim2.new(0.5, 0, 0.57, 0),
+			TextXAlignment = Enum.TextXAlignment.Center,
+			Font = Enum.Font.GothamBold,
+			TextTransparency = 1
+		})
+
+		TweenService:Create(LoadSequenceLogo, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageTransparency = 0, Position = UDim2.new(0.5,0,0.5,0)}):Play()
+		wait(0.8)
+		TweenService:Create(LoadSequenceLogo, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(0.5, -(LoadSequenceText.TextBounds.X/2), 0.5, 0)}):Play()
+		wait(0.3)
+		TweenService:Create(LoadSequenceText, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
+		TweenService:Create(LoadingBarBackground, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0}):Play()
+		TweenService:Create(PercentageText, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
+		wait(0.5)
+
+		local function UpdateLoading(percentage)
+			TweenService:Create(LoadingBarFill, TweenInfo.new(0.05, Enum.EasingStyle.Linear), {Size = UDim2.new(percentage/100, 0, 1, 0)}):Play()
+			PercentageText.Text = percentage .. "%"
+		end
+
+		for i = 0, 100 do
+			UpdateLoading(i)
+			wait(0.03)
+		end
+
+		wait(0.3)
+
+		TweenService:Create(LoadSequenceText, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 1}):Play()
+		TweenService:Create(LoadSequenceLogo, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageTransparency = 1}):Play()
+		TweenService:Create(LoadingBarBackground, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
+		TweenService:Create(PercentageText, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 1}):Play()
+		wait(0.3)
+
+		MainWindow.Visible = true
+		LoadSequenceLogo:Destroy()
+		LoadSequenceText:Destroy()
+		LoadingBarBackground:Destroy()
+		PercentageText:Destroy()
+	end
+
+	if WindowConfig.IntroEnabled then LoadSequence() end
+
+	local function BuildTab(TabConfig, ParentHolder)
+		TabConfig = TabConfig or {}
+		TabConfig.Name        = TabConfig.Name        or "Tab"
+		TabConfig.Icon        = TabConfig.Icon        or ""
+		TabConfig.PremiumOnly = TabConfig.PremiumOnly or false
+
+		local TabFrame = SetChildren(SetProps(MakeElement("Button"), {
+			Size = UDim2.new(1, 0, 0, 30),
+			Parent = ParentHolder
+		}), {
+			AddThemeObject(SetProps(MakeElement("Image", TabConfig.Icon), {
+				AnchorPoint = Vector2.new(0, 0.5),
+				Size = UDim2.new(0,18,0,18),
+				Position = UDim2.new(0,10,0.5,0),
+				ImageTransparency = 0.4,
+				Name = "Ico"
+			}), "Text"),
+			AddThemeObject(SetProps(MakeElement("Label", TabConfig.Name, 14), {
+				Size = UDim2.new(1,-35,1,0),
+				Position = UDim2.new(0,35,0,0),
+				Font = Enum.Font.GothamBlack,
+				TextTransparency = 0.4,
+				Name = "Title"
+			}), "Text")
+		})
+
+		if GetIcon(TabConfig.Icon) ~= nil then TabFrame.Ico.Image = GetIcon(TabConfig.Icon) end
+
+		local TabItemContainer = AddThemeObject(SetChildren(SetProps(MakeElement("ScrollFrame", Color3.fromRGB(255,255,255), 5), {
+			Size = UDim2.new(1,-150,1,-50),
+			Position = UDim2.new(0,150,0,50),
+			Parent = MainWindow,
+			Visible = false,
+			Name = "ItemContainer"
+		}), {
+			MakeElement("List", 0, 6),
+			MakeElement("Padding", 15, 10, 10, 15)
+		}), "Divider")
+
+		AddConnection(TabItemContainer.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"), function()
+			TabItemContainer.CanvasSize = UDim2.new(0, 0, 0, TabItemContainer.UIListLayout.AbsoluteContentSize.Y + 30)
+		end)
+
+		if FirstTab then
+			FirstTab = false
+			TabFrame.Ico.ImageTransparency = 0
+			TabFrame.Title.TextTransparency = 0
+			TabFrame.Title.Font = Enum.Font.GothamBlack
+			TabFrame.Ico.ImageColor3 = Color3.fromRGB(150, 150, 165)
+			TabFrame.Title.TextColor3 = Color3.fromRGB(150, 150, 165)
+			TabItemContainer.Visible = true
+		end
+
+		AddConnection(TabFrame.MouseButton1Click, function()
+			local sound = Instance.new("Sound") sound.SoundId = "rbxassetid://6895079853" sound.Volume = 0.5 sound.Parent = game:GetService("SoundService") sound:Play() game:GetService("Debris"):AddItem(sound, 1)
+			for _, Tab in next, TabHolder:GetChildren() do
+				if Tab:IsA("TextButton") and Tab:FindFirstChild("Ico") and Tab:FindFirstChild("Title") then
+					Tab.Title.Font = Enum.Font.GothamBlack
+					TweenService:Create(Tab.Ico,   TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0.4, ImageColor3 = Color3.fromRGB(240,240,240)}):Play()
+					TweenService:Create(Tab.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency  = 0.4, TextColor3  = Color3.fromRGB(240,240,240)}):Play()
+				end
+			end
+			for _, ItemContainer in next, MainWindow:GetChildren() do
+				if ItemContainer.Name == "ItemContainer" then ItemContainer.Visible = false end
+			end
+			TweenService:Create(TabFrame.Ico,   TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0, ImageColor3 = Color3.fromRGB(150, 150, 165)}):Play()
+			TweenService:Create(TabFrame.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency  = 0, TextColor3  = Color3.fromRGB(150, 150, 165)}):Play()
+			TabFrame.Title.Font = Enum.Font.GothamBlack
+			TabItemContainer.Visible = true
+		end)
+
+		local function GetElements(ItemParent)
+			local ElementFunction = {}
+
+			function ElementFunction:AddLabel(Text)
+				local LabelFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 5), {
+					Size = UDim2.new(1,-16,0,30),
+					Position = UDim2.new(0,8,0,0),
+					BackgroundTransparency = 0.2,
+					Parent = ItemParent
+				}), {
+					AddThemeObject(SetProps(MakeElement("Label", Text, 15), {
+						Size = UDim2.new(1,-12,1,0),
+						Position = UDim2.new(0,12,0,0),
+						Font = Enum.Font.FredokaOne,
+						Name = "Content"
+					}), "Text"),
+					AddThemeObject(MakeElement("Stroke"), "Stroke")
+				}), "Second")
+				local LabelFunction = {}
+				function LabelFunction:Set(ToChange)
+					if LabelFrame:FindFirstChild("Content") then LabelFrame.Content.Text = ToChange end
+				end
+				return LabelFunction
+			end
+
+			function ElementFunction:AddParagraph(Text, Content)
+				Text    = Text    or "Text"
+				Content = Content or "Content"
+				local ParagraphFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(150, 150, 165), 0, 5), {
+					Size = UDim2.new(1,-16,0,30),
+					Position = UDim2.new(0,8,0,0),
+					BackgroundTransparency = 0.2,
+					Parent = ItemParent
+				}), {
+					AddThemeObject(SetProps(MakeElement("Label", Text, 15), {
+						Size = UDim2.new(1,-24,0,14),
+						Position = UDim2.new(0,12,0,11),
+						Font = Enum.Font.FredokaOne,
+						Name = "Title"
+					}), "Text"),
+					AddThemeObject(SetProps(MakeElement("Label", "", 13), {
+						Size = UDim2.new(1,-28,0,0),
+						Position = UDim2.new(0,12,0,30),
+						Font = Enum.Font.FredokaOne,
+						Name = "Content",
+						TextWrapped = true
+					}), "TextDark"),
+					AddThemeObject(MakeElement("Stroke"), "Stroke")
+				}), "Second")
+				AddConnection(ParagraphFrame.Content:GetPropertyChangedSignal("Text"), function()
+					ParagraphFrame.Content.Size = UDim2.new(1,-28,0,ParagraphFrame.Content.TextBounds.Y)
+					ParagraphFrame.Size = UDim2.new(1,0,0,ParagraphFrame.Content.TextBounds.Y + 46)
+				end)
+				ParagraphFrame.Content.Text = Content
+				local ParagraphFunction = {}
+				function ParagraphFunction:Set(ToChange) ParagraphFrame.Content.Text = ToChange end
+				return ParagraphFunction
+			end
+
+			function ElementFunction:AddButton(ButtonConfig)
+				ButtonConfig = ButtonConfig or {}
+				ButtonConfig.Name     = ButtonConfig.Name     or "Button"
+				ButtonConfig.Callback = ButtonConfig.Callback or function() end
+				ButtonConfig.Icon     = ButtonConfig.Icon     or "rbxassetid://3944703587"
+				local Button = {}
+				local Click = SetProps(MakeElement("Button"), {Size = UDim2.new(1,0,1,0)})
+				local ButtonFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 5), {
+					Size = UDim2.new(1,0,0,33),
+					Parent = ItemParent,
+					BackgroundTransparency = 0.2
+				}), {
+					AddThemeObject(SetProps(MakeElement("Label", ButtonConfig.Name, 15), {
+						Size = UDim2.new(1,-12,1,0),
+						Position = UDim2.new(0,12,0,0),
+						Font = Enum.Font.FredokaOne,
+						Name = "Content"
+					}), "Text"),
+					AddThemeObject(SetProps(MakeElement("Image", ButtonConfig.Icon), {
+						Size = UDim2.new(0,20,0,20),
+						Position = UDim2.new(1,-30,0,7),
+					}), "TextDark"),
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					Click
+				}), "Second")
+				AddConnection(Click.MouseEnter,      function() TweenService:Create(ButtonFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R*255+3, Library.Themes[Library.SelectedTheme].Second.G*255+3, Library.Themes[Library.SelectedTheme].Second.B*255+3)}):Play() end)
+				AddConnection(Click.MouseLeave,      function() TweenService:Create(ButtonFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Library.Themes[Library.SelectedTheme].Second}):Play() end)
+				AddConnection(Click.MouseButton1Up,  function()
+					local sound = Instance.new("Sound") sound.SoundId = "rbxassetid://6895079853" sound.Volume = 0.5 sound.Parent = game:GetService("SoundService") sound:Play() game:GetService("Debris"):AddItem(sound, 1)
+					TweenService:Create(ButtonFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R*255+3, Library.Themes[Library.SelectedTheme].Second.G*255+3, Library.Themes[Library.SelectedTheme].Second.B*255+3)}):Play()
+					spawn(function() ButtonConfig.Callback() end)
+				end)
+				AddConnection(Click.MouseButton1Down, function() TweenService:Create(ButtonFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R*255+6, Library.Themes[Library.SelectedTheme].Second.G*255+6, Library.Themes[Library.SelectedTheme].Second.B*255+6)}):Play() end)
+				function Button:Set(ButtonText) ButtonFrame.Content.Text = ButtonText end
+				return Button
+			end
+
+			function ElementFunction:AddToggle(ToggleConfig)
+				ToggleConfig = ToggleConfig or {}
+				ToggleConfig.Name     = ToggleConfig.Name     or "Toggle"
+				ToggleConfig.Default  = ToggleConfig.Default  or false
+				ToggleConfig.Callback = ToggleConfig.Callback or function() end
+				ToggleConfig.Color    = ToggleConfig.Color    or Color3.fromRGB(150, 150, 165)
+				ToggleConfig.Flag     = ToggleConfig.Flag     or nil
+				ToggleConfig.Save     = ToggleConfig.Save     or false
+
+				local Toggle = {Value = ToggleConfig.Default, Save = ToggleConfig.Save, Type = "Toggle"}
+				local Click = SetProps(MakeElement("Button"), {Size = UDim2.new(1,0,1,0)})
+				local ToggleBox = SetChildren(SetProps(MakeElement("RoundFrame", ToggleConfig.Color, 0, 4), {
+					Size = UDim2.new(0,24,0,24),
+					Position = UDim2.new(1,-24,0.5,0),
+					AnchorPoint = Vector2.new(0.5,0.5),
+					BackgroundTransparency = 0.2
+				}), {
+					SetProps(MakeElement("Stroke"), {Color = ToggleConfig.Color, Name = "Stroke", Transparency = 0.7, Thickness = 1}),
+					SetProps(MakeElement("Image", "rbxassetid://3944680095"), {
+						Size = UDim2.new(0,20,0,20),
+						AnchorPoint = Vector2.new(0.5,0.5),
+						Position = UDim2.new(0.5,0,0.5,0),
+						ImageColor3 = Color3.fromRGB(255,255,255),
+						Name = "Ico"
+					}),
+				})
+				local ToggleFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 5), {
+					Size = UDim2.new(1,0,0,38),
+					Parent = ItemParent,
+					BackgroundTransparency = 0.2
+				}), {
+					AddThemeObject(SetProps(MakeElement("Label", ToggleConfig.Name, 15), {
+						Size = UDim2.new(1,-12,1,0),
+						Position = UDim2.new(0,12,0,0),
+						Font = Enum.Font.FredokaOne,
+						Name = "Content"
+					}), "Text"),
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					ToggleBox,
+					Click
+				}), "Second")
+
+				function Toggle:Set(Value)
+					Toggle.Value = Value
+					TweenService:Create(ToggleBox,        TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Toggle.Value and ToggleConfig.Color or Library.Themes.Default.Divider}):Play()
+					TweenService:Create(ToggleBox.Stroke, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Color            = Toggle.Value and ToggleConfig.Color or Library.Themes.Default.Stroke}):Play()
+					TweenService:Create(ToggleBox.Ico,    TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = Toggle.Value and 0 or 1, Size = Toggle.Value and UDim2.new(0,20,0,20) or UDim2.new(0,8,0,8)}):Play()
+					ToggleConfig.Callback(Toggle.Value)
+					if Toggle.Save and Library.ConfigFile then
+						Library.UserConfig[ToggleConfig.Flag or ToggleConfig.Name] = Value
+						Library:SaveConfig()
+					end
+				end
+
+				if Toggle.Save and Library.ConfigFile and Library.UserConfig[ToggleConfig.Flag or ToggleConfig.Name] ~= nil then
+					Toggle:Set(Library.UserConfig[ToggleConfig.Flag or ToggleConfig.Name])
+				else
+					Toggle:Set(Toggle.Value)
+				end
+
+				AddConnection(Click.MouseEnter,       function() TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R*255+3, Library.Themes[Library.SelectedTheme].Second.G*255+3, Library.Themes[Library.SelectedTheme].Second.B*255+3)}):Play() end)
+				AddConnection(Click.MouseLeave,       function() TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Library.Themes[Library.SelectedTheme].Second}):Play() end)
+				AddConnection(Click.MouseButton1Up,   function()
+					local sound = Instance.new("Sound") sound.SoundId = "rbxassetid://6895079853" sound.Volume = 0.5 sound.Parent = game:GetService("SoundService") sound:Play() game:GetService("Debris"):AddItem(sound, 1)
+					TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R*255+3, Library.Themes[Library.SelectedTheme].Second.G*255+3, Library.Themes[Library.SelectedTheme].Second.B*255+3)}):Play()
+					Toggle:Set(not Toggle.Value)
+				end)
+				AddConnection(Click.MouseButton1Down, function() TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R*255+6, Library.Themes[Library.SelectedTheme].Second.G*255+6, Library.Themes[Library.SelectedTheme].Second.B*255+6)}):Play() end)
+
+				if ToggleConfig.Flag then Library.Flags[ToggleConfig.Flag] = Toggle end
+				return Toggle
+			end
+
+			function ElementFunction:AddSlider(SliderConfig)
+				SliderConfig = SliderConfig or {}
+				SliderConfig.Name      = SliderConfig.Name      or "Slider"
+				SliderConfig.Min       = SliderConfig.Min       or 0
+				SliderConfig.Max       = SliderConfig.Max       or 100
+				SliderConfig.Increment = SliderConfig.Increment or 1
+				SliderConfig.Default   = SliderConfig.Default   or 50
+				SliderConfig.Callback  = SliderConfig.Callback  or function() end
+				SliderConfig.ValueName = SliderConfig.ValueName or ""
+				SliderConfig.Color     = SliderConfig.Color     or Color3.fromRGB(150, 150, 165)
+				SliderConfig.Flag      = SliderConfig.Flag      or nil
+				SliderConfig.Save      = SliderConfig.Save      or false
+
+				local Slider = {Value = SliderConfig.Default, Save = SliderConfig.Save, Type = "Slider"}
+				local Dragging = false
+
+				local SliderDrag = SetChildren(SetProps(MakeElement("RoundFrame", SliderConfig.Color, 0, 5), {
+					Size = UDim2.new(0,0,1,0),
+					BackgroundTransparency = 0.3,
+					ClipsDescendants = true
+				}), {
+					AddThemeObject(SetProps(MakeElement("Label", "value", 13), {
+						Size = UDim2.new(1,-12,0,14),
+						Position = UDim2.new(0,12,0,6),
+						Font = Enum.Font.FredokaOne,
+						Name = "Value",
+						TextTransparency = 0
+					}), "Text")
+				})
+
+				local SliderBar = SetChildren(SetProps(MakeElement("RoundFrame", SliderConfig.Color, 0, 5), {
+					Size = UDim2.new(1,-24,0,26),
+					Position = UDim2.new(0,12,0,30),
+					BackgroundTransparency = 0.9
+				}), {
+					SetProps(MakeElement("Stroke"), {Color = SliderConfig.Color}),
+					AddThemeObject(SetProps(MakeElement("Label", "value", 13), {
+						Size = UDim2.new(1,-12,0,14),
+						Position = UDim2.new(0,12,0,6),
+						Font = Enum.Font.FredokaOne,
+						Name = "Value",
+						TextTransparency = 0.8
+					}), "Text"),
+					SliderDrag
+				})
+
+				local SliderFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 4), {
+					Size = UDim2.new(1,0,0,65),
+					Parent = ItemParent,
+					BackgroundTransparency = 0.2
+				}), {
+					AddThemeObject(SetProps(MakeElement("Label", SliderConfig.Name, 15), {
+						Size = UDim2.new(1,-12,0,14),
+						Position = UDim2.new(0,12,0,10),
+						Font = Enum.Font.FredokaOne,
+						Name = "Content"
+					}), "Text"),
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					SliderBar
+				}), "Second")
+
+				SliderBar.InputBegan:Connect(function(Input)
+					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+						Dragging = true
+						local sound = Instance.new("Sound") sound.SoundId = "rbxassetid://6895079853" sound.Volume = 0.5 sound.Parent = game:GetService("SoundService") sound:Play() game:GetService("Debris"):AddItem(sound, 1)
+					end
+				end)
+				SliderBar.InputEnded:Connect(function(Input)
+					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+						Dragging = false
+					end
+				end)
+				UserInputService.InputChanged:Connect(function(Input)
+					if Dragging then
+						local SizeScale = math.clamp((Mouse.X - SliderBar.AbsolutePosition.X) / SliderBar.AbsoluteSize.X, 0, 1)
+						Slider:Set(SliderConfig.Min + ((SliderConfig.Max - SliderConfig.Min) * SizeScale))
+					end
+				end)
+
+				function Slider:Set(Value)
+					local inc = SliderConfig.Increment
+					if type(inc) ~= "number" or inc <= 0 then inc = 1 end
+					self.Value = math.clamp(Round(Value, inc), SliderConfig.Min, SliderConfig.Max)
+					TweenService:Create(SliderDrag, TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.fromScale((self.Value - SliderConfig.Min) / (SliderConfig.Max - SliderConfig.Min), 1)}):Play()
+					SliderBar.Value.Text   = tostring(self.Value).." "..SliderConfig.ValueName
+					SliderDrag.Value.Text  = tostring(self.Value).." "..SliderConfig.ValueName
+					SliderConfig.Callback(self.Value)
+					if Slider.Save and Library.ConfigFile then
+						Library.UserConfig[SliderConfig.Flag or SliderConfig.Name] = self.Value
+						Library:SaveConfig()
+					end
+				end
+
+				if Slider.Save and Library.ConfigFile and Library.UserConfig[SliderConfig.Flag or SliderConfig.Name] ~= nil then
+					Slider:Set(Library.UserConfig[SliderConfig.Flag or SliderConfig.Name])
+				else
+					Slider:Set(Slider.Value)
+				end
+
+				if SliderConfig.Flag then Library.Flags[SliderConfig.Flag] = Slider end
+				return Slider
+			end
+
+			function ElementFunction:AddDropdown(DropdownConfig)
+				DropdownConfig = DropdownConfig or {}
+				DropdownConfig.Name     = DropdownConfig.Name     or "Dropdown"
+				DropdownConfig.Options  = DropdownConfig.Options  or {}
+				DropdownConfig.Default  = DropdownConfig.Default  or ""
+				DropdownConfig.Callback = DropdownConfig.Callback or function() end
+				DropdownConfig.Flag     = DropdownConfig.Flag     or nil
+				DropdownConfig.Save     = DropdownConfig.Save     or false
+
+				local Dropdown = {Value = DropdownConfig.Default, Options = DropdownConfig.Options, Buttons = {}, Toggled = false, Type = "Dropdown", Save = DropdownConfig.Save}
+				local MaxElements = 5
+
+				if not table.find(Dropdown.Options, Dropdown.Value) then Dropdown.Value = "..." end
+
+				local DropdownList = MakeElement("List")
+				local DropdownContainer = AddThemeObject(SetProps(SetChildren(MakeElement("ScrollFrame", Color3.fromRGB(255,255,255), 4), {DropdownList}), {
+					Parent = ItemParent,
+					Position = UDim2.new(0,0,0,38),
+					Size = UDim2.new(1,0,1,-38),
+					ClipsDescendants = true
+				}), "Divider")
+
+				local Click = SetProps(MakeElement("Button"), {Size = UDim2.new(1,0,1,0)})
+				local DropdownFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 5), {
+					Size = UDim2.new(1,0,0,38),
+					Parent = ItemParent,
+					ClipsDescendants = true,
+					BackgroundTransparency = 0.2
+				}), {
+					DropdownContainer,
+					SetProps(SetChildren(MakeElement("TFrame"), {
+						AddThemeObject(SetProps(MakeElement("Label", DropdownConfig.Name, 15), {Size = UDim2.new(1,-12,1,0), Position = UDim2.new(0,12,0,0), Font = Enum.Font.FredokaOne, Name = "Content"}), "Text"),
+						AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://7072706796"), {Size = UDim2.new(0,20,0,20), AnchorPoint = Vector2.new(0,0.5), Position = UDim2.new(1,-30,0.5,0), ImageColor3 = Color3.fromRGB(240,240,240), Name = "Ico"}), "TextDark"),
+						AddThemeObject(SetProps(MakeElement("Label", "Selected", 13), {Size = UDim2.new(1,-40,1,0), Font = Enum.Font.FredokaOne, Name = "Selected", TextXAlignment = Enum.TextXAlignment.Right}), "TextDark"),
+						AddThemeObject(SetProps(MakeElement("Frame"), {Size = UDim2.new(1,0,0,1), Position = UDim2.new(0,0,1,-1), Name = "Line", Visible = false}), "Stroke"),
+						Click
+					}), {Size = UDim2.new(1,0,0,38), ClipsDescendants = true, Name = "F"}),
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					MakeElement("Corner")
+				}), "Second")
+
+				AddConnection(DropdownList:GetPropertyChangedSignal("AbsoluteContentSize"), function()
+					DropdownContainer.CanvasSize = UDim2.new(0,0,0,DropdownList.AbsoluteContentSize.Y)
+				end)
+
+				local function AddOptions(Options)
+					for _, Option in pairs(Options) do
+						local OptionBtn = AddThemeObject(SetChildren(SetProps(MakeElement("Button"), {
+							Parent = DropdownContainer,
+							Size = UDim2.new(1,0,0,28),
+							BackgroundTransparency = 0.2,
+							ClipsDescendants = true
+						}), {
+							MakeElement("Corner", 0, 6),
+							AddThemeObject(SetProps(MakeElement("Label", Option, 13, 0.4), {Position = UDim2.new(0,8,0,0), Size = UDim2.new(1,-8,1,0), Name = "Title"}), "Text")
+						}), "Second")
+						AddConnection(OptionBtn.MouseButton1Click, function()
+							local sound = Instance.new("Sound") sound.SoundId = "rbxassetid://6895079853" sound.Volume = 0.5 sound.Parent = game:GetService("SoundService") sound:Play() game:GetService("Debris"):AddItem(sound, 1)
+							Dropdown:Set(Option)
+						end)
+						Dropdown.Buttons[Option] = OptionBtn
+					end
+				end
+
+				function Dropdown:Refresh(Options, Delete)
+					if Delete then
+						for _,v in pairs(Dropdown.Buttons) do v:Destroy() end
+						table.clear(Dropdown.Options)
+						table.clear(Dropdown.Buttons)
+					end
+					Dropdown.Options = Options
+					AddOptions(Dropdown.Options)
+				end
+
+				function Dropdown:Set(Value)
+					if not table.find(Dropdown.Options, Value) then
+						Dropdown.Value = "..."
+						DropdownFrame.F.Selected.Text = Dropdown.Value
+						for _, v in pairs(Dropdown.Buttons) do
+							TweenService:Create(v,       TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0.2}):Play()
+							TweenService:Create(v.Title, TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency       = 0.4}):Play()
+						end
+						return
+					end
+					Dropdown.Value = Value
+					DropdownFrame.F.Selected.Text = Dropdown.Value
+					for _, v in pairs(Dropdown.Buttons) do
+						TweenService:Create(v,       TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0.2}):Play()
+						TweenService:Create(v.Title, TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency       = 0.4}):Play()
+					end
+					TweenService:Create(Dropdown.Buttons[Value],       TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0}):Play()
+					TweenService:Create(Dropdown.Buttons[Value].Title, TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency       = 0}):Play()
+					DropdownConfig.Callback(Dropdown.Value)
+					if Dropdown.Save and Library.ConfigFile then
+						Library.UserConfig[DropdownConfig.Flag or DropdownConfig.Name] = Value
+						Library:SaveConfig()
+					end
+					return DropdownConfig.Callback(Dropdown.Value)
+				end
+
+				AddConnection(Click.MouseButton1Click, function()
+					local sound = Instance.new("Sound") sound.SoundId = "rbxassetid://6895079853" sound.Volume = 0.5 sound.Parent = game:GetService("SoundService") sound:Play() game:GetService("Debris"):AddItem(sound, 1)
+					Dropdown.Toggled = not Dropdown.Toggled
+					DropdownFrame.F.Line.Visible = Dropdown.Toggled
+					TweenService:Create(DropdownFrame.F.Ico, TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Rotation = Dropdown.Toggled and 180 or 0}):Play()
+					if #Dropdown.Options > MaxElements then
+						TweenService:Create(DropdownFrame, TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = Dropdown.Toggled and UDim2.new(1,0,0,38+(MaxElements*28)) or UDim2.new(1,0,0,38)}):Play()
+					else
+						TweenService:Create(DropdownFrame, TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = Dropdown.Toggled and UDim2.new(1,0,0,DropdownList.AbsoluteContentSize.Y+38) or UDim2.new(1,0,0,38)}):Play()
+					end
+				end)
+
+				Dropdown:Refresh(Dropdown.Options, false)
+
+				if Dropdown.Save and Library.ConfigFile and Library.UserConfig[DropdownConfig.Flag or DropdownConfig.Name] then
+					Dropdown:Set(Library.UserConfig[DropdownConfig.Flag or DropdownConfig.Name])
+				else
+					Dropdown:Set(Dropdown.Value)
+				end
+
+				if DropdownConfig.Flag then Library.Flags[DropdownConfig.Flag] = Dropdown end
+				return Dropdown
+			end
+
+			function ElementFunction:AddBind(BindConfig)
+				BindConfig.Name     = BindConfig.Name     or "Bind"
+				BindConfig.Default  = BindConfig.Default  or Enum.KeyCode.Unknown
+				BindConfig.Hold     = BindConfig.Hold     or false
+				BindConfig.Callback = BindConfig.Callback or function() end
+				BindConfig.Flag     = BindConfig.Flag     or nil
+				BindConfig.Save     = BindConfig.Save     or false
+
+				local Bind = {Value = nil, Binding = false, Type = "Bind", Save = BindConfig.Save}
+				local Holding = false
+				local Click = SetProps(MakeElement("Button"), {Size = UDim2.new(1,0,1,0)})
+
+				local BindBox = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 4), {
+					Size = UDim2.new(0,24,0,24),
+					Position = UDim2.new(1,-12,0.5,0),
+					AnchorPoint = Vector2.new(1,0.5),
+					BackgroundTransparency = 0.2
+				}), {
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					AddThemeObject(SetProps(MakeElement("Label", BindConfig.Name, 14), {
+						Size = UDim2.new(1,0,1,0),
+						Font = Enum.Font.FredokaOne,
+						TextXAlignment = Enum.TextXAlignment.Center,
+						Name = "Value"
+					}), "Text")
+				}), "Main")
+
+				local BindFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 5), {
+					Size = UDim2.new(1,0,0,38),
+					Parent = ItemParent,
+					BackgroundTransparency = 0.2
+				}), {
+					AddThemeObject(SetProps(MakeElement("Label", BindConfig.Name, 15), {
+						Size = UDim2.new(1,-12,1,0),
+						Position = UDim2.new(0,12,0,0),
+						Font = Enum.Font.FredokaOne,
+						Name = "Content"
+					}), "Text"),
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					BindBox,
+					Click
+				}), "Second")
+
+				AddConnection(BindBox.Value:GetPropertyChangedSignal("Text"), function()
+					TweenService:Create(BindBox, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, BindBox.Value.TextBounds.X + 16, 0, 24)}):Play()
+				end)
+				AddConnection(Click.InputEnded, function(Input)
+					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+						if Bind.Binding then return end
+						Bind.Binding = true
+						BindBox.Value.Text = ""
+					end
+				end)
+				AddConnection(UserInputService.InputBegan, function(Input)
+					if UserInputService:GetFocusedTextBox() then return end
+					if (Input.KeyCode.Name == Bind.Value or Input.UserInputType.Name == Bind.Value) and not Bind.Binding then
+						if BindConfig.Hold then
+							Holding = true
+							BindConfig.Callback(Holding)
+						else
+							BindConfig.Callback()
+						end
+					elseif Bind.Binding then
+						local Key
+						pcall(function() if not CheckKey(BlacklistedKeys, Input.KeyCode) then Key = Input.KeyCode end end)
+						pcall(function() if CheckKey(WhitelistedMouse, Input.UserInputType) and not Key then Key = Input.UserInputType end end)
+						Key = Key or Bind.Value
+						Bind:Set(Key)
+					end
+				end)
+				AddConnection(UserInputService.InputEnded, function(Input)
+					if Input.KeyCode.Name == Bind.Value or Input.UserInputType.Name == Bind.Value then
+						if BindConfig.Hold and Holding then
+							Holding = false
+							BindConfig.Callback(Holding)
+						end
+					end
+				end)
+				AddConnection(Click.MouseEnter,       function() TweenService:Create(BindFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R*255+3, Library.Themes[Library.SelectedTheme].Second.G*255+3, Library.Themes[Library.SelectedTheme].Second.B*255+3)}):Play() end)
+				AddConnection(Click.MouseLeave,       function() TweenService:Create(BindFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Library.Themes[Library.SelectedTheme].Second}):Play() end)
+				AddConnection(Click.MouseButton1Up,   function() TweenService:Create(BindFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R*255+3, Library.Themes[Library.SelectedTheme].Second.G*255+3, Library.Themes[Library.SelectedTheme].Second.B*255+3)}):Play() end)
+				AddConnection(Click.MouseButton1Down, function() TweenService:Create(BindFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R*255+6, Library.Themes[Library.SelectedTheme].Second.G*255+6, Library.Themes[Library.SelectedTheme].Second.B*255+6)}):Play() end)
+
+				function Bind:Set(Key)
+					Bind.Binding = false
+					Bind.Value = Key or Bind.Value
+					Bind.Value = Bind.Value.Name or Bind.Value
+					BindBox.Value.Text = Bind.Value
+					if Bind.Save and Library.ConfigFile then
+						Library.UserConfig[BindConfig.Flag or BindConfig.Name] = Bind.Value
+						Library:SaveConfig()
+					end
+				end
+
+				if Bind.Save and Library.ConfigFile and Library.UserConfig[BindConfig.Flag or BindConfig.Name] then
+					Bind:Set(Library.UserConfig[BindConfig.Flag or BindConfig.Name])
+				else
+					Bind:Set(BindConfig.Default)
+				end
+
+				if BindConfig.Flag then Library.Flags[BindConfig.Flag] = Bind end
+				return Bind
+			end
+
+			function ElementFunction:AddTextbox(TextboxConfig)
+				TextboxConfig = TextboxConfig or {}
+				TextboxConfig.Name          = TextboxConfig.Name          or "Textbox"
+				TextboxConfig.Default       = TextboxConfig.Default       or ""
+				TextboxConfig.TextDisappear = TextboxConfig.TextDisappear or false
+				TextboxConfig.Callback      = TextboxConfig.Callback      or function() end
+				TextboxConfig.Save          = TextboxConfig.Save          or false
+				TextboxConfig.Flag          = TextboxConfig.Flag          or nil
+
+				local Textbox = {Save = TextboxConfig.Save, Type = "Textbox", Value = TextboxConfig.Default}
+				local Click = SetProps(MakeElement("Button"), {Size = UDim2.new(1,0,1,0)})
+				local TextboxActual = AddThemeObject(Create("TextBox", {
+					Size = UDim2.new(1,0,1,0),
+					BackgroundTransparency = 1,
+					TextColor3 = Color3.fromRGB(255,255,255),
+					PlaceholderColor3 = Color3.fromRGB(210,210,210),
+					PlaceholderText = "Input",
+					Font = Enum.Font.GothamSemibold,
+					TextXAlignment = Enum.TextXAlignment.Center,
+					TextSize = 14,
+					ClearTextOnFocus = false
+				}), "Text")
+
+				local TextContainer = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 4), {
+					Size = UDim2.new(0,24,0,24),
+					Position = UDim2.new(1,-12,0.5,0),
+					AnchorPoint = Vector2.new(1,0.5),
+					BackgroundTransparency = 0.2
+				}), {
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					TextboxActual
+				}), "Main")
+
+				local TextboxFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 5), {
+					Size = UDim2.new(1,0,0,38),
+					Parent = ItemParent,
+					BackgroundTransparency = 0.2
+				}), {
+					AddThemeObject(SetProps(MakeElement("Label", TextboxConfig.Name, 15), {
+						Size = UDim2.new(1,-12,1,0),
+						Position = UDim2.new(0,12,0,0),
+						Font = Enum.Font.FredokaOne,
+						Name = "Content"
+					}), "Text"),
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					TextContainer,
+					Click
+				}), "Second")
+
+				function Textbox:Set(Value)
+					Textbox.Value = Value
+					TextboxActual.Text = Value
+					if Textbox.Save and Library.ConfigFile then
+						Library.UserConfig[TextboxConfig.Flag or TextboxConfig.Name] = Value
+						Library:SaveConfig()
+					end
+				end
+
+				AddConnection(TextboxActual:GetPropertyChangedSignal("Text"), function()
+					TweenService:Create(TextContainer, TweenInfo.new(0.45, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, TextboxActual.TextBounds.X+16, 0, 24)}):Play()
+				end)
+				AddConnection(TextboxActual.FocusLost, function()
+					TextboxConfig.Callback(TextboxActual.Text)
+					Textbox.Value = TextboxActual.Text
+					if Textbox.Save and Library.ConfigFile then
+						Library.UserConfig[TextboxConfig.Flag or TextboxConfig.Name] = TextboxActual.Text
+						Library:SaveConfig()
+					end
+					if TextboxConfig.TextDisappear then TextboxActual.Text = "" end
+				end)
+
+				if Textbox.Save and Library.ConfigFile and Library.UserConfig[TextboxConfig.Flag or TextboxConfig.Name] then
+					Textbox:Set(Library.UserConfig[TextboxConfig.Flag or TextboxConfig.Name])
+				else
+					TextboxActual.Text = TextboxConfig.Default
+				end
+
+				AddConnection(Click.MouseEnter,       function() TweenService:Create(TextboxFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R*255+3, Library.Themes[Library.SelectedTheme].Second.G*255+3, Library.Themes[Library.SelectedTheme].Second.B*255+3)}):Play() end)
+				AddConnection(Click.MouseLeave,       function() TweenService:Create(TextboxFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Library.Themes[Library.SelectedTheme].Second}):Play() end)
+				AddConnection(Click.MouseButton1Up,   function()
+					TweenService:Create(TextboxFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R*255+3, Library.Themes[Library.SelectedTheme].Second.G*255+3, Library.Themes[Library.SelectedTheme].Second.B*255+3)}):Play()
+					TextboxActual:CaptureFocus()
+				end)
+				AddConnection(Click.MouseButton1Down, function() TweenService:Create(TextboxFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R*255+6, Library.Themes[Library.SelectedTheme].Second.G*255+6, Library.Themes[Library.SelectedTheme].Second.B*255+6)}):Play() end)
+
+				if TextboxConfig.Flag then Library.Flags[TextboxConfig.Flag] = Textbox end
+				return Textbox
+			end
+
+			function ElementFunction:AddColorpicker(ColorpickerConfig)
+				ColorpickerConfig = ColorpickerConfig or {}
+				ColorpickerConfig.Name     = ColorpickerConfig.Name     or "Colorpicker"
+				ColorpickerConfig.Default  = ColorpickerConfig.Default  or Color3.fromRGB(255,255,255)
+				ColorpickerConfig.Callback = ColorpickerConfig.Callback or function() end
+				ColorpickerConfig.Flag     = ColorpickerConfig.Flag     or nil
+				ColorpickerConfig.Save     = ColorpickerConfig.Save     or false
+
+				local ColorH, ColorS, ColorV = 1, 1, 1
+				local Colorpicker = {Value = ColorpickerConfig.Default, Toggled = false, Type = "Colorpicker", Save = ColorpickerConfig.Save}
+
+				local ColorSelection = Create("ImageLabel", {
+					Size = UDim2.new(0,18,0,18),
+					Position = UDim2.new(select(3, Color3.toHSV(Colorpicker.Value))),
+					ScaleType = Enum.ScaleType.Fit,
+					AnchorPoint = Vector2.new(0.5,0.5),
+					BackgroundTransparency = 1,
+					Image = "http://www.roblox.com/asset/?id=4805639000"
+				})
+				local HueSelection = Create("ImageLabel", {
+					Size = UDim2.new(0,18,0,18),
+					Position = UDim2.new(0.5,0,1-select(1, Color3.toHSV(Colorpicker.Value))),
+					ScaleType = Enum.ScaleType.Fit,
+					AnchorPoint = Vector2.new(0.5,0.5),
+					BackgroundTransparency = 1,
+					Image = "http://www.roblox.com/asset/?id=4805639000"
+				})
+				local Color = Create("ImageLabel", {Size = UDim2.new(1,-25,1,0), Visible = false, Image = "rbxassetid://4155801252"}, {
+					Create("UICorner", {CornerRadius = UDim.new(0,5)}),
+					ColorSelection
+				})
+				local Hue = Create("Frame", {Size = UDim2.new(0,20,1,0), Position = UDim2.new(1,-20,0,0), Visible = false, BackgroundTransparency = 0.2}, {
+					Create("UIGradient", {Rotation = 270, Color = ColorSequence.new{
+						ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255,0,4)),
+						ColorSequenceKeypoint.new(0.20, Color3.fromRGB(234,255,0)),
+						ColorSequenceKeypoint.new(0.40, Color3.fromRGB(21,255,0)),
+						ColorSequenceKeypoint.new(0.60, Color3.fromRGB(0,255,255)),
+						ColorSequenceKeypoint.new(0.80, Color3.fromRGB(0,17,255)),
+						ColorSequenceKeypoint.new(0.90, Color3.fromRGB(255,0,251)),
+						ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255,0,4))
+					}}),
+					Create("UICorner", {CornerRadius = UDim.new(0,5)}),
+					HueSelection
+				})
+				local ColorpickerContainer = Create("Frame", {
+					Position = UDim2.new(0,0,0,32),
+					Size = UDim2.new(1,0,1,-32),
+					BackgroundTransparency = 1,
+					ClipsDescendants = true
+				}, {
+					Hue, Color,
+					Create("UIPadding", {PaddingLeft=UDim.new(0,35), PaddingRight=UDim.new(0,35), PaddingBottom=UDim.new(0,10), PaddingTop=UDim.new(0,17)})
+				})
+
+				local Click = SetProps(MakeElement("Button"), {Size = UDim2.new(1,0,1,0)})
+				local ColorpickerBox = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 4), {
+					Size = UDim2.new(0,24,0,24),
+					Position = UDim2.new(1,-12,0.5,0),
+					AnchorPoint = Vector2.new(1,0.5),
+					BackgroundTransparency = 0.2
+				}), {AddThemeObject(MakeElement("Stroke"), "Stroke")}), "Main")
+
+				local ColorpickerFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 5), {
+					Size = UDim2.new(1,0,0,38),
+					Parent = ItemParent,
+					BackgroundTransparency = 0.2
+				}), {
+					SetProps(SetChildren(MakeElement("TFrame"), {
+						AddThemeObject(SetProps(MakeElement("Label", ColorpickerConfig.Name, 15), {Size=UDim2.new(1,-12,1,0), Position=UDim2.new(0,12,0,0), Font=Enum.Font.FredokaOne, Name="Content"}), "Text"),
+						ColorpickerBox,
+						Click,
+						AddThemeObject(SetProps(MakeElement("Frame"), {Size=UDim2.new(1,0,0,1), Position=UDim2.new(0,0,1,-1), Name="Line", Visible=false}), "Stroke"),
+					}), {Size=UDim2.new(1,0,0,38), ClipsDescendants=true, Name="F"}),
+					ColorpickerContainer,
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+				}), "Second")
+
+				AddConnection(Click.MouseButton1Click, function()
+					local sound = Instance.new("Sound") sound.SoundId = "rbxassetid://6895079853" sound.Volume = 0.5 sound.Parent = game:GetService("SoundService") sound:Play() game:GetService("Debris"):AddItem(sound, 1)
+					Colorpicker.Toggled = not Colorpicker.Toggled
+					TweenService:Create(ColorpickerFrame, TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = Colorpicker.Toggled and UDim2.new(1,0,0,148) or UDim2.new(1,0,0,38)}):Play()
+					Color.Visible = Colorpicker.Toggled
+					Hue.Visible   = Colorpicker.Toggled
+					ColorpickerFrame.F.Line.Visible = Colorpicker.Toggled
+				end)
+
+				local function UpdateColorPicker()
+					ColorpickerBox.BackgroundColor3 = Color3.fromHSV(ColorH, ColorS, ColorV)
+					Color.BackgroundColor3 = Color3.fromHSV(ColorH, 1, 1)
+					Colorpicker:Set(ColorpickerBox.BackgroundColor3)
+					ColorpickerConfig.Callback(ColorpickerBox.BackgroundColor3)
+				end
+
+				ColorH = 1 - (math.clamp(HueSelection.AbsolutePosition.Y - Hue.AbsolutePosition.Y, 0, Hue.AbsoluteSize.Y) / Hue.AbsoluteSize.Y)
+				ColorS = (math.clamp(ColorSelection.AbsolutePosition.X - Color.AbsolutePosition.X, 0, Color.AbsoluteSize.X) / Color.AbsoluteSize.X)
+				ColorV = 1 - (math.clamp(ColorSelection.AbsolutePosition.Y - Color.AbsolutePosition.Y, 0, Color.AbsoluteSize.Y) / Color.AbsoluteSize.Y)
+
+				AddConnection(Color.InputBegan, function(input)
+					if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+						if ColorInput then ColorInput:Disconnect() end
+						ColorInput = AddConnection(RunService.RenderStepped, function()
+							local ColorX = math.clamp(Mouse.X - Color.AbsolutePosition.X, 0, Color.AbsoluteSize.X) / Color.AbsoluteSize.X
+							local ColorY = math.clamp(Mouse.Y - Color.AbsolutePosition.Y, 0, Color.AbsoluteSize.Y) / Color.AbsoluteSize.Y
+							ColorSelection.Position = UDim2.new(ColorX, 0, ColorY, 0)
+							ColorS = ColorX; ColorV = 1 - ColorY
+							UpdateColorPicker()
+						end)
+					end
+				end)
+				AddConnection(Color.InputEnded, function(input)
+					if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+						if ColorInput then ColorInput:Disconnect() end
+					end
+				end)
+				AddConnection(Hue.InputBegan, function(input)
+					if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+						if HueInput then HueInput:Disconnect() end
+						HueInput = AddConnection(RunService.RenderStepped, function()
+							local HueY = math.clamp(Mouse.Y - Hue.AbsolutePosition.Y, 0, Hue.AbsoluteSize.Y) / Hue.AbsoluteSize.Y
+							HueSelection.Position = UDim2.new(0.5, 0, HueY, 0)
+							ColorH = 1 - HueY
+							UpdateColorPicker()
+						end)
+					end
+				end)
+				AddConnection(Hue.InputEnded, function(input)
+					if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+						if HueInput then HueInput:Disconnect() end
+					end
+				end)
+
+				function Colorpicker:Set(Value)
+					Colorpicker.Value = Value
+					ColorpickerBox.BackgroundColor3 = Colorpicker.Value
+					ColorpickerConfig.Callback(Colorpicker.Value)
+					if Colorpicker.Save and Library.ConfigFile then
+						local packed = PackColor(Value)
+						Library.UserConfig[ColorpickerConfig.Flag or ColorpickerConfig.Name] = packed
+						Library:SaveConfig()
+					end
+				end
+
+				if Colorpicker.Save and Library.ConfigFile and Library.UserConfig[ColorpickerConfig.Flag or ColorpickerConfig.Name] then
+					local saved = Library.UserConfig[ColorpickerConfig.Flag or ColorpickerConfig.Name]
+					if saved and saved.R and saved.G and saved.B then
+						Colorpicker:Set(UnpackColor(saved))
+					else
+						Colorpicker:Set(Colorpicker.Value)
+					end
+				else
+					Colorpicker:Set(Colorpicker.Value)
+				end
+
+				if ColorpickerConfig.Flag then Library.Flags[ColorpickerConfig.Flag] = Colorpicker end
+				return Colorpicker
+			end
+
+			return ElementFunction
+		end
+
+		local ElementFunction = {}
+
+		function ElementFunction:AddSection(SectionConfig)
+			SectionConfig.Name = SectionConfig.Name or "Section"
+			local SectionFrame = SetChildren(SetProps(MakeElement("TFrame"), {
+				Size = UDim2.new(1,0,0,26),
+				Parent = TabItemContainer
+			}), {
+				(function()
+					local line = Create("Frame", {
+						Size = UDim2.new(0,2,0,14), Position = UDim2.new(0,0,0,5),
+						BackgroundColor3 = Color3.fromRGB(150, 150, 165), BorderSizePixel = 0, Parent = SectionFrame,
+					})
+					Create("UICorner", {CornerRadius = UDim.new(0,2), Parent = line})
+					return line
+				end)(),
+				AddThemeObject(SetProps(MakeElement("Label", SectionConfig.Name, 14), {
+					Size = UDim2.new(1,-12,0,16),
+					Position = UDim2.new(0,10,0,3),
+					Font = Enum.Font.FredokaOne
+				}), "TextDark"),
+				SetChildren(SetProps(MakeElement("TFrame"), {
+					AnchorPoint = Vector2.new(0,0),
+					Size = UDim2.new(1,0,1,-24),
+					Position = UDim2.new(0,0,0,23),
+					Name = "Holder"
+				}), {MakeElement("List", 0, 6)}),
+			})
+			AddConnection(SectionFrame.Holder.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"), function()
+				SectionFrame.Size        = UDim2.new(1, 0, 0, SectionFrame.Holder.UIListLayout.AbsoluteContentSize.Y + 31)
+				SectionFrame.Holder.Size = UDim2.new(1, 0, 0, SectionFrame.Holder.UIListLayout.AbsoluteContentSize.Y)
+			end)
+			local SectionFunction = {}
+			for i, v in next, GetElements(SectionFrame.Holder) do SectionFunction[i] = v end
+			return SectionFunction
+		end
+
+		for i, v in next, GetElements(TabItemContainer) do ElementFunction[i] = v end
+
+		if TabConfig.PremiumOnly then
+			for i, v in next, ElementFunction do ElementFunction[i] = function() end end
+			TabItemContainer:FindFirstChild("UIListLayout"):Destroy()
+			TabItemContainer:FindFirstChild("UIPadding"):Destroy()
+			SetChildren(SetProps(MakeElement("TFrame"), {Size = UDim2.new(1,0,1,0), Parent = TabItemContainer}), {
+				AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://3610239960"), {Size=UDim2.new(0,18,0,18), Position=UDim2.new(0,15,0,15), ImageTransparency=0.4}), "Text"),
+				AddThemeObject(SetProps(MakeElement("Label", "Unauthorised Access", 14), {Size=UDim2.new(1,-38,0,14), Position=UDim2.new(0,38,0,18), TextTransparency=0.4}), "Text"),
+			})
+		end
+		return ElementFunction, TabFrame
+	end
+
+	local TabFunction    = {}
+	local tabLayoutOrder = 0
+	local tabGroupRegistry = {}
+	local allGroups = {}
+
+	local currentTabSection = nil
+
+	local function NextOrder()
+		tabLayoutOrder = tabLayoutOrder + 1
+		return tabLayoutOrder
+	end
+
+	local Drag = {active = false, src = nil, ghost = nil}
+
+	local function GetOrderedTabs()
+		local t = {}
+		for _, c in ipairs(TabHolder:GetChildren()) do
+			if c:IsA("TextButton") and c:FindFirstChild("Ico") and c:FindFirstChild("Title") then
+				table.insert(t, c)
+			end
+		end
+		table.sort(t, function(a,b) return a.LayoutOrder < b.LayoutOrder end)
+		return t
+	end
+
+	local function TabUnderMouse(exclude)
+		for _, c in ipairs(TabHolder:GetChildren()) do
+			if c:IsA("TextButton") and c:FindFirstChild("Ico") and c:FindFirstChild("Title") and c ~= exclude then
+				local p, s = c.AbsolutePosition, c.AbsoluteSize
+				if Mouse.X >= p.X and Mouse.X <= p.X+s.X and Mouse.Y >= p.Y and Mouse.Y <= p.Y+s.Y then return c end
+			end
+		end
+	end
+
+	local function GroupHeaderUnderMouse()
+		for _, g in ipairs(allGroups) do
+			local h = g.header
+			if h then
+				local p, s = h.AbsolutePosition, h.AbsoluteSize
+				if Mouse.X >= p.X and Mouse.X <= p.X+s.X and Mouse.Y >= p.Y and Mouse.Y <= p.Y+s.Y then return g end
+			end
+		end
+	end
+
+	local function RemoveFromGroup(tabBtn)
+		local reg = tabGroupRegistry[tabBtn]
+		if not reg then return end
+		for i, v in ipairs(reg.frames) do
+			if v == tabBtn then table.remove(reg.frames, i) break end
+		end
+		tabGroupRegistry[tabBtn] = nil
+	end
+
+	local function AddToGroup(tabBtn, groupData)
+		RemoveFromGroup(tabBtn)
+		table.insert(groupData.frames, tabBtn)
+		tabGroupRegistry[tabBtn] = groupData
+		tabBtn.Visible = not groupData.collapsed
+		local pad = tabBtn:FindFirstChildOfClass("UIPadding")
+		if not pad then pad = Instance.new("UIPadding"); pad.Parent = tabBtn end
+		pad.PaddingLeft = UDim.new(0, 0)
+	end
+
+	local function RemoveIndent(tabBtn)
+		local pad = tabBtn:FindFirstChildOfClass("UIPadding")
+		if pad then pad.PaddingLeft = UDim.new(0, 0) end
+	end
+
+	local function EndDrag()
+		Drag.active = false
+		if Drag.ghost then Drag.ghost:Destroy(); Drag.ghost = nil end
+		if Drag.src then
+			TweenService:Create(Drag.src, TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
+			Drag.src = nil
+		end
+		for _, c in ipairs(TabHolder:GetChildren()) do
+			if c:IsA("TextButton") then
+				TweenService:Create(c, TweenInfo.new(0.1), {BackgroundTransparency = 1}):Play()
+			end
+		end
+	end
+
+	local function StartDrag(tabFrame)
+		Drag.active = true
+		Drag.src    = tabFrame
+		tabFrame.BackgroundColor3       = Color3.fromRGB(135, 206, 250)
+		tabFrame.BackgroundTransparency = 0.6
+
+		local ghost = Instance.new("Frame")
+		ghost.Size                   = UDim2.new(0, tabFrame.AbsoluteSize.X-8, 0, tabFrame.AbsoluteSize.Y-4)
+		ghost.BackgroundColor3       = Color3.fromRGB(135, 206, 250)
+		ghost.BackgroundTransparency = 0.4
+		ghost.BorderSizePixel        = 0
+		ghost.ZIndex                 = 20
+		Instance.new("UICorner",ghost).CornerRadius = UDim.new(0,5)
+		local gl = Instance.new("TextLabel", ghost)
+		gl.Size=UDim2.new(1,-8,1,0); gl.Position=UDim2.new(0,8,0,0)
+		gl.BackgroundTransparency=1; gl.Text=tabFrame.Title.Text
+		gl.TextColor3=Color3.fromRGB(255,255,255); gl.Font=Enum.Font.GothamBlack
+		gl.TextSize=13; gl.TextXAlignment=Enum.TextXAlignment.Left; gl.ZIndex=21
+		ghost.Parent = Container
+		Drag.ghost = ghost
+
+		local dragConn
+		dragConn = RunService.RenderStepped:Connect(function()
+			if not Drag.active then
+				dragConn:Disconnect()
+				return
+			end
+			local rx = Mouse.X - TabHolder.AbsolutePosition.X
+			local ry = Mouse.Y - TabHolder.AbsolutePosition.Y - 15
+			if Drag.ghost then Drag.ghost.Position = UDim2.new(0,rx,0,ry) end
+			local hovered = TabUnderMouse(tabFrame)
+			local hgroup  = GroupHeaderUnderMouse()
+			for _, c in ipairs(TabHolder:GetChildren()) do
+				if c:IsA("TextButton") and c ~= tabFrame then
+					local isTarget = (c == hovered) or (hgroup and c == hgroup.header)
+					c.BackgroundTransparency = isTarget and 0.6 or 1
+					if isTarget then c.BackgroundColor3 = Color3.fromRGB(135, 206, 250) end
+				end
+			end
+		end)
+	end
+
+	local function AttachDrag(tabFrame)
+		local timer, dragging = nil, false
+		tabFrame.InputBegan:Connect(function(inp)
+			if inp.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
+			dragging = false
+			timer = task.delay(0.25, function()
+				if UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) then
+					dragging = true; StartDrag(tabFrame)
+				end
+			end)
+		end)
+		tabFrame.InputEnded:Connect(function(inp)
+			if inp.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
+			if timer then task.cancel(timer); timer = nil end
+			if not dragging then return end
+			dragging = false
+			if not (Drag.active and Drag.src == tabFrame) then return end
+
+			local targetTab   = TabUnderMouse(tabFrame)
+			local targetGroup = GroupHeaderUnderMouse()
+
+			if targetGroup then
+				RemoveFromGroup(tabFrame)
+				local lastOrder = targetGroup.header.LayoutOrder
+				for _, f in ipairs(targetGroup.frames) do
+					if f.LayoutOrder > lastOrder then lastOrder = f.LayoutOrder end
+				end
+				tabLayoutOrder = tabLayoutOrder + 1
+				tabFrame.LayoutOrder = lastOrder + 0.5
+				local sorted = GetOrderedTabs()
+				for i, btn in ipairs(sorted) do btn.LayoutOrder = i * 10 end
+				tabLayoutOrder = #sorted * 10
+				AddToGroup(tabFrame, targetGroup)
+			elseif targetTab then
+				local srcOrder = tabFrame.LayoutOrder
+				tabFrame.LayoutOrder = targetTab.LayoutOrder
+				targetTab.LayoutOrder = srcOrder
+				local tg = tabGroupRegistry[targetTab]
+				if tg then
+					AddToGroup(tabFrame, tg)
+				elseif tabGroupRegistry[tabFrame] then
+					RemoveFromGroup(tabFrame)
+					RemoveIndent(tabFrame)
+					tabFrame.Visible = true
+				end
+			end
+			EndDrag()
+		end)
+	end
+
+	function TabFunction:TabSection(Name)
+		Name = Name or "Section"
+
+		local headerBtn = Create("Frame", {  -- Changed from TextButton to Frame (not clickable)
+			Size             = UDim2.new(1, 0, 0, 24),
+			BackgroundTransparency = 1,
+			BorderSizePixel  = 0,
+			LayoutOrder      = NextOrder(),
+			Parent           = TabHolder,
+		})
+
+		local accentLine = Create("Frame", {
+			Size             = UDim2.new(0, 2, 0, 12),
+			Position         = UDim2.new(0, 6, 0.5, -6),
+			BackgroundColor3 = Color3.fromRGB(150, 150, 165),
+			BorderSizePixel  = 0,
+			Parent           = headerBtn,
+		})
+		Create("UICorner", {CornerRadius = UDim.new(0, 2), Parent = accentLine})
+
+		local sectionLabel = Create("TextLabel", {
+			Size               = UDim2.new(1, -18, 1, 0),
+			Position           = UDim2.new(0, 14, 0, 0),
+			BackgroundTransparency = 1,
+			Text               = string.upper(Name),
+			TextColor3         = Color3.fromRGB(150, 150, 165),
+			TextSize           = 10,
+			Font               = Enum.Font.GothamBold,
+			TextXAlignment     = Enum.TextXAlignment.Left,
+			Parent             = headerBtn,
+		})
+
+		-- No collapse logic; tabs always visible
+		local tabFrames = {}
+
+		local groupData = {
+			header    = headerBtn,
+			frames    = tabFrames,
+			collapsed = false,  -- always false, never collapses
+		}
+		table.insert(allGroups, groupData)
+
+		currentTabSection = groupData
+	end
+
+	function TabFunction:MakeTab(TabConfig)
+		local ef, frame = BuildTab(TabConfig, TabHolder)
+		if frame then
+			frame.LayoutOrder = NextOrder()
+			AttachDrag(frame)
+
+			if currentTabSection then
+				table.insert(currentTabSection.frames, frame)
+				tabGroupRegistry[frame] = currentTabSection
+				frame.Visible = true  -- always visible, no collapse
+			end
+		end
+		return ef
+	end
+
+	function TabFunction:MakeTabGroup(GroupConfig)
+		GroupConfig = GroupConfig or {}
+		GroupConfig.Name      = GroupConfig.Name      or "Group"
+		GroupConfig.Collapsed = GroupConfig.Collapsed or false
+
+		local collapsed     = GroupConfig.Collapsed
+		local groupFrames   = {}
+		local headerCreated = false
+		local AccentLine, GroupLabel
+		local headerBtn
+
+		local groupData = {frames = groupFrames, header = nil, collapsed = collapsed}
+		table.insert(allGroups, groupData)
+
+		local function SetCollapsed(state)
+			collapsed = state
+			groupData.collapsed = state
+			for _, tf in ipairs(groupFrames) do tf.Visible = not collapsed end
+			if AccentLine then
+				TweenService:Create(AccentLine, TweenInfo.new(0.2), {BackgroundColor3 = collapsed and Color3.fromRGB(80,80,85) or Color3.fromRGB(135, 206, 250)}):Play()
+			end
+			if GroupLabel then
+				TweenService:Create(GroupLabel, TweenInfo.new(0.2), {TextColor3 = collapsed and Color3.fromRGB(100,100,105) or Color3.fromRGB(135, 206, 250)}):Play()
+			end
+		end
+
+		local function EnsureHeader()
+			if headerCreated then return end
+			headerCreated = true
+			headerBtn = Create("TextButton", {
+				Size=UDim2.new(1,0,0,22), BackgroundTransparency=1,
+				BorderSizePixel=0, Text="", AutoButtonColor=false,
+				LayoutOrder=NextOrder(), Parent=TabHolder,
+			})
+			groupData.header = headerBtn
+			AccentLine = Create("Frame", {
+				Size=UDim2.new(0,2,0,10), Position=UDim2.new(0,6,0.5,-5),
+				BackgroundColor3 = collapsed and Color3.fromRGB(80,80,85) or Color3.fromRGB(135, 206, 250),
+				BorderSizePixel=0, Parent=headerBtn,
+			})
+			Create("UICorner",{CornerRadius=UDim.new(0,2),Parent=AccentLine})
+			GroupLabel = Create("TextLabel", {
+				Size=UDim2.new(1,-16,1,0), Position=UDim2.new(0,14,0,0),
+				BackgroundTransparency=1, Text=string.upper(GroupConfig.Name),
+				TextColor3 = collapsed and Color3.fromRGB(100,100,105) or Color3.fromRGB(135, 206, 250),
+				TextSize=10, Font=Enum.Font.GothamBold,
+				TextXAlignment=Enum.TextXAlignment.Left, Parent=headerBtn,
+			})
+			headerBtn.MouseButton1Click:Connect(function() SetCollapsed(not collapsed) end)
+			headerBtn.MouseEnter:Connect(function() TweenService:Create(GroupLabel,TweenInfo.new(0.15),{TextColor3=Color3.fromRGB(200,230,255)}):Play() end)
+			headerBtn.MouseLeave:Connect(function() TweenService:Create(GroupLabel,TweenInfo.new(0.15),{TextColor3=collapsed and Color3.fromRGB(100,100,105) or Color3.fromRGB(135, 206, 250)}):Play() end)
+		end
+
+		local GroupFunction = {}
+		function GroupFunction:MakeTab(TabConfig)
+			EnsureHeader()
+			local tabEF, tabBtn = BuildTab(TabConfig, TabHolder)
+			if tabBtn then
+				tabBtn.LayoutOrder = NextOrder()
+				local pad = tabBtn:FindFirstChildOfClass("UIPadding")
+				if not pad then pad = Instance.new("UIPadding"); pad.Parent = tabBtn end
+				pad.PaddingLeft = UDim.new(0, 0)
+				table.insert(groupFrames, tabBtn)
+				tabGroupRegistry[tabBtn] = groupData
+				tabBtn.Visible = not collapsed
+				AttachDrag(tabBtn)
+			end
+			return tabEF
+		end
+		return GroupFunction
+	end
+
+	return TabFunction
+end
+
+return Library
