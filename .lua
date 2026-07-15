@@ -1,3 +1,4 @@
+--nice
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
@@ -102,6 +103,24 @@ end
 
 local function UnpackColor(Color)
 	return Color3.fromRGB(Color.R, Color.G, Color.B)
+end
+
+local function GenerateThemeFromAccent(AccentColor)
+	local h, s, v = Color3.toHSV(AccentColor)
+	local function Shade(Value, Saturation)
+		return Color3.fromHSV(h, Saturation or s, Value)
+	end
+	return {
+		Main               = Shade(math.clamp(v * 0.30, 0.04, 0.14), math.clamp(s * 0.6,  0, 1)),
+		Second             = Shade(math.clamp(v * 0.45, 0.06, 0.20), math.clamp(s * 0.65, 0, 1)),
+		Stroke             = Shade(math.clamp(v * 0.85, 0.20, 0.60), math.clamp(s * 0.85, 0, 1)),
+		Divider            = Shade(math.clamp(v * 0.60, 0.09, 0.30), math.clamp(s * 0.7,  0, 1)),
+		Text               = Color3.fromRGB(240, 240, 245),
+		TextDark           = Color3.fromRGB(165, 165, 172),
+		MainTransparency   = 0,
+		SecondTransparency = 0,
+		FrameTransparency  = 0
+	}
 end
 
 function Library:LoadConfig()
@@ -593,7 +612,8 @@ function Library:MakeWindow(WindowConfig)
 		BackgroundTransparency = 1
 	}), {
 		AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://7072725342"), {
-			Position = UDim2.new(0, 9, 0, 6),
+			AnchorPoint = Vector2.new(0.5, 0.5),
+			Position = UDim2.new(0.5, 0, 0.5, 0),
 			Size = UDim2.new(0, 18, 0, 18)
 		}), "Text")
 	})
@@ -604,14 +624,12 @@ function Library:MakeWindow(WindowConfig)
 		BackgroundTransparency = 1
 	}), {
 		AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://7072719338"), {
-			Position = UDim2.new(0, 9, 0, 6),
+			AnchorPoint = Vector2.new(0.5, 0.5),
+			Position = UDim2.new(0.5, 0, 0.5, 0),
 			Size = UDim2.new(0, 18, 0, 18),
 			Name = "Ico"
 		}), "Text")
 	})
-
-	local ThemeDropdownOpen = false
-	local ThemeDropdownFrame = nil
 
 	local ThemeBtn = SetChildren(SetProps(MakeElement("Button"), {
 		Size = UDim2.new(0.334, 0, 1, 0),
@@ -684,14 +702,17 @@ function Library:MakeWindow(WindowConfig)
 		Position = UDim2.new(0,0,1,-1)
 	}), "Stroke")
 
+	local TopBarDivider1 = AddThemeObject(SetProps(MakeElement("Frame"), {Size = UDim2.new(0,1,1,0), Position = UDim2.new(0.333,0,0,0)}), "Stroke")
+	local TopBarDivider2 = AddThemeObject(SetProps(MakeElement("Frame"), {Size = UDim2.new(0,1,1,0), Position = UDim2.new(0.667,0,0,0)}), "Stroke")
+
 	local TopBarButtonContainer = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 7), {
 		Size = UDim2.new(0, 105, 0, 30),
 		Position = UDim2.new(1, -120, 0, 10),
 		BackgroundTransparency = 0.15
 	}), {
 		AddThemeObject(MakeElement("Stroke"), "Stroke"),
-		AddThemeObject(SetProps(MakeElement("Frame"), {Size = UDim2.new(0,1,1,0), Position = UDim2.new(0.333,0,0,0)}), "Stroke"),
-		AddThemeObject(SetProps(MakeElement("Frame"), {Size = UDim2.new(0,1,1,0), Position = UDim2.new(0.667,0,0,0)}), "Stroke"),
+		TopBarDivider1,
+		TopBarDivider2,
 		MinimizeBtn,
 		ThemeBtn,
 		CloseBtn
@@ -713,145 +734,6 @@ function Library:MakeWindow(WindowConfig)
 		WindowStuff
 	}), "Main")
 
-	local ThemeNames = {"Black", "White", "Gray", "Blue", "Purple", "Red"}
-	local ThemeDisplayNames = {"Black", "White", "Gray", "Blue", "Purple", "Red"}
-
-	local ThemePopup = Create("Frame", {
-		BackgroundColor3 = Library.Themes[Library.SelectedTheme].Second,
-		BackgroundTransparency = 0,
-		BorderSizePixel = 0,
-		Size = UDim2.new(0, 120, 0, #ThemeNames * 28 + 8),
-		Visible = false,
-		ZIndex = 50,
-		Parent = Container,
-	})
-	Create("UICorner", {CornerRadius = UDim.new(0, 8), Parent = ThemePopup})
-	Create("UIStroke", {Color = Library.Themes[Library.SelectedTheme].Stroke, Thickness = 1, Parent = ThemePopup})
-	local ThemePopupList = Create("UIListLayout", {
-		SortOrder = Enum.SortOrder.LayoutOrder,
-		Padding = UDim.new(0, 2),
-		Parent = ThemePopup
-	})
-	Create("UIPadding", {
-		PaddingTop = UDim.new(0,4), PaddingBottom = UDim.new(0,4),
-		PaddingLeft = UDim.new(0,4), PaddingRight = UDim.new(0,4),
-		Parent = ThemePopup
-	})
-
-	local ThemeButtonRefs = {}
-	for i, tName in ipairs(ThemeNames) do
-		local displayName = ThemeDisplayNames[i]
-		local optBtn = Create("TextButton", {
-			Size = UDim2.new(1, 0, 0, 26),
-			BackgroundTransparency = (Library.SelectedTheme == tName) and 0.5 or 1,
-			BackgroundColor3 = Library.Themes[Library.SelectedTheme].Stroke,
-			BorderSizePixel = 0,
-			Text = displayName,
-			TextColor3 = Library.Themes[Library.SelectedTheme].Text,
-			TextSize = 13,
-			Font = Enum.Font.FredokaOne,
-			ZIndex = 51,
-			Parent = ThemePopup,
-		})
-		Create("UICorner", {CornerRadius = UDim.new(0, 5), Parent = optBtn})
-		ThemeButtonRefs[tName] = optBtn
-
-		optBtn.MouseEnter:Connect(function()
-			if Library.SelectedTheme ~= tName then
-				TweenService:Create(optBtn, TweenInfo.new(0.15), {BackgroundTransparency = 0.7}):Play()
-			end
-		end)
-		optBtn.MouseLeave:Connect(function()
-			if Library.SelectedTheme ~= tName then
-				TweenService:Create(optBtn, TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
-			end
-		end)
-		optBtn.MouseButton1Click:Connect(function()
-			local sound = Instance.new("Sound")
-			sound.SoundId = "rbxassetid://6895079853"
-			sound.Volume = 0.5
-			sound.Parent = game:GetService("SoundService")
-			sound:Play()
-			game:GetService("Debris"):AddItem(sound, 1)
-
-			Library.SelectedTheme = tName
-			SetTheme()
-
-			ThemePopup.BackgroundColor3 = Library.Themes[tName].Second
-			local popupStroke = ThemePopup:FindFirstChildOfClass("UIStroke")
-			if popupStroke then popupStroke.Color = Library.Themes[tName].Stroke end
-
-			for k, btn in pairs(ThemeButtonRefs) do
-				btn.TextColor3 = Library.Themes[tName].Text
-				btn.BackgroundColor3 = Library.Themes[tName].Stroke
-				TweenService:Create(btn, TweenInfo.new(0.15), {
-					BackgroundTransparency = (k == tName) and 0.5 or 1
-				}):Play()
-			end
-
-			if WindowConfig.SaveConfig and Library.ConfigFile then
-				Library.UserConfig.__theme = tName
-				Library:SaveConfig()
-			end
-
-			ThemeDropdownOpen = false
-			TweenService:Create(ThemePopup, TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-				BackgroundTransparency = 1
-			}):Play()
-			wait(0.15)
-			ThemePopup.Visible = false
-			ThemePopup.BackgroundTransparency = 0.05
-		end)
-	end
-
-	local function RepositionThemePopup()
-		local btnPos = TopBarButtonContainer.AbsolutePosition
-		local btnSize = TopBarButtonContainer.AbsoluteSize
-		ThemePopup.Position = UDim2.new(0, btnPos.X + btnSize.X - 120, 0, btnPos.Y + btnSize.Y + 4)
-	end
-
-	AddConnection(ThemeBtn.MouseButton1Click, function()
-		ThemeDropdownOpen = not ThemeDropdownOpen
-		if ThemeDropdownOpen then
-			RepositionThemePopup()
-			ThemePopup.Visible = true
-			ThemePopup.BackgroundTransparency = 1
-			TweenService:Create(ThemePopup, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-				BackgroundTransparency = 0.05
-			}):Play()
-			TweenService:Create(ThemeBtn.Ico, TweenInfo.new(0.2), {Rotation = 180}):Play()
-		else
-			TweenService:Create(ThemePopup, TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-				BackgroundTransparency = 1
-			}):Play()
-			TweenService:Create(ThemeBtn.Ico, TweenInfo.new(0.2), {Rotation = 0}):Play()
-			wait(0.15)
-			ThemePopup.Visible = false
-			ThemePopup.BackgroundTransparency = 0.05
-		end
-	end)
-
-	AddConnection(UserInputService.InputBegan, function(Input)
-		if Input.UserInputType == Enum.UserInputType.MouseButton1 and ThemeDropdownOpen then
-			local mx, my = Mouse.X, Mouse.Y
-			local pp = ThemePopup.AbsolutePosition
-			local ps = ThemePopup.AbsoluteSize
-			local insidePopup = mx >= pp.X and mx <= pp.X+ps.X and my >= pp.Y and my <= pp.Y+ps.Y
-			local bp = TopBarButtonContainer.AbsolutePosition
-			local bs = TopBarButtonContainer.AbsoluteSize
-			local insideBtn = mx >= bp.X and mx <= bp.X+bs.X and my >= bp.Y and my <= bp.Y+bs.Y
-			if not insidePopup and not insideBtn then
-				ThemeDropdownOpen = false
-				TweenService:Create(ThemePopup, TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
-				TweenService:Create(ThemeBtn.Ico, TweenInfo.new(0.2), {Rotation = 0}):Play()
-				task.delay(0.15, function()
-					ThemePopup.Visible = false
-					ThemePopup.BackgroundTransparency = 0.05
-				end)
-			end
-		end
-	end)
-
 	local SetResizingCallback = MakeDraggable(DragPoint, MainWindow)
 
 	local MobileReopenButton = SetChildren(SetProps(MakeElement("Button"), {
@@ -872,8 +754,6 @@ function Library:MakeWindow(WindowConfig)
 
 	AddConnection(CloseBtn.MouseButton1Up, function()
 		MainWindow.Visible = false
-		ThemePopup.Visible = false
-		ThemeDropdownOpen = false
 		if UserInputService.TouchEnabled then MobileReopenButton.Visible = true end
 		UIHidden = true
 		Library:MakeNotification({
@@ -904,7 +784,23 @@ function Library:MakeWindow(WindowConfig)
 			MainWindow.ClipsDescendants = false
 			WindowStuff.Visible = true
 			WindowTopBarLine.Visible = true
+
+			ThemeBtn.Visible = true
+			TopBarDivider2.Visible = true
+			TopBarDivider1.Position = UDim2.new(0.333,0,0,0)
+			MinimizeBtn.Size = UDim2.new(0.333,0,1,0)
+			MinimizeBtn.Position = UDim2.new(0,0,0,0)
+			CloseBtn.Size = UDim2.new(0.333,0,1,0)
+			CloseBtn.Position = UDim2.new(0.667,0,0,0)
 		else
+			ThemeBtn.Visible = false
+			TopBarDivider2.Visible = false
+			TopBarDivider1.Position = UDim2.new(0.5,0,0,0)
+			MinimizeBtn.Size = UDim2.new(0.5,0,1,0)
+			MinimizeBtn.Position = UDim2.new(0,0,0,0)
+			CloseBtn.Size = UDim2.new(0.5,0,1,0)
+			CloseBtn.Position = UDim2.new(0.5,0,0,0)
+
 			MainWindow.ClipsDescendants = true
 			WindowTopBarLine.Visible = false
 			MinimizeBtn.Ico.Image = "rbxassetid://7072720870"
@@ -1000,6 +896,26 @@ function Library:MakeWindow(WindowConfig)
 
 	if WindowConfig.IntroEnabled then LoadSequence() end
 
+	local CurrentActiveTab, CurrentActiveContainer
+
+	local function ActivateTab(TabFrame, TabItemContainer)
+		CurrentActiveTab, CurrentActiveContainer = TabFrame, TabItemContainer
+		for _, Tab in next, TabHolder:GetChildren() do
+			if Tab:IsA("TextButton") and Tab:FindFirstChild("Ico") and Tab:FindFirstChild("Title") then
+				Tab.Title.Font = Enum.Font.GothamBlack
+				TweenService:Create(Tab.Ico,   TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0.4, ImageColor3 = Color3.fromRGB(240,240,240)}):Play()
+				TweenService:Create(Tab.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency  = 0.4, TextColor3  = Color3.fromRGB(240,240,240)}):Play()
+			end
+		end
+		for _, ItemContainer in next, MainWindow:GetChildren() do
+			if ItemContainer.Name == "ItemContainer" then ItemContainer.Visible = false end
+		end
+		TweenService:Create(TabFrame.Ico,   TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0, ImageColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+		TweenService:Create(TabFrame.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency  = 0, TextColor3  = Color3.fromRGB(255, 255, 255)}):Play()
+		TabFrame.Title.Font = Enum.Font.GothamBlack
+		TabItemContainer.Visible = true
+	end
+
 	local function BuildTab(TabConfig, ParentHolder)
 		TabConfig = TabConfig or {}
 		TabConfig.Name        = TabConfig.Name        or "Tab"
@@ -1051,24 +967,12 @@ function Library:MakeWindow(WindowConfig)
 			TabFrame.Ico.ImageColor3 = Color3.fromRGB(255, 255, 255)
 			TabFrame.Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 			TabItemContainer.Visible = true
+			CurrentActiveTab, CurrentActiveContainer = TabFrame, TabItemContainer
 		end
 
 		AddConnection(TabFrame.MouseButton1Click, function()
 			local sound = Instance.new("Sound") sound.SoundId = "rbxassetid://6895079853" sound.Volume = 0.5 sound.Parent = game:GetService("SoundService") sound:Play() game:GetService("Debris"):AddItem(sound, 1)
-			for _, Tab in next, TabHolder:GetChildren() do
-				if Tab:IsA("TextButton") and Tab:FindFirstChild("Ico") and Tab:FindFirstChild("Title") then
-					Tab.Title.Font = Enum.Font.GothamBlack
-					TweenService:Create(Tab.Ico,   TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0.4, ImageColor3 = Color3.fromRGB(240,240,240)}):Play()
-					TweenService:Create(Tab.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency  = 0.4, TextColor3  = Color3.fromRGB(240,240,240)}):Play()
-				end
-			end
-			for _, ItemContainer in next, MainWindow:GetChildren() do
-				if ItemContainer.Name == "ItemContainer" then ItemContainer.Visible = false end
-			end
-			TweenService:Create(TabFrame.Ico,   TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0, ImageColor3 = Color3.fromRGB(255, 255, 255)}):Play()
-			TweenService:Create(TabFrame.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency  = 0, TextColor3  = Color3.fromRGB(255, 255, 255)}):Play()
-			TabFrame.Title.Font = Enum.Font.GothamBlack
-			TabItemContainer.Visible = true
+			ActivateTab(TabFrame, TabItemContainer)
 		end)
 
 		local function GetElements(ItemParent)
@@ -1490,9 +1394,8 @@ function Library:MakeWindow(WindowConfig)
 
 				local BindBox = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 4), {
 					Size = UDim2.new(0,24,0,24),
-					Position = UDim2.new(1,-34,0.5,0),
-					AnchorPoint = Vector2.new(1,0.5),
-					BackgroundTransparency = 0.2
+					BackgroundTransparency = 0.2,
+					LayoutOrder = 2
 				}), {
 					AddThemeObject(MakeElement("Stroke"), "Stroke"),
 					AddThemeObject(SetProps(MakeElement("Label", BindConfig.Name, 14), {
@@ -1505,13 +1408,27 @@ function Library:MakeWindow(WindowConfig)
 
 				local ResetBindButton = SetProps(MakeElement("Button"), {
 					Size = UDim2.new(0,16,0,16),
-					Position = UDim2.new(1,-12,0.5,0),
-					AnchorPoint = Vector2.new(1,0.5),
 					Text = "×",
 					TextColor3 = Color3.fromRGB(255,80,80),
 					TextSize = 16,
 					Font = Enum.Font.GothamBold,
-					ZIndex = 2
+					ZIndex = 2,
+					LayoutOrder = 1
+				})
+
+				local BindControls = SetChildren(SetProps(Instance.new("Frame"), {
+					Size = UDim2.new(0,0,0,24),
+					AutomaticSize = Enum.AutomaticSize.X,
+					Position = UDim2.new(1,-12,0.5,0),
+					AnchorPoint = Vector2.new(1,0.5),
+					BackgroundTransparency = 1
+				}), {
+					SetProps(MakeElement("List", 0, 8), {
+						FillDirection = Enum.FillDirection.Horizontal,
+						VerticalAlignment = Enum.VerticalAlignment.Center
+					}),
+					ResetBindButton,
+					BindBox
 				})
 
 				local BindFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 5), {
@@ -1526,9 +1443,8 @@ function Library:MakeWindow(WindowConfig)
 						Name = "Content"
 					}), "Text"),
 					AddThemeObject(MakeElement("Stroke"), "Stroke"),
-					BindBox,
-					ResetBindButton,
-					Click
+					Click,
+					BindControls
 				}), "Second")
 				AddDescriptionIcon(BindFrame.Content, BindConfig.Description, Click)
 
@@ -1898,7 +1814,117 @@ function Library:MakeWindow(WindowConfig)
 				AddThemeObject(SetProps(MakeElement("Label", "Unauthorised Access", 14), {Size=UDim2.new(1,-38,0,14), Position=UDim2.new(0,38,0,18), TextTransparency=0.4}), "Text"),
 			})
 		end
-		return ElementFunction, TabFrame
+		return ElementFunction, TabFrame, TabItemContainer
+	end
+
+	do
+		local PresetThemes = {"Black", "White", "Gray", "Blue", "Purple", "Red"}
+		local DefaultAccent = Color3.fromRGB(90, 140, 230)
+		local SavedAccent = nil
+		if WindowConfig.SaveConfig and Library.ConfigFile and Library.UserConfig.__customAccent then
+			local saved = Library.UserConfig.__customAccent
+			if saved and saved.R and saved.G and saved.B then SavedAccent = UnpackColor(saved) end
+		end
+
+		local ThemeTabEF, ThemeTabFrame, ThemeTabItemContainer = BuildTab({Name = "Theme"}, TabHolder)
+		ThemeTabFrame.LayoutOrder = 1000000
+		-- the Theme tab is only reachable through the top bar dropdown button, not as a normal sidebar entry
+		ThemeTabFrame.Visible = false
+		ThemeTabItemContainer.Visible = false
+		FirstTab = true
+
+		local ThemeModeActive = false
+		local SavedTabBeforeTheme, SavedContainerBeforeTheme
+
+		local function SetThemeModeActive(State)
+			if State == ThemeModeActive then return end
+			ThemeModeActive = State
+			if State then
+				SavedTabBeforeTheme, SavedContainerBeforeTheme = CurrentActiveTab, CurrentActiveContainer
+				for _, Tab in next, TabHolder:GetChildren() do
+					if Tab:IsA("TextButton") and Tab:FindFirstChild("Ico") and Tab:FindFirstChild("Title") then
+						Tab.Visible = false
+					end
+				end
+				ActivateTab(ThemeTabFrame, ThemeTabItemContainer)
+				TweenService:Create(ThemeBtn.Ico, TweenInfo.new(0.2), {Rotation = 180}):Play()
+			else
+				for _, Tab in next, TabHolder:GetChildren() do
+					if Tab:IsA("TextButton") and Tab:FindFirstChild("Ico") and Tab:FindFirstChild("Title") then
+						Tab.Visible = true
+					end
+				end
+				TweenService:Create(ThemeBtn.Ico, TweenInfo.new(0.2), {Rotation = 0}):Play()
+				if SavedTabBeforeTheme then
+					ActivateTab(SavedTabBeforeTheme, SavedContainerBeforeTheme)
+				end
+			end
+		end
+
+		AddConnection(ThemeBtn.MouseButton1Click, function()
+			local sound = Instance.new("Sound") sound.SoundId = "rbxassetid://6895079853" sound.Volume = 0.5 sound.Parent = game:GetService("SoundService") sound:Play() game:GetService("Debris"):AddItem(sound, 1)
+			SetThemeModeActive(not ThemeModeActive)
+		end)
+
+		local PresetsSection = ThemeTabEF:AddSection({Name = "Presets"})
+		PresetsSection:AddDropdown({
+			Name = "Theme",
+			Options = PresetThemes,
+			Default = Library.SelectedTheme,
+			Callback = function(tName)
+				Library.SelectedTheme = tName
+				SetTheme()
+				if WindowConfig.SaveConfig and Library.ConfigFile then
+					Library.UserConfig.__theme = tName
+					Library:SaveConfig()
+				end
+			end
+		})
+
+		local CustomSection = ThemeTabEF:AddSection({Name = "Custom Color"})
+
+		local AllowCustomThemeApply = false
+		local function ApplyCustomTheme(Color)
+			Library.Themes.Custom = GenerateThemeFromAccent(Color)
+			Library.SelectedTheme = "Custom"
+			SetTheme()
+			if WindowConfig.SaveConfig and Library.ConfigFile then
+				Library.UserConfig.__theme = "Custom"
+				Library.UserConfig.__customAccent = PackColor(Color)
+				Library:SaveConfig()
+			end
+		end
+
+		local AccentColorpicker = CustomSection:AddColorpicker({
+			Name = "Accent Color",
+			Default = SavedAccent or DefaultAccent,
+			Callback = function(Color)
+				if not AllowCustomThemeApply then return end
+				ApplyCustomTheme(Color)
+			end
+		})
+
+		if Library.UserConfig.__theme == "Custom" and SavedAccent then
+			ApplyCustomTheme(SavedAccent)
+		end
+		AllowCustomThemeApply = true
+
+		CustomSection:AddButton({
+			Name = "Reset Custom Color",
+			Callback = function()
+				Library.Themes.Custom = nil
+				Library.SelectedTheme = "Default"
+				SetTheme()
+				AllowCustomThemeApply = false
+				AccentColorpicker:Set(DefaultAccent)
+				AllowCustomThemeApply = true
+				if WindowConfig.SaveConfig and Library.ConfigFile then
+					Library.UserConfig.__theme = "Default"
+					Library.UserConfig.__customAccent = nil
+					Library:SaveConfig()
+				end
+			end
+		})
 	end
 
 	local TabFunction    = {}
