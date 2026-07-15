@@ -939,7 +939,7 @@ function Library:MakeWindow(WindowConfig)
 
 		local LoadingBarBackground = Instance.new("Frame")
 		LoadingBarBackground.Size = UDim2.new(0, 200, 0, 4)
-		LoadingBarBackground.Position = UDim2.new(0.5, -100, 0.55, 0)
+		LoadingBarBackground.Position = UDim2.new(0.5, -100, 0.5, 12)
 		LoadingBarBackground.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 		LoadingBarBackground.BorderSizePixel = 0
 		LoadingBarBackground.Parent = Container
@@ -958,7 +958,7 @@ function Library:MakeWindow(WindowConfig)
 			Parent = Container,
 			Size = UDim2.new(0, 50, 0, 20),
 			AnchorPoint = Vector2.new(0.5, 0),
-			Position = UDim2.new(0.5, 0, 0.57, 0),
+			Position = UDim2.new(0.5, 0, 0.5, 22),
 			TextXAlignment = Enum.TextXAlignment.Center,
 			Font = Enum.Font.GothamBold,
 			TextTransparency = 1
@@ -1490,7 +1490,7 @@ function Library:MakeWindow(WindowConfig)
 
 				local BindBox = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 4), {
 					Size = UDim2.new(0,24,0,24),
-					Position = UDim2.new(1,-12,0.5,0),
+					Position = UDim2.new(1,-34,0.5,0),
 					AnchorPoint = Vector2.new(1,0.5),
 					BackgroundTransparency = 0.2
 				}), {
@@ -1502,6 +1502,17 @@ function Library:MakeWindow(WindowConfig)
 						Name = "Value"
 					}), "Text")
 				}), "Main")
+
+				local ResetBindButton = SetProps(MakeElement("Button"), {
+					Size = UDim2.new(0,16,0,16),
+					Position = UDim2.new(1,-12,0.5,0),
+					AnchorPoint = Vector2.new(1,0.5),
+					Text = "×",
+					TextColor3 = Color3.fromRGB(255,80,80),
+					TextSize = 16,
+					Font = Enum.Font.GothamBold,
+					ZIndex = 2
+				})
 
 				local BindFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 5), {
 					Size = UDim2.new(1,0,0,38),
@@ -1516,12 +1527,17 @@ function Library:MakeWindow(WindowConfig)
 					}), "Text"),
 					AddThemeObject(MakeElement("Stroke"), "Stroke"),
 					BindBox,
+					ResetBindButton,
 					Click
 				}), "Second")
 				AddDescriptionIcon(BindFrame.Content, BindConfig.Description, Click)
 
 				AddConnection(BindBox.Value:GetPropertyChangedSignal("Text"), function()
 					TweenService:Create(BindBox, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, BindBox.Value.TextBounds.X + 16, 0, 24)}):Play()
+				end)
+				AddConnection(ResetBindButton.MouseButton1Click, function()
+					Bind.Binding = false
+					Bind:Set(Enum.KeyCode.Unknown)
 				end)
 				AddConnection(Click.InputEnded, function(Input)
 					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
