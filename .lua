@@ -112,7 +112,6 @@ function Library:LoadConfig()
 		end)
 		if success and data then
 			self.UserConfig = data
-			-- Load saved theme
 			if data.__theme and self.Themes[data.__theme] then
 				self.SelectedTheme = data.__theme
 			end
@@ -453,40 +452,36 @@ function Library:MakeNotification(NotificationConfig)
 	end)
 end
 
--- ================= Description Tooltip Helper =================
--- Adds a small "?" icon right after a Content label. The "?" is hidden by
--- default (clean row) and only fades in while the person hovers the row
--- (HoverSource). Hovering shows the "?" and the floating tooltip together;
--- leaving hides both again.
 local function AddDescriptionIcon(ContentLabel, Description, HoverSource)
 	if not Description or Description == "" then return end
 
 	local QuestionMark = AddThemeObject(SetProps(MakeElement("Label", "?", 12), {
-		Size = UDim2.new(0, 14, 0, 14),
+		Size = UDim2.new(0, 0, 0, 14),
 		AnchorPoint = Vector2.new(0, 0.5),
 		Position = UDim2.new(0, ContentLabel.TextBounds.X + 6, 0.5, 0),
 		TextXAlignment = Enum.TextXAlignment.Center,
 		Font = Enum.Font.GothamBold,
 		Name = "QuestionMark",
 		Visible = false,
+		TextTransparency = 1,
 		Parent = ContentLabel
 	}), "TextDark")
 
-	local Tooltip = SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(25,25,25), 0, 8), {
-		Size = UDim2.new(0, 220, 0, 0),
+	local Tooltip = SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(25,25,25), 0, 12), {
+		Size = UDim2.new(0, 200, 0, 0),
 		AutomaticSize = Enum.AutomaticSize.Y,
-		BackgroundTransparency = 0.05,
+		BackgroundTransparency = 0.15,
 		Visible = false,
 		ZIndex = 100,
 		Parent = Container
 	}), {
-		MakeElement("Stroke", Color3.fromRGB(93,93,93), 1),
-		MakeElement("Padding", 8, 10, 10, 8),
-		SetProps(MakeElement("Label", Description, 13), {
+		Create("UIStroke", {Color = Color3.fromRGB(255,255,255), Thickness = 0.8, Transparency = 0.85}),
+		Create("UIPadding", {PaddingTop = UDim.new(0,6), PaddingBottom = UDim.new(0,6), PaddingLeft = UDim.new(0,8), PaddingRight = UDim.new(0,8)}),
+		SetProps(MakeElement("Label", Description, 12), {
 			Size = UDim2.new(1, 0, 0, 0),
 			AutomaticSize = Enum.AutomaticSize.Y,
 			TextWrapped = true,
-			TextColor3 = Color3.fromRGB(220, 220, 220),
+			TextColor3 = Color3.fromRGB(240, 240, 245),
 			Font = Enum.Font.GothamMedium,
 			ZIndex = 101,
 			Name = "Text"
@@ -498,29 +493,59 @@ local function AddDescriptionIcon(ContentLabel, Description, HoverSource)
 	end
 	AddConnection(ContentLabel:GetPropertyChangedSignal("Text"), UpdatePosition)
 
-	local function ShowHover()
-		QuestionMark.Visible = true
-		local Pos = QuestionMark.AbsolutePosition
-		Tooltip.AnchorPoint = Vector2.new(0, 1)
-		Tooltip.Position = UDim2.new(0, Pos.X, 0, Pos.Y - 8)
+	local function ShowTooltip()
 		Tooltip.Visible = true
-		TweenService:Create(Tooltip, TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0.05}):Play()
+		local pos = QuestionMark.AbsolutePosition
+		Tooltip.Position = UDim2.new(0, pos.X, 0, pos.Y - 8)
+		Tooltip.AnchorPoint = Vector2.new(0, 1)
+		Tooltip.Size = UDim2.new(0, 200, 0, Tooltip.Text.TextBounds.Y + 12)
+		TweenService:Create(Tooltip, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			BackgroundTransparency = 0.15,
+			Size = UDim2.new(0, 200, 0, Tooltip.Text.TextBounds.Y + 12)
+		}):Play()
 	end
 
-	local function HideHover()
-		QuestionMark.Visible = false
-		Tooltip.Visible = false
+	local function HideTooltip()
+		local hideTween = TweenService:Create(Tooltip, TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			BackgroundTransparency = 1
+		})
+		hideTween:Play()
+		hideTween.Completed:Connect(function()
+			if Tooltip.BackgroundTransparency >= 1 then
+				Tooltip.Visible = false
+			end
+		end)
 	end
 
 	if HoverSource then
-		-- Clean by default: "?" + tooltip only appear while hovering the row.
-		AddConnection(HoverSource.MouseEnter, ShowHover)
-		AddConnection(HoverSource.MouseLeave, HideHover)
+		AddConnection(HoverSource.MouseEnter, function()
+			QuestionMark.Visible = true
+			TweenService:Create(QuestionMark, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				TextTransparency = 0,
+				Size = UDim2.new(0, 14, 0, 14)
+			}):Play()
+		end)
+		AddConnection(HoverSource.MouseLeave, function()
+			local tween = TweenService:Create(QuestionMark, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				TextTransparency = 1,
+				Size = UDim2.new(0, 0, 0, 14)
+			})
+			tween:Play()
+			tween.Completed:Connect(function()
+				QuestionMark.Visible = false
+			end)
+			HideTooltip()
+		end)
+
+		AddConnection(QuestionMark.MouseEnter, ShowTooltip)
+		AddConnection(QuestionMark.MouseLeave, HideTooltip)
 	else
-		-- Fallback (no hover source given): behave like before, hover the "?" itself.
 		QuestionMark.Visible = true
-		AddConnection(QuestionMark.MouseEnter, ShowHover)
-		AddConnection(QuestionMark.MouseLeave, HideHover)
+		QuestionMark.TextTransparency = 0
+		QuestionMark.Size = UDim2.new(0, 14, 0, 14)
+
+		AddConnection(QuestionMark.MouseEnter, ShowTooltip)
+		AddConnection(QuestionMark.MouseLeave, HideTooltip)
 	end
 
 	return QuestionMark
@@ -585,7 +610,6 @@ function Library:MakeWindow(WindowConfig)
 		}), "Text")
 	})
 
-	-- Theme Dropdown Button (arrow down icon, middle button)
 	local ThemeDropdownOpen = false
 	local ThemeDropdownFrame = nil
 
@@ -660,16 +684,13 @@ function Library:MakeWindow(WindowConfig)
 		Position = UDim2.new(0,0,1,-1)
 	}), "Stroke")
 
-	-- TopBar button container: now 3 buttons wide
 	local TopBarButtonContainer = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,255,255), 0, 7), {
 		Size = UDim2.new(0, 105, 0, 30),
 		Position = UDim2.new(1, -120, 0, 10),
 		BackgroundTransparency = 0.15
 	}), {
 		AddThemeObject(MakeElement("Stroke"), "Stroke"),
-		-- divider between minimize and theme
 		AddThemeObject(SetProps(MakeElement("Frame"), {Size = UDim2.new(0,1,1,0), Position = UDim2.new(0.333,0,0,0)}), "Stroke"),
-		-- divider between theme and close
 		AddThemeObject(SetProps(MakeElement("Frame"), {Size = UDim2.new(0,1,1,0), Position = UDim2.new(0.667,0,0,0)}), "Stroke"),
 		MinimizeBtn,
 		ThemeBtn,
@@ -692,7 +713,6 @@ function Library:MakeWindow(WindowConfig)
 		WindowStuff
 	}), "Main")
 
-	-- Theme dropdown popup (parented to Container so it floats above everything)
 	local ThemeNames = {"Black", "White", "Gray", "Blue", "Purple", "Red"}
 	local ThemeDisplayNames = {"Black", "White", "Gray", "Blue", "Purple", "Red"}
 
@@ -747,7 +767,6 @@ function Library:MakeWindow(WindowConfig)
 			end
 		end)
 		optBtn.MouseButton1Click:Connect(function()
-			-- play click sound
 			local sound = Instance.new("Sound")
 			sound.SoundId = "rbxassetid://6895079853"
 			sound.Volume = 0.5
@@ -758,7 +777,6 @@ function Library:MakeWindow(WindowConfig)
 			Library.SelectedTheme = tName
 			SetTheme()
 
-			-- Update popup styling
 			ThemePopup.BackgroundColor3 = Library.Themes[tName].Second
 			local popupStroke = ThemePopup:FindFirstChildOfClass("UIStroke")
 			if popupStroke then popupStroke.Color = Library.Themes[tName].Stroke end
@@ -771,13 +789,11 @@ function Library:MakeWindow(WindowConfig)
 				}):Play()
 			end
 
-			-- Auto-save theme
 			if WindowConfig.SaveConfig and Library.ConfigFile then
 				Library.UserConfig.__theme = tName
 				Library:SaveConfig()
 			end
 
-			-- Close popup
 			ThemeDropdownOpen = false
 			TweenService:Create(ThemePopup, TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
 				BackgroundTransparency = 1
@@ -815,7 +831,6 @@ function Library:MakeWindow(WindowConfig)
 		end
 	end)
 
-	-- Close popup when clicking elsewhere
 	AddConnection(UserInputService.InputBegan, function(Input)
 		if Input.UserInputType == Enum.UserInputType.MouseButton1 and ThemeDropdownOpen then
 			local mx, my = Mouse.X, Mouse.Y
@@ -2047,7 +2062,7 @@ function Library:MakeWindow(WindowConfig)
 	function TabFunction:TabSection(Name)
 		Name = Name or "Section"
 
-		local headerBtn = Create("Frame", {  -- Changed from TextButton to Frame (not clickable)
+		local headerBtn = Create("Frame", {
 			Size             = UDim2.new(1, 0, 0, 24),
 			BackgroundTransparency = 1,
 			BorderSizePixel  = 0,
@@ -2076,13 +2091,12 @@ function Library:MakeWindow(WindowConfig)
 			Parent             = headerBtn,
 		})
 
-		-- No collapse logic; tabs always visible
 		local tabFrames = {}
 
 		local groupData = {
 			header    = headerBtn,
 			frames    = tabFrames,
-			collapsed = false,  -- always false, never collapses
+			collapsed = false,
 		}
 		table.insert(allGroups, groupData)
 
@@ -2098,7 +2112,7 @@ function Library:MakeWindow(WindowConfig)
 			if currentTabSection then
 				table.insert(currentTabSection.frames, frame)
 				tabGroupRegistry[frame] = currentTabSection
-				frame.Visible = true  -- always visible, no collapse
+				frame.Visible = true
 			end
 		end
 		return ef
